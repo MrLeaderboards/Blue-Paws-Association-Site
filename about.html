@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">About - Blue Paws Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        .about-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('Blue%20Paws%20Logo.jpeg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 500px;
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Blue%20Paws%20Logo.jpeg" alt="Blue Paws Association" class="h-10 w-auto">
+                <h1 id="logo-text"class="text-2xl font-bold text-blue-700 font-[Nunito]">Blue Paws Association</h1>
+            </div>
+           
+            <div class="hidden md:flex gap-8 text-lg items-center">
+                <a href="index.html" id="nav-home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#adopt" id="nav-adopt" class="hover:text-blue-600 font-medium">Adopt</a>
+                <a href="about.html" id="nav-about" class="text-blue-600 font-semibold">About</a>
+                <a href="impact.html" id="nav-impact" class="hover:text-blue-600 font-medium">Impact</a>
+                <a href="stories.html" id="nav-stories" class="hover:text-blue-600 font-medium">Stories</a>
+                <a href="news.html" id="nav-news" class="hover:text-blue-600 font-medium">News</a>
+                <a href="faq.html" id="nav-faq" class="hover:text-blue-600 font-medium">FAQ</a>
+            </div>
+
+            <!-- Language Selector + Donate Button -->
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button id="lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none">
+                        <span id="current-flag" class="text-2xl">🇬🇧</span>
+                        <span id="current-lang" class="font-medium text-gray-700">EN</span>
+                        <i id="chevron" class="fa-solid fa-chevron-down text-sm text-gray-500 transition-transform"></i>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl py-2 hidden z-50 border border-gray-100">
+<a href="#" onclick="changeLanguage('en'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/gb.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>English</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('ro'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/ro.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Romanian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('hu'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/hu.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Hungarian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('it'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/it.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Italian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('de'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/de.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>German</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('fr'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/fr.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>French</span>
+
+</a>
+                    </div>
+                </div>
+                <a href="donation.html" 
+                   class="accent-gradient hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fa-solid fa-heart"></i> 
+                    <span id="donate-btn">Donate</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+<!-- About Content -->
+<section class="py-20 bg-white font-[Nunito]">
+    <div class="max-w-4xl mx-auto px-6">
+
+        <div class="about-bg h-96 rounded-3xl mb-12 flex items-center justify-center relative">
+            <div class="text-white text-center z-10 px-6">
+                <i class="fa-solid fa-paw text-8xl text-blue-200 opacity-30"></i>
+            </div>
+        </div>
+
+        <!-- Title -->
+        <h2 id="about-title"
+            class="text-4xl font-extrabold mb-10 text-center text-blue-800 font-[Nunito]">
+            Blue Paws Association
+        </h2>
+
+        <!-- Text -->
+        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8 font-[Nunito]">
+
+            <p id="about-text-1"></p>
+            <p id="about-text-2"></p>
+            <p id="about-text-3"></p>
+
+        </div>
+
+    </div>
+</section>
+
+    <script>
+        const translations = {
+            en: {
+                "page-title": "About - Blue Paws Association",
+                "logo-text": "Blue Paws Association",
+                "nav-home": "Home",
+                "nav-adopt": "Adopt",
+                "nav-about": "About",
+                "nav-impact": "Impact",
+                "nav-stories": "Stories",
+                "nav-news": "News",
+                "nav-faq": "FAQ",
+                "about-title": "Blue Paws Association",
+                "about-text-1": "New in name.<br>Established in purpose.<br>Long before this association existed.<br>Our work had already begun.",
+                "about-text-2": "Years of rescue, care and commitment.<br>Years of standing where others did not.<br>We have witnessed life on the streets.<br>The hunger, the fear, the abandonment.<br>We have carried those realities with us through loss and through hope.",
+                "about-text-3": "Blue Paws Association was not created from an idea but from experience.<br>A group of caring individuals.<br>Brought together by action and a shared responsibility,<br>to protect those who do not have a voice.<br>This is not a beginning.<br>It is a continuation.<br>With a structure.<br>With a purpose and with accountability.",
+                "contact-title": "Contact Us",
+                "message-title": "Send us a message",
+                "name-placeholder": "Your Name",
+                "email-placeholder": "Email Address",
+                "message-placeholder": "How can we help you?",
+                "footer-logo": "Blue Paws Association",
+                "donate-btn": "Donate",
+                "footer-slogan": "Saving one dog at a time."
+            },
+            ro: {
+                "page-title": "Despre Noi - Asociația Blue Paws",
+                "logo-text": "Asociația Blue Paws",
+                "nav-home": "Acasă",
+                "nav-adopt": "Adoptă",
+                "nav-about": "Despre Noi",
+                "nav-impact": "Impact",
+                "nav-stories": "Povești",
+                "nav-news": "Știri",
+                "nav-faq": "Întrebări Frecvente",
+                "about-title": "Asociația Blue Paws",
+                "about-text-1": "Nouă ca nume.<br>Stabilită în scop.<br>Cu mult înainte ca această asociație să existe,<br>munca noastră începuse deja.",
+                "about-text-2": "Ani de salvare, îngrijire și angajament.<br>Ani în care am stat acolo unde alții nu au stat.<br>Am fost martori ai vieții de pe străzi.<br>Foamea, frica, abandonul.<br>Am purtat aceste realități cu noi prin pierdere și prin speranță.",
+                "about-text-3": "Asociația Blue Paws nu a fost creată dintr-o idee, ci din experiență.<br>Un grup de oameni cu suflet mare,<br>uniți prin acțiune și responsabilitate comună,<br>pentru a proteja pe cei care nu au voce.<br>Aceasta nu este un început.<br>Este o continuare.<br>Cu o structură.<br>Cu un scop și cu responsabilitate.",
+                "contact-title": "Contactează-ne",
+                "message-title": "Trimite-ne un mesaj",
+                "name-placeholder": "Numele tău",
+                "email-placeholder": "Adresa de email",
+                "message-placeholder": "Cum te putem ajuta?",
+                "footer-logo": "Asociația Blue Paws",
+                "donate-btn": "Donează",
+                "footer-slogan": "Salvăm un câine odată."
+            },
+            hu: {
+                "page-title": "Rólunk - Blue Paws Egyesület",
+                "logo-text": "Blue Paws Egyesület",
+                "nav-home": "Kezdőlap",
+                "nav-adopt": "Örökbefogadás",
+                "nav-about": "Rólunk",
+                "nav-impact": "Hatásunk",
+                "nav-stories": "Sikertörténetek",
+                "nav-news": "Hírek",
+                "nav-faq": "GYIK",
+                "about-title": "Blue Paws Egyesület",
+                "about-text-1": "Új névben.<br>Megalapozott célban.<br>Már jóval azelőtt, hogy ez az egyesület létezett volna,<br>munkánk már elkezdődött.",
+                "about-text-2": "Évek mentése, gondozása és elkötelezettsége.<br>Évek, amikor ott álltunk, ahol mások nem.<br>Láttuk az utca életét.<br>Az éhséget, a félelmet, az elhagyatottságot.<br>Ezeket a valóságokat magunkkal hordoztuk veszteségen és reményen keresztül.",
+                "about-text-3": "A Blue Paws Egyesület nem egy ötletből született, hanem tapasztalatból.<br>Gondoskodó emberek csoportja,<br>akiket a cselekvés és a közös felelősség hozott össze,<br>hogy védjük azokat, akiknek nincs hangjuk.<br>Ez nem kezdet.<br>Ez folytatás.<br>Struktúrával.<br>Céllal és elszámoltathatósággal.",
+                "contact-title": "Kapcsolat",
+                "message-title": "Küldj nekünk üzenetet",
+                "name-placeholder": "Neved",
+                "email-placeholder": "Email címed",
+                "message-placeholder": "Miben segíthetünk?",
+                "footer-logo": "Blue Paws Egyesület",
+                "donate-btn": "Adományozás",
+                "footer-slogan": "Egy kutyát mentünk egyszerre."
+            },
+            it: {
+                "page-title": "Chi Siamo - Associazione Blue Paws",
+                "logo-text": "Associazione Blue Paws",
+                "nav-home": "Home",
+                "nav-adopt": "Adotta",
+                "nav-about": "Chi Siamo",
+                "nav-impact": "Il Nostro Impatto",
+                "nav-stories": "Storie di Successo",
+                "nav-news": "Notizie",
+                "nav-faq": "FAQ",
+                "about-title": "Associazione Blue Paws",
+                "about-text-1": "Nuova di nome.<br>Stabilita nello scopo.<br>Molto prima che questa associazione esistesse,<br>il nostro lavoro era già iniziato.",
+                "about-text-2": "Anni di salvataggio, cura e impegno.<br>Anni in cui siamo stati dove gli altri non c'erano.<br>Abbiamo visto la vita per strada.<br>La fame, la paura, l'abbandono.<br>Abbiamo portato queste realtà con noi attraverso la perdita e la speranza.",
+                "about-text-3": "L'Associazione Blue Paws non è nata da un'idea ma dall'esperienza.<br>Un gruppo di persone premurose unite dall'azione e da una responsabilità condivisa,<br>per proteggere chi non ha voce.<br>Questo non è un inizio.<br>È una continuazione.<br>Con una struttura.<br>Con uno scopo e con responsabilità.",
+                "contact-title": "Contattaci",
+                "message-title": "Inviaci un messaggio",
+                "name-placeholder": "Il tuo nome",
+                "email-placeholder": "Indirizzo email",
+                "message-placeholder": "Come possiamo aiutarti?",
+                "footer-logo": "Associazione Blue Paws",
+                "donate-btn": "Dona",
+                "footer-slogan": "Salviamo un cane alla volta."
+            },
+            de: {
+                "page-title": "Über uns - Blue Paws Verein",
+                "logo-text": "Blue Paws Verein",
+                "nav-home": "Start",
+                "nav-adopt": "Adoptieren",
+                "nav-about": "Über uns",
+                "nav-impact": "Unser Impact",
+                "nav-stories": "Erfolgsgeschichten",
+                "nav-news": "Nachrichten",
+                "nav-faq": "FAQ",
+                "about-title": "Blue Paws Verein",
+                "about-text-1": "Neu im Namen.<br>Gefestigt im Zweck.<br>Lange bevor dieser Verein existierte,<br>hatte unsere Arbeit bereits begonnen.",
+                "about-text-2": "Jahre der Rettung, Pflege und Hingabe.<br>Jahre, in denen wir dort standen, wo andere es nicht taten.<br>Wir haben das Leben auf der Straße gesehen.<br>Den Hunger, die Angst, die Verlassenheit.<br>Wir haben diese Realitäten durch Verlust und Hoffnung mit uns getragen.",
+                "about-text-3": "Der Blue Paws Verein wurde nicht aus einer Idee heraus gegründet, sondern aus Erfahrung.<br>Eine Gruppe fürsorglicher Menschen, die durch Handeln und gemeinsame Verantwortung zusammengebracht wurden,<br>um die zu schützen, die keine Stimme haben.<br>Dies ist kein Anfang.<br>Es ist eine Fortsetzung.<br>Mit Struktur.<br>Mit Zweck und mit Verantwortlichkeit.",
+                "contact-title": "Kontakt",
+                "message-title": "Schick uns eine Nachricht",
+                "name-placeholder": "Dein Name",
+                "email-placeholder": "E-Mail-Adresse",
+                "message-placeholder": "Wie können wir dir helfen?",
+                "footer-logo": "Blue Paws Verein",
+                "donate-btn": "Spenden",
+                "footer-slogan": "Wir retten einen Hund nach dem anderen."
+            },
+            fr: {
+                "page-title": "À Propos - Association Blue Paws",
+                "logo-text": "Association Blue Paws",
+                "nav-home": "Accueil",
+                "nav-adopt": "Adopter",
+                "nav-about": "À Propos",
+                "nav-impact": "Notre Impact",
+                "nav-stories": "Histoires",
+                "nav-news": "Actualités",
+                "nav-faq": "FAQ",
+                "about-title": "Association Blue Paws",
+                "about-text-1": "Nouveau de nom.<br>Établi dans son but.<br>Bien avant que cette association n'existe,<br>notre travail avait déjà commencé.",
+                "about-text-2": "Des années de sauvetage, de soins et d'engagement.<br>Des années où nous nous sommes tenus là où les autres ne l'ont pas fait.<br>Nous avons vu la vie dans la rue.<br>La faim, la peur, l'abandon.<br>Nous avons porté ces réalités avec nous à travers la perte et l'espoir.",
+                "about-text-3": "L'Association Blue Paws n'a pas été créée à partir d'une idée mais à partir de l'expérience.<br>Un groupe d'individus attentionnés réunis par l'action et une responsabilité partagée,<br>pour protéger ceux qui n'ont pas de voix.<br>Ce n'est pas un début.<br>C'est une continuation.<br>Avec une structure.<br>Avec un but et avec responsabilité.",
+                "contact-title": "Contactez-nous",
+                "message-title": "Envoyez-nous un message",
+                "name-placeholder": "Votre Nom",
+                "email-placeholder": "Adresse Email",
+                "message-placeholder": "Comment pouvons-nous vous aider ?",
+                "footer-logo": "Association Blue Paws",
+                "donate-btn": "Faire un don",
+                "footer-slogan": "Sauver un chien à la fois."
+            }
+        };
+
+        function changeLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+
+            const flagMap = { en: '🇬🇧', ro: '🇷🇴', hu: '🇭🇺', it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷' };
+            const codeMap = { en: 'EN', ro: 'RO', hu: 'HU', it: 'IT', de: 'DE', fr: 'FR' };
+
+            document.getElementById('current-flag').textContent = flagMap[lang];
+            document.getElementById('current-lang').textContent = codeMap[lang];
+
+            Object.keys(translations[lang]).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.innerHTML = translations[lang][key];
+                    }
+                }
+            });
+
+            document.getElementById('page-title').textContent = translations[lang]["page-title"];
+            document.documentElement.lang = lang;
+        }
+
+        let dropdownOpen = false;
+        function toggleDropdown() {
+            const dd = document.getElementById('lang-dropdown');
+            const ch = document.getElementById('chevron');
+            dropdownOpen = !dropdownOpen;
+            dd.classList.toggle('hidden', !dropdownOpen);
+            ch.style.transform = dropdownOpen ? 'rotate(180deg)' : '';
+        }
+
+        document.getElementById('lang-btn').addEventListener('click', toggleDropdown);
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('lang-btn').contains(e.target)) {
+                const dd = document.getElementById('lang-dropdown');
+                if (!dd.classList.contains('hidden')) toggleDropdown();
+            }
+        });
+
+        window.onload = () => changeLanguage('en');
+    </script>
+</body>
+</html>
