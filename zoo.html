@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Târgu Mureș Dog Show - Blue Paws Association</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+
+<style>
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#f8fafc;
+    overflow-x:hidden;
+}
+
+/* HERO */
+.news-hero{
+    position:relative;
+    height:85vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('Zoo1.JPG');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-text{
+    text-shadow:
+    0 0 15px rgba(0,0,0,0.8),
+    0 0 35px rgba(0,0,0,0.5);
+}
+
+.fade-up{
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeUp 1.2s ease forwards;
+}
+
+.fade-delay{
+    animation-delay:0.5s;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* SECTION TITLE */
+.section-title{
+    font-size:2.7rem;
+    font-weight:700;
+    color:#1e3a8a;
+    text-align:center;
+    margin-bottom:4rem;
+}
+
+/* EVENT CARDS */
+.event-card{
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.08);
+
+    transition:all .45s ease;
+}
+
+.event-card:hover{
+    transform:translateY(-12px);
+}
+
+.event-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.event-card-content{
+    padding:2rem;
+}
+
+.event-card h3{
+    font-size:1.7rem;
+    font-weight:700;
+    margin-bottom:1rem;
+    color:#2563eb;
+}
+
+.event-card p{
+    color:#4b5563;
+    line-height:1.8;
+}
+
+/* GALLERY */
+.gallery-wrapper{
+    position:relative;
+    max-width:1100px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:30px;
+}
+
+.gallery-track{
+    display:flex;
+    transition:transform .7s ease;
+}
+
+.gallery-slide{
+    min-width:100%;
+    position:relative;
+}
+
+.gallery-slide img{
+    width:100%;
+    height:700px;
+    object-fit:cover;
+}
+
+/* ARROWS */
+.gallery-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:65px;
+    height:65px;
+
+    border-radius:999px;
+    border:none;
+
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(10px);
+
+    color:white;
+    font-size:1.4rem;
+
+    cursor:pointer;
+    z-index:10;
+
+    transition:all .35s ease;
+}
+
+.gallery-btn:hover{
+    background:#2563eb;
+    transform:translateY(-50%) scale(1.08);
+}
+
+.prev-btn{
+    left:25px;
+}
+
+.next-btn{
+    right:25px;
+}
+
+/* DOTS */
+.gallery-dots{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:2rem;
+}
+
+.dot{
+    width:14px;
+    height:14px;
+
+    border-radius:999px;
+    background:#cbd5e1;
+
+    cursor:pointer;
+    transition:all .3s ease;
+}
+
+.dot.active{
+    background:#2563eb;
+    transform:scale(1.2);
+}
+
+/* FLIP CARD */
+.news-flip-card {
+    perspective: 1400px;
+}
+
+/* INNER */
+.news-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 560px;
+
+    transform-style: preserve-3d;
+
+    transition: transform 0.9s ease;
+}
+
+/* FLIPPED */
+.news-flip-card.flipped .news-flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* SIDES */
+.news-flip-front,
+.news-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+
+    border-radius: 1.8rem;
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* BACK SIDE */
+.news-flip-back {
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.96),
+            rgba(219,234,254,0.96)
+        );
+}
+
+/* PAW BUTTON */
+.paw-flip-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    background: rgba(37,99,235,0.12);
+
+    border: 2px solid rgba(37,99,235,0.25);
+
+    color: #2563eb;
+
+    padding: 12px 24px;
+
+    border-radius: 9999px;
+
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.35s ease;
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,0.12);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* PAW ICON */
+.paw-flip-btn i {
+    font-size: 1.2rem;
+
+    transition: transform 0.35s ease;
+}
+
+/* HOVER */
+.paw-flip-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.04);
+
+    background: #2563eb;
+
+    color: white;
+
+    box-shadow:
+        0 0 25px rgba(37,99,235,0.35),
+        0 15px 35px rgba(37,99,235,0.25);
+}
+
+/* ICON ANIMATION */
+.paw-flip-btn:hover i {
+    transform:
+        rotate(-12deg)
+        scale(1.18);
+}
+
+/* GLOW RING */
+.paw-flip-btn::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+
+    border: 2px solid rgba(59,130,246,0.25);
+
+    opacity: 0;
+
+    transform: scale(0.9);
+
+    transition: all 0.35s ease;
+}
+
+.paw-flip-btn:hover::after {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f9fafb;
+    color: #1f2937;
+}
+
+/* Shared Blue Gradient */
+.accent-gradient {
+    background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+}
+
+/* Navbar */
+nav {
+    backdrop-filter: blur(12px);
+}
+
+/* Hero text glow */
+.hero-text {
+    text-shadow:
+        0 0 8px rgba(0,0,0,0.9),
+        -2px -2px 3px rgba(0,0,0,0.85),
+        2px -2px 3px rgba(0,0,0,0.85),
+        -2px 2px 3px rgba(0,0,0,0.85),
+        2px 2px 3px rgba(0,0,0,0.85);
+}
+
+/* Smooth links */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Navbar hover */
+nav a:hover {
+    color: #2563eb;
+}
+
+#card1-title,
+#card2-title,
+#card3-title{
+    color:#1e3a8a;
+}
+
+</style>
+</head>
+
+<body>
+
+        <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Blue%20Paws%20Logo.jpeg" alt="Blue Paws Association" class="h-10 w-auto">
+                <h1 id="logo-text"class="text-2xl font-bold text-blue-700 font-[Nunito]">Blue Paws Association</h1>
+            </div>
+           
+            <div class="hidden md:flex gap-8 text-lg items-center">
+                <a href="index.html" id="nav-home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#adopt" id="nav-adopt" class="hover:text-blue-600 font-medium">Adopt</a>
+                <a href="about.html" id="nav-about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="impact.html" id="nav-impact" class="hover:text-blue-600 font-medium">Impact</a>
+                <a href="stories.html" id="nav-stories" class="hover:text-blue-600 font-medium">Stories</a>
+                <a href="news.html" id="nav-news" class="hover:text-blue-600 font-medium">News</a>
+                <a href="faq.html" id="nav-faq" class="hover:text-blue-600 font-medium">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button id="lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none">
+                        <span id="current-flag" class="text-2xl">🇬🇧</span>
+                        <span id="current-lang" class="font-medium text-gray-700">EN</span>
+                        <i id="chevron" class="fa-solid fa-chevron-down text-sm text-gray-500 transition-transform"></i>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl py-2 hidden z-50 border border-gray-100">
+<a href="#" onclick="changeLanguage('en'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/gb.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>English</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('ro'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/ro.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Romanian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('hu'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/hu.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Hungarian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('it'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/it.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Italian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('de'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/de.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>German</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('fr'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/fr.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>French</span>
+
+</a>
+                    </div>
+                </div>
+                <a href="donation.html" class="accent-gradient hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fa-solid fa-heart"></i> 
+                    <span id="donate-btn">Donate</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+<!-- EVENT DESCRIPTION -->
+<section class="py-24">
+
+<h2 id="event-section-title" class="section-title">
+Community • Compassion • Celebration
+</h2>
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+
+    <!-- CARD 1 -->
+<div class="news-flip-card">
+
+    <div class="news-flip-inner">
+
+        <!-- FRONT -->
+        <div class="news-flip-front">
+
+            <img src="Zoo2.jpeg"
+                 class="w-full h-72 object-cover">
+
+            <div class="p-6">
+
+            <h3 id="card1-title" class="text-3xl font-bold mb-3">Community Dog Show</h3>
+
+   <p id="card1-text"class="text-gray-600 leading-relaxed">Today we joined the Targu Mureș Zoo community dog eventto support local families and award prizes.</p>
+
+<button class="paw-flip-btn mt-6">
+
+    <i class="fa-solid fa-paw"></i>
+
+    <span id="flip-btn-text">Flip</span>
+
+</button>
+
+            </div>
+        </div>
+
+        <!-- BACK -->
+<div class="news-flip-back">
+
+    <div class="w-full overflow-hidden rounded-3xl shadow-lg">
+
+        <video controls class="w-full block">
+            <source src="Zoo8.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+<button class="paw-flip-btn back-btn mt-6">
+
+    <i class="fa-solid fa-paw"></i>
+
+    <span id="unflip-btn-text">Back</span>
+
+</button>
+
+        </div>
+
+    </div>
+</div>
+
+    <!-- CARD 2 -->
+<div class="news-flip-card">
+
+    <div class="news-flip-inner">
+
+        <!-- FRONT -->
+        <div class="news-flip-front">
+
+            <img src="Zoo4.jpeg"
+                 class="w-full h-72 object-cover">
+
+            <div class="p-6">
+
+            <h3 id="card2-title" class="text-3xl font-bold mb-3">Handing Winner Prizes</h3>
+
+   <p id="card2-text"class="text-gray-600 leading-relaxed">Blue Paws was offered to opportunity to hand out winners their winning prizes.</p>
+
+<button class="paw-flip-btn mt-6">
+
+    <i class="fa-solid fa-paw"></i>
+
+    <span id="flip-btn-text2">Flip</span>
+
+</button>
+
+            </div>
+        </div>
+
+        <!-- BACK -->
+<div class="news-flip-back">
+
+    <div class="w-full overflow-hidden rounded-3xl shadow-lg">
+
+        <video autoplay muted controls class="w-full block">
+            <source src="Zoo7.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+<button class="paw-flip-btn back-btn mt-6">
+
+    <i class="fa-solid fa-paw"></i>
+
+    <span id="unflip-btn-text2">Back</span>
+
+</button>
+
+        </div>
+
+    </div>
+</div>
+
+    <!-- CARD 3 -->
+<div class="news-flip-card">
+
+    <div class="news-flip-inner">
+
+        <!-- FRONT -->
+        <div class="news-flip-front">
+
+            <img src="Zoo5.jpeg"
+                 class="w-full h-72 object-cover">
+
+            <div class="p-6">
+
+            <h3 id="card3-title" class="text-3xl font-bold mb-3">Community Dog Show</h3>
+
+   <p id="card3-text"class="text-gray-600 leading-relaxed">Today we joined the Targu Mureș Zoo community dog eventto support local families and award prizes.</p>
+
+<button class="paw-flip-btn mt-6">
+
+    <i class="fa-solid fa-paw"></i>
+
+    <span id="flip-btn-text3">Flip</span>
+
+</button>
+
+            </div>
+        </div>
+
+        <!-- BACK -->
+<div class="news-flip-back">
+
+    <div class="w-full overflow-hidden rounded-3xl shadow-lg">
+
+        <video controls class="w-full block">
+            <source src="Zoo6.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+<button class="paw-flip-btn back-btn mt-6">
+
+    <i class="fa-solid fa-paw"></i>
+
+    <span id="unflip-btn-text3">Back</span>
+
+</button>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+<section class="pb-28">
+
+<h2 id="gallery-title" class="section-title">
+Event Gallery
+</h2>
+
+<div class="gallery-wrapper">
+
+    <div class="gallery-track" id="galleryTrack">
+
+        <div class="gallery-slide">
+            <img src="Zoo15.jpeg" alt="">
+        </div>
+
+        <div class="gallery-slide">
+            <img src="Zoo16.jpg" alt="">
+        </div>
+
+        <div class="gallery-slide">
+            <img src="Zoo17.jpg" alt="">
+        </div>
+
+        <div class="gallery-slide">
+            <img src="Zoo18.jpg" alt="">
+        </div>
+
+        <div class="gallery-slide">
+            <img src="Zoo19.jpg" alt="">
+        </div>
+
+    </div>
+
+    <!-- ARROWS -->
+    <button class="gallery-btn prev-btn" id="prevBtn">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <button class="gallery-btn next-btn" id="nextBtn">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+</div>
+
+<!-- DOTS -->
+<div class="gallery-dots" id="galleryDots"></div>
+
+</section>
+
+<script>
+
+const track = document.getElementById('galleryTrack');
+
+const slides = document.querySelectorAll('.gallery-slide');
+
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+
+const dotsContainer = document.getElementById('galleryDots');
+
+let index = 0;
+
+/* CREATE DOTS */
+slides.forEach((_, i) => {
+
+    const dot = document.createElement('div');
+
+    dot.classList.add('dot');
+
+    if(i === 0){
+        dot.classList.add('active');
+    }
+
+    dot.addEventListener('click', () => {
+        index = i;
+        updateGallery();
+    });
+
+    dotsContainer.appendChild(dot);
+
+});
+
+const dots = document.querySelectorAll('.dot');
+
+function updateGallery(){
+
+    track.style.transform =
+    `translateX(-${index * 100}%)`;
+
+    dots.forEach(dot =>
+        dot.classList.remove('active')
+    );
+
+    dots[index].classList.add('active');
+}
+
+nextBtn.addEventListener('click', () => {
+
+    index++;
+
+    if(index >= slides.length){
+        index = 0;
+    }
+
+    updateGallery();
+
+});
+
+prevBtn.addEventListener('click', () => {
+
+    index--;
+
+    if(index < 0){
+        index = slides.length - 1;
+    }
+
+    updateGallery();
+
+});
+
+/* AUTO SLIDE */
+setInterval(() => {
+
+    index++;
+
+    if(index >= slides.length){
+        index = 0;
+    }
+
+    updateGallery();
+
+}, 6000);
+
+</script>
+
+<script>
+
+document.querySelectorAll('.news-flip-card').forEach(card => {
+
+    const buttons = card.querySelectorAll('.paw-flip-btn');
+
+    buttons.forEach(btn => {
+
+        btn.addEventListener('click', () => {
+
+            card.classList.toggle('flipped');
+
+        });
+
+    });
+
+});
+
+
+const translations = {
+
+    en: {
+        "nav-home": "Home",
+        "nav-adopt": "Adopt",
+        "nav-about": "About",
+        "nav-impact": "Impact",
+        "nav-stories": "Stories",
+        "nav-news": "News",
+        "nav-faq": "FAQ",
+        "nav-zoo": "Zoo Event",
+        "zoo-title": "Community Dog Show at Targu Mureș Zoo",
+        "zoo-subtitle": "A beautiful day of dogs, families and compassion.",
+        "card1-title": "Preparing Prizes",
+        "card1-text": "We helped hand out prizes to participants and supported the local community event.",
+        "card2-title": "Community Awareness",
+        "card2-text": "Visitors had the chance to interact with rescue dogs and learn about adoption & proper care.",
+        "card3-title": "Supporting Rescued Dogs",
+        "card3-text": "Giving rescue dogs love, joy and a moment to shine.",
+        "gallery-title": "Event Gallery",
+        "event-section-title": "Community • Compassion • Celebration",
+        "flip-btn-text": "Flip",
+        "unflip-btn-text": "Back",
+        "flip-btn-text2": "Flip",
+        "unflip-btn-text2": "Back",
+        "flip-btn-text3": "Flip",
+        "unflip-btn-text3": "Back",
+        "nav-news": "News",
+        "donate-btn": "Donate"
+    },
+
+    ro: {
+        "nav-home": "Acasă",
+        "nav-adopt": "Adoptă",
+        "nav-about": "Despre",
+        "nav-impact": "Impact",
+        "nav-stories": "Povești",
+        "nav-news": "Noutăți",
+        "nav-faq": "FAQ",
+        "nav-zoo": "Eveniment Zoo",
+        "zoo-title": "Expoziție Canină Comunitară la Zoo Târgu Mureș",
+        "zoo-subtitle": "O zi frumoasă plină de câini, familii și compasiune.",
+        "card1-title": "Pregătirea Premiilor",
+        "card1-text": "Am ajutat la distribuirea premiilor participanților și am susținut evenimentul comunitar local.",
+        "card2-title": "Conștientizare Comunitară",
+        "card2-text": "Vizitatorii au avut ocazia să interacționeze cu câinii salvați și să afle despre adopție și îngrijire corespunzătoare.",
+        "card3-title": "Susținerea Câinilor Salvați",
+        "card3-text": "Oferind câinilor salvați iubire, bucurie și un moment să strălucească.",
+        "gallery-title": "Galeria Evenimentului",
+        "event-section-title": "Comunitate • Compasiune • Sărbătoare",
+        "flip-btn-text": "Întoarce",
+        "unflip-btn-text": "Înapoi",
+        "flip-btn-text2": "Întoarce",
+        "unflip-btn-text2": "Înapoi",
+        "flip-btn-text3": "Întoarce",
+        "unflip-btn-text3": "Înapoi",
+        "nav-news": "Noutăți",
+        "donate-btn": "Donează"
+    },
+
+    hu: {
+        "nav-home": "Kezdőlap",
+        "nav-adopt": "Örökbefogadás",
+        "nav-about": "Rólunk",
+        "nav-impact": "Hatás",
+        "nav-stories": "Történetek",
+        "nav-news": "Hírek",
+        "nav-faq": "GYIK",
+        "nav-zoo": "Állatkerti Esemény",
+        "zoo-title": "Közösségi Kutyakiállítás a Marosvásárhelyi Állatkertben",
+        "zoo-subtitle": "Egy gyönyörű nap kutyákkal, családokkal és együttérzéssel.",
+        "card1-title": "Díjak Előkészítése",
+        "card1-text": "Segítettünk kiosztani a díjakat a résztvevőknek és támogattuk a helyi közösségi eseményt.",
+        "card2-title": "Közösségi Tudatosság",
+        "card2-text": "A látogatóknak lehetőségük volt találkozni mentett kutyákkal és többet megtudni az örökbefogadásról és a megfelelő gondozásról.",
+        "card3-title": "Mentett Kutyák Támogatása",
+        "card3-text": "Szeretetet, örömöt és egy ragyogó pillanatot adunk a mentett kutyáknak.",
+        "gallery-title": "Eseménygaléria",
+        "event-section-title": "Közösség • Együttérzés • Ünneplés",
+        "flip-btn-text": "Megfordítás",
+        "unflip-btn-text": "Vissza",
+        "flip-btn-text2": "Megfordítás",
+        "unflip-btn-text2": "Vissza",
+        "flip-btn-text3": "Megfordítás",
+        "unflip-btn-text3": "Vissza",
+        "nav-news": "Hírek",
+        "donate-btn": "Adományozás"
+    },
+
+    it: {
+        "nav-home": "Home",
+        "nav-adopt": "Adotta",
+        "nav-about": "Chi Siamo",
+        "nav-impact": "Impatto",
+        "nav-stories": "Storie",
+        "nav-news": "Notizie",
+        "nav-faq": "FAQ",
+        "nav-zoo": "Evento Zoo",
+        "zoo-title": "Mostra Canina Comunitaria allo Zoo di Târgu Mureș",
+        "zoo-subtitle": "Una splendida giornata di cani, famiglie e compassione.",
+        "card1-title": "Preparazione dei Premi",
+        "card1-text": "Abbiamo aiutato a distribuire i premi ai partecipanti e sostenuto l'evento della comunità locale.",
+        "card2-title": "Consapevolezza della Comunità",
+        "card2-text": "I visitatori hanno avuto la possibilità di interagire con i cani salvati e conoscere l'adozione e la cura corretta.",
+        "card3-title": "Sostenere i Cani Salvati",
+        "card3-text": "Dare ai cani salvati amore, gioia e un momento per brillare.",
+        "gallery-title": "Galleria dell'Evento",
+        "event-section-title": "Comunità • Compassione • Celebrazione",
+        "flip-btn-text": "Gira",
+        "unflip-btn-text": "Indietro",
+        "flip-btn-text2": "Gira",
+        "unflip-btn-text2": "Indietro",
+        "flip-btn-text3": "Gira",
+        "unflip-btn-text3": "Indietro",
+        "nav-news": "Notizie",
+        "donate-btn": "Dona"
+    },
+
+    de: {
+        "nav-home": "Startseite",
+        "nav-adopt": "Adoptieren",
+        "nav-about": "Über Uns",
+        "nav-impact": "Einfluss",
+        "nav-stories": "Geschichten",
+        "nav-news": "Neuigkeiten",
+        "nav-faq": "FAQ",
+        "nav-zoo": "Zoo Veranstaltung",
+        "zoo-title": "Gemeinschaftliche Hundeausstellung im Zoo Târgu Mureș",
+        "zoo-subtitle": "Ein wunderschöner Tag voller Hunde, Familien und Mitgefühl.",
+        "card1-title": "Vorbereitung der Preise",
+        "card1-text": "Wir halfen dabei, Preise an die Teilnehmer zu verteilen und unterstützten die lokale Gemeinschaftsveranstaltung.",
+        "card2-title": "Bewusstsein der Gemeinschaft",
+        "card2-text": "Besucher hatten die Möglichkeit, mit geretteten Hunden zu interagieren und mehr über Adoption und richtige Pflege zu erfahren.",
+        "card3-title": "Unterstützung Geretteter Hunde",
+        "card3-text": "Geretteten Hunden Liebe, Freude und einen Moment zum Strahlen schenken.",
+        "gallery-title": "Event Galerie",
+        "event-section-title": "Gemeinschaft • Mitgefühl • Feier",
+        "flip-btn-text": "Drehen",
+        "unflip-btn-text": "Zurück",
+        "flip-btn-text2": "Drehen",
+        "unflip-btn-text2": "Zurück",
+        "flip-btn-text3": "Drehen",
+        "unflip-btn-text3": "Zurück",
+        "nav-news": "Neuigkeiten",
+        "donate-btn": "Spenden"
+    },
+
+    fr: {
+        "nav-home": "Accueil",
+        "nav-adopt": "Adopter",
+        "nav-about": "À Propos",
+        "nav-impact": "Impact",
+        "nav-stories": "Histoires",
+        "nav-news": "Actualités",
+        "nav-faq": "FAQ",
+        "nav-zoo": "Événement Zoo",
+        "zoo-title": "Exposition Canine Communautaire au Zoo de Târgu Mureș",
+        "zoo-subtitle": "Une magnifique journée de chiens, de familles et de compassion.",
+        "card1-title": "Préparation des Récompenses",
+        "card1-text": "Nous avons aidé à distribuer les récompenses aux participants et soutenu l'événement communautaire local.",
+        "card2-title": "Sensibilisation de la Communauté",
+        "card2-text": "Les visiteurs ont eu l'occasion d'interagir avec des chiens sauvés et d'en apprendre davantage sur l'adoption et les soins appropriés.",
+        "card3-title": "Soutenir les Chiens Sauvés",
+        "card3-text": "Donner aux chiens sauvés de l'amour, de la joie et un moment pour briller.",
+        "gallery-title": "Galerie de l'Événement",
+        "event-section-title": "Communauté • Compassion • Célébration",
+        "flip-btn-text": "Retourner",
+        "unflip-btn-text": "Retour",
+        "flip-btn-text2": "Retourner",
+        "unflip-btn-text2": "Retour",
+        "flip-btn-text3": "Retourner",
+        "unflip-btn-text3": "Retour",
+        "nav-news": "Actualités",
+        "donate-btn": "Faire un don"
+    }
+};
+
+/* CHANGE LANGUAGE */
+function changeLanguage(lang) {
+
+    if (!translations[lang]) lang = 'en';
+
+    const flagMap = {
+        en: '🇬🇧',
+        ro: '🇷🇴',
+        hu: '🇭🇺',
+        it: '🇮🇹',
+        de: '🇩🇪',
+        fr: '🇫🇷'
+    };
+
+    const codeMap = {
+        en: 'EN',
+        ro: 'RO',
+        hu: 'HU',
+        it: 'IT',
+        de: 'DE',
+        fr: 'FR'
+    };
+
+    document.getElementById('current-flag').textContent = flagMap[lang];
+    document.getElementById('current-lang').textContent = codeMap[lang];
+
+    Object.keys(translations[lang]).forEach(key => {
+
+        const el = document.getElementById(key);
+
+        if (el) {
+            el.textContent = translations[lang][key];
+        }
+
+    });
+
+    document.documentElement.lang = lang;
+}
+
+/* DROPDOWN */
+let dropdownOpen = false;
+
+function toggleDropdown() {
+
+    const dd = document.getElementById('lang-dropdown');
+    const ch = document.getElementById('chevron');
+
+    dropdownOpen = !dropdownOpen;
+
+    dd.classList.toggle('hidden', !dropdownOpen);
+
+    ch.style.transform =
+        dropdownOpen ? 'rotate(180deg)' : '';
+}
+
+/* BUTTON CLICK */
+document
+.getElementById('lang-btn')
+.addEventListener('click', toggleDropdown);
+
+/* CLOSE WHEN CLICK OUTSIDE */
+document.addEventListener('click', (e) => {
+
+    if (!document.getElementById('lang-btn').contains(e.target)) {
+
+        const dd = document.getElementById('lang-dropdown');
+
+        if (!dd.classList.contains('hidden')) {
+            toggleDropdown();
+        }
+    }
+});
+
+/* DEFAULT LANGUAGE */
+document.addEventListener('DOMContentLoaded', () => {
+    changeLanguage('en');
+});
+
+document.querySelectorAll('.news-flip-card').forEach(card => {
+
+    const video = card.querySelector('video');
+
+    if(video){
+
+        video.addEventListener('ended', () => {
+
+            card.classList.remove('flipped');
+
+        });
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
