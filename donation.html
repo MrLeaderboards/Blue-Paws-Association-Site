@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Donate - Blue Paws Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .accent-gradient {
+            background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+        }
+        .donation-hero {
+            position: relative;
+            height: 65vh;
+            background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), 
+                              url('Blue%20Paws%20Logo.jpeg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-text {
+            text-shadow: 
+                0 0 8px rgba(0,0,0,0.9),
+                -2px -2px 3px rgba(0,0,0,0.85),
+                2px -2px 3px rgba(0,0,0,0.85),
+                -2px 2px 3px rgba(0,0,0,0.85),
+                2px 2px 3px rgba(0,0,0,0.85);
+        }
+        .amount-btn {
+            transition: all 0.2s ease;
+        }
+        .amount-btn.active {
+            background-color: #1e40af;
+            color: white;
+            transform: scale(1.05);
+        }
+
+    .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 54px;
+    height: 54px;
+    font-size: 1rem; 
+    
+
+    border-radius: 9999px;
+    overflow: hidden;
+
+    padding-left: 19.4px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.45s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* expand capsule */
+.social-link:hover {
+    width: 270px;
+}
+
+/* icon */
+.social-link i {
+    font-size: 1.5rem;
+    min-width: 40px;
+}
+
+/* hidden text */
+.social-link span {
+    opacity: 0;
+    margin-left: 20px;
+    white-space: nowrap;
+
+    transform: translateX(-10px);
+    transition: all 0.35s ease;
+
+    font-weight: 600;
+}
+
+/* reveal text */
+.social-link:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* colors */
+.facebook { background: #1877f2; }
+
+.instagram {
+    background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.tiktok { background: #000; }
+
+/* Smooth Floating Paw Animation */
+.blue-paw {
+    color: #2563eb;
+    font-size: 2rem;
+
+    animation: pawFloat 2.4s ease-in-out infinite;
+
+    transition: transform 0.3s ease;
+}
+
+.paw-delay {
+    animation-delay: 1.2s;
+}
+
+@keyframes pawFloat {
+
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.75;
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.12);
+        opacity: 1;
+    }
+}
+
+.hero-fade {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+    animation: heroFadeIn 1.2s ease-out forwards;
+
+        /* 👇 black shadow */
+    text-shadow: 0 8px 25px rgba(0, 0, 0, 1.1);
+}
+
+.hero-fade.delay {
+    animation-delay: 0.4s;
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+        filter: blur(3px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Blue%20Paws%20Logo.jpeg" alt="Blue Paws Association" class="h-10 w-auto">
+                <h1 id="logo-text" class="text-2xl font-bold text-blue-700">Blue Paws Association</h1>
+            </div>
+           
+            <div class="hidden md:flex gap-8 text-lg items-center">
+                <a href="index.html" id="nav-home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#adopt" id="nav-adopt" class="hover:text-blue-600 font-medium">Adopt</a>
+                <a href="about.html" id="nav-about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="impact.html" id="nav-impact" class="hover:text-blue-600 font-medium">Impact</a>
+                <a href="stories.html" id="nav-stories" class="hover:text-blue-600 font-medium">Stories</a>
+                <a href="news.html" id="nav-news" class="hover:text-blue-600 font-medium">News</a>
+                <a href="faq.html" id="nav-faq" class="hover:text-blue-600 font-medium">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button id="lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none">
+                        <span id="current-flag" class="text-2xl">🇬🇧</span>
+                        <span id="current-lang" class="font-medium text-gray-700">EN</span>
+                        <i id="chevron" class="fa-solid fa-chevron-down text-sm text-gray-500 transition-transform"></i>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl py-2 hidden z-50 border border-gray-100">
+<a href="#" onclick="changeLanguage('en'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/gb.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>English</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('ro'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/ro.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Romanian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('hu'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/hu.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Hungarian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('it'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/it.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Italian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('de'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/de.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>German</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('fr'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/fr.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>French</span>
+
+</a>
+                    </div>
+                </div>
+<a href="donation.html" class="accent-gradient hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+
+    <i class="fa-solid fa-heart"></i>
+
+    <span id="donate-btn">Donate</span>
+
+</a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero -->
+<section class="donation-hero text-white">
+
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+
+        <h1 id="donation-title" class="text-5xl md:text-6xl font-bold mb-4 hero-fade"></h1>
+
+        <p id="donation-subtitle" class="text-xl md:text-2xl max-w-3xl mx-auto hero-fade delay"></p>
+
+    </div>
+
+</section>
+
+<!-- Donation Section -->
+<section class="py-24 bg-gray-50">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <!-- Heading -->
+        <div class="text-center mb-20">
+
+            <h1 class="text-4xl md:text-6xl font-bold text-blue-700 mb-6 tracking-tight flex items-center justify-center gap-12">
+
+                <i class="fa-solid fa-paw blue-paw"></i>
+
+                <span id="donation-main-title"></span>
+
+                <i class="fa-solid fa-paw blue-paw paw-delay"></i>
+
+            </h1>
+
+            <div class="w-32 h-1 bg-blue-600 rounded-full mx-auto mt-12 mb-8"></div>
+
+            <p id="donation-main-subtitle"
+               class="text-xl md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            </p>
+
+        </div>
+
+        <!-- Donation Grid -->
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Financial -->
+            <div class="bg-white rounded-3xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition">
+
+                <div class="w-16 h-16 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-hand-holding-heart text-3xl"></i>
+                </div>
+
+                <h2 id="donation-financial-title" class="text-3xl font-bold mb-4 text-gray-800"></h2>
+
+                <p id="donation-financial-desc" class="text-gray-600 leading-relaxed mb-8"></p>
+
+                <div class="space-y-6">
+
+                    <div class="bg-gray-50 rounded-2xl p-5 border border-gray-200">
+                        <p id="iban-ron-label" class="font-semibold text-blue-700 mb-2"></p>
+                        <p class="text-gray-500 bold">RO63UGBI0000412024922RON</p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-2xl p-5 border border-gray-200">
+                        <p id="iban-eur-label" class="font-semibold text-blue-700 mb-2"></p>
+                        <p class="text-gray-500 bold">RO56UGBI0000412024923EUR</p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-2xl p-5 border border-gray-200">
+                        <p id="paypal-label" class="font-semibold text-blue-700 mb-2"></p>
+                        <a href="https://www.paypal.com/ncp/payment/Y3D6PEBDKZQMG"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="font-Nunito font-semibold tracking-wide inline-flex items-center gap-2 px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-500 transition">
+   PayPal
+</a>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-2xl p-5 border border-gray-200">
+                        <p id="payu-label" class="font-semibold text-blue-700 mb-2"></p>
+                        <p class="text-gray-500 italic">Coming soon!</p>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 bg-blue-50 border border-blue-100 rounded-2xl p-5">
+                    <p id="donation-note" class="text-blue-800 leading-relaxed"></p>
+                </div>
+
+            </div>
+
+            <!-- Food -->
+            <div class="bg-white rounded-3xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition">
+
+                <div class="w-16 h-16 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-bowl-food text-3xl"></i>
+                </div>
+
+                <h2 id="food-title" class="text-3xl font-bold mb-4 text-gray-800"></h2>
+
+                <p id="food-desc" class="text-gray-600 leading-relaxed mb-8"></p>
+
+                <div class="space-y-4">
+
+                    <div id="food1" class="bg-gray-50 rounded-2xl p-5 border border-gray-200"></div>
+                    <div id="food2" class="bg-gray-50 rounded-2xl p-5 border border-gray-200"></div>
+                    <div id="food3" class="bg-gray-50 rounded-2xl p-5 border border-gray-200"></div>
+                    <div id="food4" class="bg-gray-50 rounded-2xl p-5 border border-gray-200"></div>
+
+                </div>
+
+                <div class="mt-8 bg-blue-50 border border-blue-100 rounded-2xl p-5">
+
+                    <p id="delivery-label" class="font-semibold text-blue-700 mb-2"></p>
+
+                    <p class="text-gray-500 bold">
+                        Str. Principala 40, Ernei (MS) | 547215 | Județul Mureș
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Supplies -->
+            <div class="bg-white rounded-3xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition">
+
+                <div class="w-16 h-16 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-box-open text-3xl"></i>
+                </div>
+
+                <h2 id="supplies-title" class="text-3xl font-bold mb-4 text-gray-800"></h2>
+
+                <p id="supplies-desc" class="text-gray-600 leading-relaxed mb-8"></p>
+
+                <div class="grid grid-cols-2 gap-4 text-sm">
+
+                    <div id="sup1" class="bg-gray-50 rounded-2xl p-4 border border-gray-200"></div>
+                    <div id="sup2" class="bg-gray-50 rounded-2xl p-4 border border-gray-200"></div>
+                    <div id="sup3" class="bg-gray-50 rounded-2xl p-4 border border-gray-200"></div>
+                    <div id="sup4" class="bg-gray-50 rounded-2xl p-4 border border-gray-200"></div>
+                    <div id="sup5" class="bg-gray-50 rounded-2xl p-4 border border-gray-200"></div>
+                    <div id="sup6" class="bg-gray-50 rounded-2xl p-4 border border-gray-200"></div>
+                    <div id="sup7" class="bg-gray-50 rounded-2xl p-4 border border-gray-200"></div>
+                    <div id="sup8" class="bg-gray-50 rounded-2xl p-4 border border-gray-200"></div>
+                    <div id="sup9" class="bg-gray-50 rounded-2xl p-4 border border-gray-200"></div>
+                    <div id="sup10" class="bg-gray-50 rounded-2xl p-4 border border-gray-200"></div>
+
+                </div>
+
+                <div class="mt-8 bg-blue-50 border border-blue-100 rounded-2xl p-5">
+
+                    <p id="delivery-label-2" class="font-semibold text-blue-700 mb-2"></p>
+
+                    <p class="text-gray-500 bold">
+                        Str. Principala 40, Ernei (MS) | 547215 | Județul Mureș
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Closing -->
+        <div class="mt-20 text-center">
+
+            <div class="max-w-4xl mx-auto bg-blue-700 text-white rounded-3xl p-10 shadow-2xl">
+
+<h2 class="text-3xl font-bold mb-6 flex items-center justify-center gap-4">
+
+    <i class="fa-solid fa-paw text-white animate-pulse"></i>
+
+    <span id="thanks-title"></span>
+
+    <i class="fa-solid fa-paw text-white animate-pulse"></i>
+
+</h2>
+
+<p class="text-xl leading-relaxed text-blue-100 flex items-center justify-center gap-3">
+
+    <i class="fa-solid fa-paw text-white text-sm opacity-70 animate-pulse"></i>
+
+    <span id="thanks-text"></span>
+
+    <i class="fa-solid fa-paw text-white text-sm opacity-70 animate-pulse"></i>
+
+</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <h2 id="impact-title" class="text-4xl font-bold mb-12"></h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="bg-white p-8 rounded-3xl">
+                <div class="text-5xl mb-4">🩺</div>
+                <h3 id="impact1" class="font-semibold text-xl"></h3>
+                <p id="impact1-desc" class="text-gray-600 mt-3"></p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl">
+                <div class="text-5xl mb-4">🍖</div>
+                <h3 id="impact2" class="font-semibold text-xl"></h3>
+                <p id="impact2-desc" class="text-gray-600 mt-3"></p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl">
+                <div class="text-5xl mb-4">🏡</div>
+                <h3 id="impact3" class="font-semibold text-xl"></h3>
+                <p id="impact3-desc" class="text-gray-600 mt-3"></p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <img src="Blue%20Paws%20Logo.jpeg"
+     alt="Blue Paws Association"
+     class="h-16 w-16 object-cover rounded-full border border-white/10 shadow-md transition-all duration-300 hover:scale-105">
+                        <h2 id="footer-logo" class="text-3xl font-bold">Blue Paws Association</h2>
+                    </div>
+                    <p id="footer-slogan" class="text-lg">Saving one dog at a time.</p>
+                </div>
+                <div>
+                    <h3 id="contact-title" class="text-xl font-semibold mb-6 text-white">Contact Us</h3>
+                    <div class="space-y-3">
+                        <p><i class="fa-solid fa-location-dot"></i> Ernei-Mureș, Romania</p>
+                        <p><i class="fa-solid fa-phone"></i> +40 759 031 793</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact@pawsblue.org</p>
+                    </div>
+                </div>
+<div>
+<h3 id="footer-follow-us" class="text-xl font-semibold mb-6 text-white"></h3>
+
+<div class="flex flex-col gap-4">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/people/Blue-Paws/61562938898795/?sk=about"
+       target="_blank"
+       class="social-link facebook">
+
+        <i class="fa-brands fa-facebook-f"></i>
+        <span id="footer-facebook"></span>
+
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/bluepawsmax/"
+       target="_blank"
+       class="social-link instagram">
+
+        <i class="fa-brands fa-instagram"></i>
+        <span id="footer-instagram"></span>
+
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://tiktok.com"
+       target="_blank"
+       class="social-link tiktok">
+
+        <i class="fa-brands fa-tiktok"></i>
+        <span id="footer-tiktok"></span>
+
+    </a>
+
+</div>
+</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("lo6t5O7GTNxTHgV95");
+
+        let selectedAmount = 50;
+
+        function selectAmount(amount) {
+            selectedAmount = amount;
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.toggle('active', parseInt(btn.textContent) === amount);
+            });
+            document.getElementById('custom-amount').value = '';
+        }
+
+        function processDonation() {
+            const custom = parseFloat(document.getElementById('custom-amount').value);
+            const amount = custom || selectedAmount;
+            if (amount > 0) {
+                alert(`Thank you! Your donation of €${amount} has been received.`);
+                document.getElementById('custom-amount').value = '';
+            } else {
+                alert("Please select or enter a donation amount.");
+            }
+        }
+
+const translations = {
+    en: {
+        "page-title": "Donate - Blue Paws Association",
+        "logo-text": "Blue Paws Association",
+        "nav-home": "Home",
+        "nav-adopt": "Adopt",
+        "nav-about": "About",
+        "nav-impact": "Impact",
+        "nav-stories": "Stories",
+        "nav-news": "News",
+        "nav-faq": "FAQ",
+        "donation-title": "Help us make a difference",
+        "donation-subtitle": "For these voiceless souls",
+        "select-amount": "Select Donation Amount",
+        "custom-amount-label": "Or enter custom amount (€)",
+        "donate-now": "Donate Now",
+        "secure-note": "🔒 Secure donation • Tax deductible in Romania",
+        "impact-title": "Your Donation Helps",
+        "impact1": "Medical Care",
+        "impact1-desc": "Vaccinations, sterilization, and emergency treatments",
+        "impact2": "Food & Shelter",
+        "impact2-desc": "Daily nutrition and safe housing",
+        "impact3": "Forever Homes",
+        "impact3-desc": "Adoption drives and transport",
+        "contact-title": "Contact Us",
+        "message-title": "Send us a message",
+        "name-placeholder": "Your Name",
+        "email-placeholder": "Email Address",
+        "message-placeholder": "How can we help you?",
+        "footer-follow-us": "Follow Us",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "impact-title": "Your Donation Helps",
+        "impact1": "Medical Care",
+        "impact1-desc": "Vaccinations, sterilization, and emergency treatments",
+        "impact2": "Food & Shelter",
+        "impact2-desc": "Daily nutrition and safe housing",
+        "impact3": "Forever Homes",
+        "impact3-desc": "Adoption drives and transport",
+        "donation-title": "Blue Paws Donations",
+        "donation-subtitle": "Every contribution helps us rescue, treat and protect animals in need.",
+        "donation-main-title": "Together we change their fate",
+        "donation-main-subtitle": "Hope starts with us",
+        "donation-financial-title": "Financial Donations",
+        "donation-financial-desc": "Support us directly. Every penny counts.",
+        "iban-ron-label": "IBAN (RON)",
+        "iban-eur-label": "IBAN (EUR)",
+        "paypal-label": "PayPal",
+        "payu-label": "PayU (Coming soon)",
+        "donation-note": "Donations can be one-time or recurring. There is no minimum or maximum contribution.",
+        "food-title": "Food Donations",
+        "food-desc": "Help us feed the dogs. We always need food suitable for puppies, adults and medical cases.",
+        "food1": "Dry dog food",
+        "food2": "Wet food",
+        "food3": "Special dietary food",
+        "food4": "Recovery food",
+        "delivery-label": "Delivery Address",
+        "supplies-title": "Dog Supplies & Essentials",
+        "supplies-desc": "Comfort and care materials. These items help dogs recover and live in better conditions.",
+        "sup1": "Blankets",
+        "sup2": "Towels",
+        "sup3": "Dog Beds",
+        "sup4": "Leashes",
+        "sup5": "Collars",
+        "sup6": "Harnesses",
+        "sup7": "Cleaning Supplies",
+        "sup8": "Safe Toys",
+        "sup9": "Transport Crates",
+        "sup10": "Cleaning Pads",
+        "delivery-label-2": "Delivery Address",
+        "thanks-title": "Thank You For Supporting Blue Paws",
+        "thanks-text": "Every donation becomes direct care, protection and a second chance at life.",
+        "footer-logo": "Blue Paws Association",
+        "donate-btn": "Donate",
+        "footer-slogan": "Standing Between Them and Suffering"
+    },
+
+    ro: {
+        "page-title": "Donează - Asociația Blue Paws",
+        "logo-text": "Asociația Blue Paws",
+        "nav-home": "Acasă",
+        "nav-adopt": "Adoptă",
+        "nav-about": "Despre Noi",
+        "nav-impact": "Impact",
+        "nav-stories": "Povești",
+        "nav-news": "Știri",
+        "nav-faq": "Întrebări Frecvente",
+        "donation-main-title": "Împreună le schimbăm destinul",
+        "donation-main-subtitle": "Speranța începe cu noi",
+        "select-amount": "Selectează suma donației",
+        "custom-amount-label": "Sau introdu o sumă personalizată (€)",
+        "donate-now": "Donează acum",
+        "secure-note": "🔒 Donație securizată • Deductibil fiscal în România",
+        "impact-title": "Donația ta ajută",
+        "impact1": "Îngrijire medicală",
+        "impact1-desc": "Vaccinări, sterilizare și tratamente de urgență",
+        "impact2": "Hrană & adăpost",
+        "impact2-desc": "Nutriție zilnică și adăpost sigur",
+        "impact3": "Căminuri permanente",
+        "impact3-desc": "Campanii de adopție și transport",
+        "contact-title": "Contactează-ne",
+        "message-title": "Trimite-ne un mesaj",
+        "name-placeholder": "Numele tău",
+        "email-placeholder": "Adresa de email",
+        "message-placeholder": "Cum te putem ajuta?",
+        "footer-follow-us": "Urmărește-ne",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "impact-title": "Sprijinul tău salvează vieți",
+        "impact1": "Îngrijire medicală",
+        "impact1-desc": "Vaccinări, sterilizări și tratamente de urgență",
+        "impact2": "Hrană și adăpost",
+        "impact2-desc": "Nutriție zilnică și adăpost sigur",
+        "impact3": "Căminuri pentru totdeauna",
+        "impact3-desc": "Campanii de adopție și transport",
+        "donation-title": "Donații Blue Paws",
+        "donation-subtitle": "Fiecare contribuție ne ajută să salvăm, să tratăm și să protejăm animalele aflate în nevoie.",
+        "donation-financial-title": "Donații financiare",
+        "donation-financial-desc": "Ne poți susține direct. Fiecare leu contează.",
+        "iban-ron-label": "IBAN (RON)",
+        "iban-eur-label": "IBAN (EUR)",
+        "paypal-label": "PayPal",
+        "payu-label": "PayU (În curând!)",
+        "donation-note": "Donațiile pot fi unice sau recurente. Nu există sumă minimă sau maximă.",
+        "food-title": "Donații de hrană",
+        "food-desc": "Ajută-ne să hrănim câinii. Avem mereu nevoie de hrană pentru pui, adulți și cazuri medicale.",
+        "food1": "Hrană uscată pentru câini",
+        "food2": "Hrană umedă",
+        "food3": "Hrană dietetică specială",
+        "food4": "Hrană pentru recuperare",
+        "delivery-label": "Adresă de livrare",
+        "supplies-title": "Accesorii și produse esențiale",
+        "supplies-desc": "Materiale pentru confort și îngrijire. Ajută câinii să se recupereze și să trăiască în condiții mai bune.",
+        "sup1": "Pături",
+        "sup2": "Prosoape",
+        "sup3": "Paturi pentru câini",
+        "sup4": "Lesă",
+        "sup5": "Zgărzi",
+        "sup6": "Hamuri",
+        "sup7": "Produse de curățenie",
+        "sup8": "Jucării sigure",
+        "sup9": "Cuști de transport",
+        "sup10": "Absorbante igienice",
+        "delivery-label-2": "Adresă de livrare",
+        "thanks-title": "Îți mulțumim pentru sprijinul acordat Blue Paws",
+        "thanks-text": "Fiecare donație înseamnă îngrijire directă, protecție și o a doua șansă la viață.",
+        "footer-logo": "Asociația Blue Paws",
+        "donate-btn": "Donează",
+        "footer-slogan": "Stăm între ei și suferință"
+    },
+
+    hu: {
+        "page-title": "Adományozás - Blue Paws Egyesület",
+        "logo-text": "Blue Paws Egyesület",
+        "nav-home": "Kezdőlap",
+        "nav-adopt": "Örökbefogadás",
+        "nav-about": "Rólunk",
+        "nav-impact": "Hatásunk",
+        "nav-stories": "Sikertörténetek",
+        "nav-news": "Hírek",
+        "nav-faq": "GYIK",
+        "donation-main-title": "Együtt megváltoztatjuk a sorsukat",
+        "donation-main-subtitle": "A remény velünk kezdődik",
+        "select-amount": "Adomány összegének kiválasztása",
+        "custom-amount-label": "Vagy adj meg egyedi összeget (€)",
+        "donate-now": "Adományozás most",
+        "secure-note": "🔒 Biztonságos adományozás • Romániában adólevonható",
+        "impact-title": "Adományod segít",
+        "impact1": "Orvosi ellátás",
+        "impact1-desc": "Oltások, ivartalanítás és sürgősségi kezelések",
+        "impact2": "Élelem és menedék",
+        "impact2-desc": "Napi étkezés és biztonságos elhelyezés",
+        "impact3": "Örök otthonok",
+        "impact3-desc": "Örökbefogadási programok és szállítás",
+        "contact-title": "Kapcsolat",
+        "message-title": "Küldj nekünk üzenetet",
+        "name-placeholder": "Neved",
+        "email-placeholder": "Email címed",
+        "message-placeholder": "Miben segíthetünk?",
+        "impact-title": "A támogatásod életet ment",
+        "impact1": "Orvosi ellátás",
+        "impact1-desc": "Oltások, ivartalanítás és sürgősségi kezelések",
+        "impact2": "Élelem és menedék",
+        "impact2-desc": "Napi étkeztetés és biztonságos elhelyezés",
+        "impact3": "Végleges otthonok",
+        "impact3-desc": "Örökbefogadási kampányok és szállítás",
+        "footer-follow-us": "Kövess minket",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "donation-title": "Blue Paws adományok",
+        "donation-subtitle": "Minden hozzájárulás segít az állatok megmentésében, kezelésében és védelmében.",
+        "donation-financial-title": "Pénzbeli adományok",
+        "donation-financial-desc": "Közvetlenül támogathatsz minket. Minden forint számít.",
+        "iban-ron-label": "IBAN (RON)",
+        "iban-eur-label": "IBAN (EUR)",
+        "paypal-label": "PayPal",
+        "payu-label": "PayU",
+        "donation-note": "Az adomány lehet egyszeri vagy rendszeres. Nincs minimum vagy maximum összeg.",
+        "food-title": "Élelmiszer adományok",
+        "food-desc": "Segíts etetni a kutyákat. Mindig szükség van kölyök-, felnőtt- és speciális tápokra.",
+        "food1": "Száraz kutyatáp",
+        "food2": "Nedves eledel",
+        "food3": "Speciális diétás eledel",
+        "food4": "Rehabilitációs eledel",
+        "delivery-label": "Szállítási cím",
+        "supplies-title": "Kutyafelszerelések és eszközök",
+        "supplies-desc": "Kényelmi és gondozási eszközök, amelyek segítik a gyógyulást és a jobb életkörülményeket.",
+        "sup1": "Takarók",
+        "sup2": "Törölközők",
+        "sup3": "Kutyafekhelyek",
+        "sup4": "Pórázok",
+        "sup5": "Nyakörvek",
+        "sup6": "Hámok",
+        "sup7": "Tisztítószerek",
+        "sup8": "Biztonságos játékok",
+        "sup9": "Szállítóboxok",
+        "sup10": "Alátétek",
+        "delivery-label-2": "Szállítási cím",
+        "thanks-title": "Köszönjük, hogy támogatod a Blue Paws-t",
+        "thanks-text": "Minden adomány közvetlen gondoskodást, védelmet és egy második esélyt jelent.",
+        "footer-logo": "Blue Paws Egyesület",
+        "donate-btn": "Adományozás",
+        "footer-slogan": "Ott állunk köztük és a szenvedés között"
+    },
+
+    it: {
+        "page-title": "Donazioni - Associazione Blue Paws",
+        "logo-text": "Associazione Blue Paws",
+        "nav-home": "Home",
+        "nav-adopt": "Adotta",
+        "nav-about": "Chi Siamo",
+        "nav-impact": "Il Nostro Impatto",
+        "nav-stories": "Storie",
+        "nav-news": "Notizie",
+        "nav-faq": "FAQ",
+        "donation-main-title": "Insieme cambiamo il loro destino",
+        "donation-main-subtitle": "La speranza inizia con noi",
+        "select-amount": "Seleziona importo della donazione",
+        "custom-amount-label": "Oppure inserisci un importo personalizzato (€)",
+        "donate-now": "Dona ora",
+        "secure-note": "🔒 Donazione sicura • Detraibile fiscalmente in Romania",
+        "impact-title": "La tua donazione aiuta",
+        "impact1": "Cure mediche",
+        "impact1-desc": "Vaccinazioni, sterilizzazione e trattamenti d’emergenza",
+        "impact2": "Cibo e rifugio",
+        "impact2-desc": "Nutrizione quotidiana e alloggio sicuro",
+        "impact3": "Case per sempre",
+        "impact3-desc": "Adozioni e trasporto",
+        "contact-title": "Contattaci",
+        "message-title": "Inviaci un messaggio",
+        "name-placeholder": "Il tuo nome",
+        "email-placeholder": "Indirizzo email",
+        "message-placeholder": "Come possiamo aiutarti?",
+        "footer-follow-us": "Seguici",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "donation-title": "Donazioni Blue Paws",
+        "donation-subtitle": "Ogni contributo ci aiuta a salvare, curare e proteggere gli animali in difficoltà.",
+        "donation-financial-title": "Donazioni finanziarie",
+        "donation-financial-desc": "Puoi sostenerci direttamente. Ogni centesimo conta.",
+        "iban-ron-label": "IBAN (RON)",
+        "iban-eur-label": "IBAN (EUR)",
+        "paypal-label": "PayPal",
+        "payu-label": "PayU",
+        "donation-note": "Le donazioni possono essere una tantum o ricorrenti. Nessun importo minimo o massimo.",
+        "food-title": "Donazioni di cibo",
+        "food-desc": "Aiutaci a nutrire i cani. Servono sempre alimenti per cuccioli, adulti e casi medici.",
+        "food1": "Cibo secco per cani",
+        "food2": "Cibo umido",
+        "food3": "Dieta speciale",
+        "food4": "Cibo per recupero",
+        "delivery-label": "Indirizzo di consegna",
+        "supplies-title": "Accessori e beni essenziali",
+        "supplies-desc": "Materiali per il comfort e la cura che aiutano i cani a recuperare e vivere meglio.",
+        "sup1": "Coperte",
+        "sup2": "Asciugamani",
+        "sup3": "Cucce",
+        "sup4": "Guinzagli",
+        "sup5": "Collari",
+        "sup6": "Pettorine",
+        "sup7": "Prodotti per la pulizia",
+        "sup8": "Giochi sicuri",
+        "sup9": "Trasportini",
+        "sup10": "Tappetini assorbenti",
+        "delivery-label-2": "Indirizzo di consegna",
+        "thanks-title": "Grazie per sostenere Blue Paws",
+        "thanks-text": "Ogni donazione diventa cure dirette, protezione e una seconda possibilità di vita.",
+        "impact-title": "Il tuo aiuto fa la differenza",
+        "impact1": "Cure mediche",
+        "impact1-desc": "Vaccinazioni, sterilizzazioni e trattamenti d’emergenza",
+        "impact2": "Cibo e rifugio",
+        "impact2-desc": "Nutrizione quotidiana e alloggi sicuri",
+        "impact3": "Case per sempre",
+        "impact3-desc": "Campagne di adozione e trasporto",
+        "footer-logo": "Associazione Blue Paws",
+        "donate-btn": "Dona",
+        "footer-slogan": "Siamo il baluardo tra loro e la sofferenza"
+    },
+
+    de: {
+        "page-title": "Spenden - Blue Paws Verein",
+        "logo-text": "Blue Paws Verein",
+        "nav-home": "Start",
+        "nav-adopt": "Adoptieren",
+        "nav-about": "Über uns",
+        "nav-impact": "Unser Impact",
+        "nav-stories": "Erfolgsgeschichten",
+        "nav-news": "Nachrichten",
+        "nav-faq": "FAQ",
+        "donation-main-title": "Gemeinsam verändern wir ihr Schicksal",
+        "donation-main-subtitle": "Die Hoffnung beginnt mit uns",
+        "select-amount": "Spendenbetrag wählen",
+        "custom-amount-label": "Oder eigenen Betrag eingeben (€)",
+        "donate-now": "Jetzt spenden",
+        "secure-note": "🔒 Sichere Spende • In Rumänien steuerlich absetzbar",
+        "impact-title": "Deine Spende hilft",
+        "impact1": "Medizinische Versorgung",
+        "impact1-desc": "Impfungen, Kastration und Notfallbehandlungen",
+        "impact2": "Futter & Unterkunft",
+        "impact2-desc": "Tägliche Ernährung und sichere Unterbringung",
+        "impact3": "Für-immer-Zuhause",
+        "impact3-desc": "Adoptionsprogramme und Transport",
+        "contact-title": "Kontakt",
+        "message-title": "Schick uns eine Nachricht",
+        "name-placeholder": "Dein Name",
+        "email-placeholder": "E-Mail-Adresse",
+        "message-placeholder": "Wie können wir dir helfen?",
+        "impact-title": "Deine Spende hilft",
+        "impact1": "Medizinische Versorgung",
+        "impact1-desc": "Impfungen, Kastrationen und Notfallbehandlungen",
+        "impact2": "Futter & Unterkunft",
+        "impact2-desc": "Tägliche Ernährung und sichere Unterbringung",
+        "impact3": "Für-immer-Zuhause",
+        "impact3-desc": "Adoptionsaktionen und Transport",
+        "footer-follow-us": "Folge uns",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "donation-title": "Blue Paws Spenden",
+        "donation-subtitle": "Jeder Beitrag hilft uns, Tiere zu retten, zu behandeln und zu schützen.",
+        "donation-financial-title": "Geldspenden",
+        "donation-financial-desc": "Du kannst uns direkt unterstützen. Jeder Cent zählt.",
+        "iban-ron-label": "IBAN (RON)",
+        "iban-eur-label": "IBAN (EUR)",
+        "paypal-label": "PayPal",
+        "payu-label": "PayU",
+        "donation-note": "Spenden können einmalig oder regelmäßig erfolgen. Kein Mindest- oder Höchstbetrag.",
+        "food-title": "Futterspenden",
+        "food-desc": "Hilf uns, die Hunde zu füttern. Wir benötigen ständig Futter für Welpen, Erwachsene und medizinische Fälle.",
+        "food1": "Trockenfutter",
+        "food2": "Nassfutter",
+        "food3": "Spezialdiät-Futter",
+        "food4": "Aufbaufutter",
+        "delivery-label": "Lieferadresse",
+        "supplies-title": "Hundezubehör & Grundbedarf",
+        "supplies-desc": "Materialien für Komfort und Pflege, die den Hunden helfen, sich zu erholen und besser zu leben.",
+        "sup1": "Decken",
+        "sup2": "Handtücher",
+        "sup3": "Hundebetten",
+        "sup4": "Leinen",
+        "sup5": "Halsbänder",
+        "sup6": "Geschirre",
+        "sup7": "Reinigungsmittel",
+        "sup8": "Sicheres Spielzeug",
+        "sup9": "Transportboxen",
+        "sup10": "Unterlagen",
+        "delivery-label-2": "Lieferadresse",
+        "thanks-title": "Danke für deine Unterstützung von Blue Paws",
+        "thanks-text": "Jede Spende bedeutet direkte Pflege, Schutz und eine zweite Chance im Leben.",
+        "footer-logo": "Blue Paws Verein",
+        "donate-btn": "Spenden",
+        "footer-slogan": "Wir stehen zwischen ihnen und dem Leid"
+    },
+
+    fr: {
+        "page-title": "Faire un don - Association Blue Paws",
+        "logo-text": "Association Blue Paws",
+        "nav-home": "Accueil",
+        "nav-adopt": "Adopter",
+        "nav-about": "À Propos",
+        "nav-impact": "Notre Impact",
+        "nav-stories": "Histoires",
+        "nav-news": "Actualités",
+        "nav-faq": "FAQ",
+        "donation-main-title": "Ensemble, nous changeons leur destin",
+        "donation-main-subtitle": "L’espoir commence avec nous",
+        "select-amount": "Choisir le montant du don",
+        "custom-amount-label": "Ou entrer un montant personnalisé (€)",
+        "donate-now": "Faire un don",
+        "secure-note": "🔒 Don sécurisé • Déductible fiscalement en Roumanie",
+        "impact-title": "Votre don aide",
+        "impact1": "Soins médicaux",
+        "impact1-desc": "Vaccins, stérilisation et soins d’urgence",
+        "impact2": "Nourriture & refuge",
+        "impact2-desc": "Nutrition quotidienne et hébergement sûr",
+        "impact3": "Foyers pour toujours",
+        "impact3-desc": "Adoptions et transport",
+        "contact-title": "Contactez-nous",
+        "message-title": "Envoyez-nous un message",
+        "name-placeholder": "Votre Nom",
+        "email-placeholder": "Adresse Email",
+        "message-placeholder": "Comment pouvons-nous vous aider?",
+        "footer-follow-us": "Suivez-nous",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "donation-title": "Dons Blue Paws",
+        "donation-subtitle": "Chaque contribution nous aide à sauver, soigner et protéger les animaux dans le besoin.",
+        "donation-financial-title": "Dons financiers",
+        "donation-financial-desc": "Soutenez-nous directement. Chaque centime compte.",
+        "iban-ron-label": "IBAN (RON)",
+        "iban-eur-label": "IBAN (EUR)",
+        "paypal-label": "PayPal",
+        "payu-label": "PayU",
+        "donation-note": "Les dons peuvent être uniques ou récurrents. Aucun montant minimum ou maximum.",
+        "food-title": "Dons de nourriture",
+        "food-desc": "Aidez-nous à nourrir les chiens. Nous avons constamment besoin de nourriture pour chiots, adultes et cas médicaux.",
+        "food1": "Croquettes",
+        "food2": "Pâtée",
+        "food3": "Alimentation spéciale",
+        "food4": "Nourriture de récupération",
+        "delivery-label": "Adresse de livraison",
+        "supplies-title": "Équipements et essentiels pour chiens",
+        "supplies-desc": "Matériel de confort et de soin pour aider les chiens à se rétablir et vivre mieux.",
+        "sup1": "Couvertures",
+        "sup2": "Serviettes",
+        "sup3": "Lits pour chiens",
+        "sup4": "Laisses",
+        "sup5": "Colliers",
+        "sup6": "Harnais",
+        "sup7": "Produits de nettoyage",
+        "sup8": "Jouets sûrs",
+        "sup9": "Caisses de transport",
+        "sup10": "Alèses",
+        "delivery-label-2": "Adresse de livraison",
+        "thanks-title": "Merci de soutenir Blue Paws",
+        "thanks-text": "Chaque don devient des soins directs, de la protection et une seconde chance de vie.",
+        "impact-title": "Votre don fait la différence",
+        "impact1": "Soins médicaux",
+        "impact1-desc": "Vaccinations, stérilisations et soins d’urgence",
+        "impact2": "Nourriture & abri",
+        "impact2-desc": "Nutrition quotidienne et logement sécurisé",
+        "impact3": "Foyers pour toujours",
+        "impact3-desc": "Campagnes d’adoption et transport",
+        "footer-logo": "Association Blue Paws",
+        "donate-btn": "Faire un don",
+        "footer-slogan": "Nous nous dressons entre eux et la souffrance"
+    }
+};
+
+        function changeLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+
+            const flagMap = { en: '🇬🇧', ro: '🇷🇴', hu: '🇭🇺', it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷' };
+            const codeMap = { en: 'EN', ro: 'RO', hu: 'HU', it: 'IT', de: 'DE', fr: 'FR' };
+
+            document.getElementById('current-flag').textContent = flagMap[lang];
+            document.getElementById('current-lang').textContent = codeMap[lang];
+
+            Object.keys(translations[lang]).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            document.getElementById('page-title').textContent = translations[lang]["page-title"];
+            document.documentElement.lang = lang;
+        }
+
+        // Amount Buttons
+        function createAmountButtons() {
+            const amounts = [1, 5, 10, 25, 50];
+            const container = document.getElementById('amount-buttons');
+            container.innerHTML = amounts.map(am => `
+                <button onclick="selectAmount(${am})" class="amount-btn px-6 py-5 bg-white border-2 border-gray-200 rounded-2xl font-semibold text-2xl hover:border-blue-500">
+                    €${am}
+                </button>
+            `).join('');
+            selectAmount(1);
+        }
+
+        function selectAmount(amount) {
+            selectedAmount = amount;
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.toggle('active', parseInt(btn.textContent.replace('€','')) === amount);
+            });
+        }
+
+        function processDonation() {
+            const custom = parseFloat(document.getElementById('custom-amount').value);
+            const amount = custom || selectedAmount;
+            if (amount > 0) {
+                alert(`Thank you! Your donation of €${amount} has been received.`);
+                document.getElementById('custom-amount').value = '';
+            } else {
+                alert("Please select or enter a donation amount.");
+            }
+        }
+
+        let dropdownOpen = false;
+        function toggleDropdown() {
+            const dd = document.getElementById('lang-dropdown');
+            const ch = document.getElementById('chevron');
+            dropdownOpen = !dropdownOpen;
+            dd.classList.toggle('hidden', !dropdownOpen);
+            ch.style.transform = dropdownOpen ? 'rotate(180deg)' : '';
+        }
+
+        document.getElementById('lang-btn').addEventListener('click', toggleDropdown);
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('lang-btn').contains(e.target)) {
+                const dd = document.getElementById('lang-dropdown');
+                if (!dd.classList.contains('hidden')) toggleDropdown();
+            }
+        });
+
+        window.onload = () => {
+            changeLanguage('en');
+            createAmountButtons();
+        };
+    </script>
+</body>
+</html>
