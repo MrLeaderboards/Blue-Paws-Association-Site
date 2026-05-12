@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Blue Paws Association | Give a Dog a Forever Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+
+/* Modern Adoption Title */
+.modern-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    position: relative;
+    display: inline-block;
+
+    line-height: 1.2;
+    padding: 6px 0;
+
+    color: #2563eb !important;
+
+    text-shadow: 0 0 20px rgba(37, 99, 235, 0.15);
+
+    animation: fadeFloat 2.5s ease forwards;
+    transition: transform 0.4s ease;
+}
+
+.modern-title:hover {
+    transform: scale(1.03);
+}
+
+/* Paw Icons */
+.paw-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Paw Style */
+.paw {
+    position: relative;
+
+    color: #3b82f6;
+
+    font-size: 2rem;
+
+animation: floatPaw 4s ease-in-out infinite;
+}
+
+/* Ring Effect */
+.paw::after {
+    content: '';
+
+    position: absolute;
+    inset: -10px;
+
+    border: 2px solid rgba(59,130,246,0.35);
+
+    border-radius: 9999px;
+
+    animation: ringPulse 3s ease-out infinite;
+}
+
+/* Slow Floating Entrance */
+@keyframes fadeFloat {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating Paw Motion */
+@keyframes floatPaw {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Ring Pulse */
+@keyframes ringPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+/* Subtitle */
+.modern-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+
+    animation: fadeFloat 3s ease forwards;
+}
+
+/* Elegant Fade Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        html, body { overflow-x: hidden; }
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: opacity 1.8s ease-in-out;
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+        }
+        .dog-card {
+            transition: all 0.4s ease;
+        }
+        .dog-card:hover {
+            transform: translateY(-12px);
+        }
+
+        /* Flip Card Effect */
+.flip-card {
+    perspective: 1200px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background: white;
+}
+
+.flip-card-back {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.95),
+            rgba(219,234,254,0.92),
+            rgba(191,219,254,0.88)
+        );
+
+    color: #1e3a8a;
+
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+}
+
+/* Logo Watermark */
+.flip-card-back::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image: url("Blue%20Paws%20Logo.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65%;
+
+    opacity: 0.08;
+
+    z-index: 0;
+}
+
+/* Soft gradient glow */
+.flip-card-back::after {
+    content: "";
+
+    position: absolute;
+    width: 350px;
+    height: 350px;
+
+    background: radial-gradient(
+        circle,
+        rgba(59,130,246,0.18),
+        transparent 70%
+    );
+
+    top: -120px;
+    right: -120px;
+
+    z-index: 0;
+}
+
+/* Keep content above overlays */
+.flip-card-back > * {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes heroZoomFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* DOG CARD TYPOGRAPHY */
+.flip-card-back h3 {
+    font-family: 'Nunito', sans-serif;
+
+    font-size: 2.5rem;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    line-height: 1;
+
+    color: #1d4ed8;
+
+    text-shadow:
+        0 4px 12px rgba(37,99,235,0.18);
+
+    margin-bottom: 1rem;
+}
+
+/* breed + age */
+.flip-card-back p {
+    font-family: 'Nunito', sans-serif;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    color: #1e3a8a;
+
+    line-height: 1.7;
+}
+
+/* ready for home text */
+.flip-card-back p:last-of-type {
+    font-weight: 800;
+
+    color: #2563eb;
+
+    opacity: 0.95;
+}
+
+/* Card Button */
+.flip-card-back a {
+    font-family: 'Nunito', sans-serif;
+
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+
+    font-size: 1rem;
+}
+
+/* HERO TITLE */
+#hero-title {
+    opacity: 0;
+    animation: heroZoomFade 1.4s ease-out forwards;
+}
+
+/* HERO SUBTITLE */
+#hero-subtitle {
+    opacity: 0;
+    animation: heroZoomFade 1.4s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes heroButtonPop {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* First button */
+#hero-dogs-btn {
+    opacity: 0;
+    animation: heroButtonPop 0.8s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+/* Second button */
+#hero-involved-btn {
+    opacity: 0;
+    animation: heroButtonPop 0.8s ease-out forwards;
+    animation-delay: 1.0s;
+}
+
+.paw-button {
+    opacity: 0;
+    animation: heroButtonPop 0.8s ease-out forwards;
+    animation-delay: 0.8s;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+
+    position: relative;
+    top: 3px;
+
+    background: #2563eb;
+    color: white;
+
+    height: 56px;
+    width: 56px;
+
+    padding: 0 18px;
+    border-radius: 9999px;
+
+    overflow: hidden;
+    text-decoration: none;
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0px;
+
+    transition:
+        width 0.45s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* paw icon (THIS is the white fix) */
+.paw-icon i {
+    font-size: 18px;
+    color: white;
+}
+
+/* hidden text */
+.paw-text {
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.paw-button {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* hover expand */
+.paw-button:hover {
+    width: 190px;
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* reveal text */
+.paw-button:hover .paw-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* little pop animation */
+.paw-button:hover .paw-icon i {
+    transform: scale(1.15) rotate(-10deg);
+    transition: transform 0.3s ease;
+}
+
+    .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 54px;
+    height: 54px;
+    font-size: 1rem; 
+    
+
+    border-radius: 9999px;
+    overflow: hidden;
+
+    padding-left: 19.4px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.45s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* expand capsule */
+.social-link:hover {
+    width: 270px;
+}
+
+/* icon */
+.social-link i {
+    font-size: 1.5rem;
+    min-width: 40px;
+}
+
+/* hidden text */
+.social-link span {
+    opacity: 0;
+    margin-left: 20px;
+    white-space: nowrap;
+
+    transform: translateX(-10px);
+    transition: all 0.35s ease;
+
+    font-weight: 600;
+}
+
+/* reveal text */
+.social-link:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* colors */
+.facebook { background: #1877f2; }
+
+.instagram {
+    background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.tiktok { background: #000; }
+
+.flip-card-back h3 {
+    letter-spacing: 0.5px;
+}
+
+.flip-card-back p {
+    line-height: 1.4;
+}
+
+/* Adopt Button */
+.adopt-ring-btn {
+    position: relative;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+    border: 2px solid transparent;
+}
+
+/* Hover Effect */
+.adopt-ring-btn:hover {
+    transform: scale(1.06);
+
+    border-color: rgba(59,130,246,0.65);
+
+    box-shadow:
+        0 0 0 6px rgba(59,130,246,0.15),
+        0 10px 25px rgba(37,99,235,0.25);
+}
+
+#hero-title {
+    font-family: 'DM Sans', sans-serif;
+}
+
+@keyframes heroButtonPop {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Blue%20Paws%20Logo.jpeg" alt="Blue Paws Association" class="h-10 w-auto">
+                <h1 id="logo-text"class="text-2xl font-bold text-blue-700 font-[Nunito]">Blue Paws Association</h1>
+            </div>
+          
+            <div class="hidden md:flex gap-8 text-lg items-center">
+                <a href="index.html" id="nav-home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="#adopt" id="nav-adopt" class="hover:text-blue-600 font-medium">Adopt</a>
+                <a href="about.html" id="nav-about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="impact.html" id="nav-impact" class="hover:text-blue-600 font-medium">Impact</a>
+                <a href="stories.html" id="nav-stories" class="hover:text-blue-600 font-medium">Stories</a>
+                <a href="news.html" id="nav-news" class="hover:text-blue-600 font-medium">News</a>
+                <a href="faq.html" id="nav-faq" class="hover:text-blue-600 font-medium">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button id="lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none">
+                        <span id="current-flag" class="text-2xl">🇬🇧</span>
+                        <span id="current-lang" class="font-medium text-gray-700">EN</span>
+                        <i id="chevron" class="fa-solid fa-chevron-down text-sm text-gray-500 transition-transform"></i>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl py-2 hidden z-[9999] border border-gray-100">
+<a href="#" onclick="changeLanguage('en'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/gb.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>English</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('ro'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/ro.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Romanian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('hu'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/hu.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Hungarian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('it'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/it.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Italian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('de'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/de.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>German</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('fr'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/fr.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>French</span>
+
+</a>
+                    </div>
+                </div>
+                <a href="donation.html" class="accent-gradient hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fa-solid fa-heart"></i> 
+                    <span id="donate-btn">Donate</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero relative">
+        <img id="hero1" src="dog1.jpg" alt="Hero 1" class="opacity-100">
+        <img id="hero2" src="dog2.jpg" alt="Hero 2" class="opacity-0">
+        <img id="hero3" src="dog3.jpg" alt="Hero 3" class="opacity-0">
+        <img id="hero4" src="Stories5.JPG" alt="Hero 4" class="opacity-0">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 flex items-center">
+            <div class="max-w-5xl mx-auto px-6 text-center text-white flex flex-col justify-center min-h-[85vh] -translate-y-6">
+<h1 id="hero-title"
+class="text-3xl md:text-4xl font-black tracking-tight mb-6 leading-snug max-w-4xl mx-auto">At Blue Paws Association, we stand at the fragile line between suffering and hope. We rescue the forgotten, protect the voiceless and fight for a world where compassion replaces neglect.</h1>
+                <p id="hero-subtitle" class="text-xl md:text-2xl max-w-2xl mx-auto">Because every life deserves more than survival, it deserves safety, dignity and a chance to be loved.</p>
+                <div class="mt-11 flex justify-center gap-6">
+                    <a href="#adopt" class="paw-button"><span class="paw-icon"><i class="fa-solid fa-paw"></i> </span><span id="meet-dogs-btn" class="paw-text">Meet Our Dogs</span></a>
+                    <a href="getinvolved.html" id="hero-involved-btn" class="border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white/10">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Adopt Carousel -->
+<section id="adopt" class="py-20 bg-white overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Animated Title -->
+        <div class="text-center mb-12">
+
+            <div class="paw-container justify-center mb-5">
+
+                <i class="fa-solid fa-paw paw"></i>
+
+<h2 id="adopt-title"
+    class="modern-title text-3xl md:text-3xl text-gray-800 leading-snug font-black tracking-tight">
+
+    At Blue Paws Association, we turn broken lives into healing souls.<br><br>
+
+    Now they wait for one thing only.<br><br>
+
+</h2>
+
+                <i class="fa-solid fa-paw paw"></i>
+
+            </div>
+
+<p id="adopt-subtitle"
+   class="modern-subtitle text-gray-600 text-xl md:text-4xl font-black tracking-tight">
+
+                A home where love finally stays. ❤️
+
+            </p>
+
+        </div>
+
+        <!-- Slider -->
+        <div class="relative">
+
+            <div class="overflow-hidden">
+
+                <div id="slider"
+                     class="flex transition-transform duration-500 ease-in-out">
+
+                    <!-- Populated by JS -->
+
+                </div>
+
+            </div>
+
+            <!-- Left Arrow -->
+            <button onclick="prevSlide()"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:scale-110 transition-all w-14 h-14 rounded-full flex items-center justify-center z-10">
+
+                <i class="fa-solid fa-chevron-left text-xl"></i>
+
+            </button>
+
+            <!-- Right Arrow -->
+            <button onclick="nextSlide()"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg hover:scale-110 transition-all w-14 h-14 rounded-full flex items-center justify-center z-10">
+
+                <i class="fa-solid fa-chevron-right text-xl"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <img src="Blue%20Paws%20Logo.jpeg"
+     alt="Blue Paws Association"
+     class="h-16 w-16 object-cover rounded-full border border-white/10 shadow-md transition-all duration-300 hover:scale-105">
+                        <h2 id="footer-logo" class="text-3xl font-bold">Blue Paws Association</h2>
+                    </div>
+                    <p id="footer-slogan" class="text-lg">Standing Between Them and Suffering</p>
+                </div>
+                <div>
+                    <h3 id="contact-title" class="text-xl font-semibold mb-6 text-white">Contact Us</h3>
+                    <div class="space-y-3">
+                        <p><i class="fa-solid fa-location-dot"></i> Ernei-Mureș, Romania</p>
+                        <p><i class="fa-solid fa-phone"></i> +40 759 031 793</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact@pawsblue.org</p>
+                    </div>
+                </div>
+<div>
+<h3 id="footer-follow-us" class="text-xl font-semibold mb-6 text-white"></h3>
+
+<div class="flex flex-col gap-4">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/people/Blue-Paws/61562938898795/?sk=about"
+       target="_blank"
+       class="social-link facebook">
+
+        <i class="fa-brands fa-facebook-f"></i>
+        <span id="footer-facebook"></span>
+
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/bluepawsmax/"
+       target="_blank"
+       class="social-link instagram">
+
+        <i class="fa-brands fa-instagram"></i>
+        <span id="footer-instagram"></span>
+
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://tiktok.com/@healingwithpaws5"
+       target="_blank"
+       class="social-link tiktok">
+
+        <i class="fa-brands fa-tiktok"></i>
+        <span id="footer-tiktok"></span>
+
+    </a>
+
+</div>
+</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("lo6t5O7GTNxTHgV95");
+
+        let currentLanguage = 'en';
+
+        const translations = {
+            en: {
+                "page-title": "Blue Paws Association | Give a Dog a Forever Home",
+                "logo-text": "Blue Paws Association",
+                "nav-home": "Home",
+                "nav-adopt": "Adopt",
+                "nav-about": "About",
+                "nav-news": "News",
+                "nav-impact": "Impact",
+                "nav-stories": "Stories",
+                "nav-faq": "FAQ",
+                "hero-title": "At Blue Paws Association, we stand at the fragile line between suffering and hope. We rescue the forgotten, protect the voiceless and fight for a world where compassion replaces neglect.",
+                "hero-subtitle": "Because every life deserves more than survival, it deserves safety, dignity and a chance to be loved.",
+                "meet-dogs-btn": "Meet Our Dogs",
+                "hero-involved-btn": "Get Involved",
+                "adopt-title": "At Blue Paws Association, we turn broken lives into healing souls. Now they wait for one thing only.",
+                "adopt-subtitle": "❤️ A home where love finally stays ❤️",
+                "contact-title": "Contact Us",
+                "message-title": "Send us a message",
+                "name-placeholder": "Your Name",
+                "email-placeholder": "Email Address",
+                "message-placeholder": "How can we help you?",
+                "footer-logo": "Blue Paws Association",
+                "footer-follow-us": "Follow Us",
+                "footer-slogan": "Standing Between Them and Suffering",
+                "dog-ready": "❤️ Ready for a forever home ❤️",
+                "footer-facebook": "Blue Paws",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "adopt-btn": "Adopt",
+                "2 Months": "2 Months",
+                "3 Months": "3 Months",
+                "5 Months": "5 Months",
+                "6 Months": "6 Months",
+                "2 Years": "2 Years",
+                "4 Years": "4 Years",
+                "5 Years": "5 Years",
+                "Male": "Male",
+                "Female": "Female",
+                "donate-btn": "Donate"
+
+            },
+            ro: {
+                "page-title": "Asociația Blue Paws | Dă unui Câine o Casă Pentru Totdeauna",
+                "logo-text": "Asociația Blue Paws",
+                "nav-home": "Acasă",
+                "nav-adopt": "Adoptă",
+                "nav-about": "Despre Noi",
+                "nav-news": "Știri",
+                "nav-impact": "Impact",
+                "nav-stories": "Povești",
+                "nav-faq": "Întrebări Frecvente",
+                "hero-title": "La Asociația Blue Paws, ne aflăm la linia fragilă dintre suferință și speranță. Îi salvăm pe cei uitați, îi protejăm pe cei fără glas și luptăm pentru o lume în care compasiunea înlocuiește neglijența.",
+                "hero-subtitle": "Pentru că fiecare viață merită mai mult decât supraviețuirea; merită siguranță, demnitate și șansa de a fi iubită.",
+                "meet-dogs-btn": "Cunoaște Câinii Noștri",
+                "hero-involved-btn": "Implică-te",
+                "adopt-title": "La Asociația Blue Paws, transformăm vieți frânte în suflete vindecate. Acum, ele așteaptă un singur lucru.",
+                "adopt-subtitle": "❤️ O casă în care iubirea, în sfârșit, rămâne ❤️",
+                "contact-title": "Contactează-ne",
+                "message-title": "Trimite-ne un mesaj",
+                "name-placeholder": "Numele tău",
+                "email-placeholder": "Adresa de email",
+                "message-placeholder": "Cum te putem ajuta?",
+                "footer-logo": "Asociația Blue Paws",
+                "dog-ready": "❤️ Pregătit pentru o casă permanentă ❤️",
+                "adopt-btn": "Adoptă",
+                "footer-slogan": "Stăm între ei și suferință.",
+                "footer-facebook": "Blue Paws",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-follow-us": "Urmărește-ne",
+                "2 Months": "2 Luni",
+                "3 Months": "3 Luni",
+                "5 Months": "5 Luni",
+                "6 Months": "6 Luni",
+                "2 Years": "2 Ani",
+                "4 Years": "4 Ani",
+                "5 Years": "5 Ani",
+                "Male": "Mascul",
+                "Female": "Femelă",
+                "donate-btn": "Donează"
+            },
+            hu: {
+                "page-title": "Blue Paws Egyesület | Adj egy Kutyának Örök Otthont",
+                "logo-text": "Blue Paws Egyesület",
+                "nav-home": "Kezdőlap",
+                "nav-adopt": "Örökbefogadás",
+                "nav-about": "Rólunk",
+                "nav-news": "Hírek",
+                "nav-impact": "Hatásunk",
+                "nav-stories": "Sikertörténetek",
+                "nav-faq": "GYIK",
+                "hero-title": "A Blue Paws Egyesületnél a szenvedés és a remény közötti törékeny határon állunk. Megmentjük az elfeledetteket, megvédjük a hangtalanokat, és egy olyan világért küzdünk, ahol az elhanyagolást az együttérzés váltja fel.",
+                "hero-subtitle": "Mert minden élet többet érdemel a puszta túlélésnél; biztonságot, méltóságot és esélyt érdemel arra, hogy szeressék.",
+                "meet-dogs-btn": "Ismerd Meg Kutyáinkat",
+                "hero-involved-btn": "Kapcsolódj Be",
+                "adopt-title": "A Blue Paws Egyesületnél a megtört életeket gyógyuló lelkekké formáljuk. Most már csak egyetlen dologra várnak.",
+                "adopt-subtitle": "❤️ Egy otthon, ahol a szeretet végre örökre marad. ❤️",
+                "contact-title": "Kapcsolat",
+                "message-title": "Küldj nekünk üzenetet",
+                "name-placeholder": "Neved",
+                "email-placeholder": "Email címed",
+                "message-placeholder": "Miben segíthetünk?",
+                "footer-logo": "Blue Paws Egyesület",
+                "dog-ready": "❤️ Készen áll egy szerető otthonra ❤️",
+                "footer-facebook": "Blue Paws",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "adopt-btn": "Örökbefogadás",
+                "footer-follow-us": "Kövess minket",
+                "footer-slogan": "Ott állunk köztük és a szenvedés között.",
+                "2 Months": "2 Hónapos",
+                "3 Months": "3 Hónapos",
+                "5 Months": "5 Hónapos",
+                "6 Months": "6 Hónapos",
+                "2 Years": "2 Éves",
+                "4 Years": "4 Éves",
+                "5 Years": "5 Éves",
+                "Male": "Kan",
+                "Female": "Nőstény",
+                "donate-btn": "Adományozás"
+            },
+            it: {
+                "page-title": "Associazione Blue Paws | Dai a un Cane una Casa Per Sempre",
+                "logo-text": "Associazione Blue Paws",
+                "nav-home": "Home",
+                "nav-adopt": "Adotta",
+                "nav-about": "Chi Siamo",
+                "nav-news": "Notizie",
+                "nav-impact": "Il Nostro Impatto",
+                "nav-stories": "Storie",
+                "nav-faq": "FAQ",
+                "hero-title": "Presso l'Associazione Blue Paws, ci troviamo sulla sottile linea tra la sofferenza e la speranza. Salviamo i dimenticati, proteggiamo chi non ha voce e lottiamo per un mondo in cui la compassione prenda il posto dell'indifferenza.",
+                "hero-subtitle": "Perché ogni vita merita più della semplice sopravvivenza; merita sicurezza, dignità e la possibilità di essere amata.",
+                "meet-dogs-btn": "Conosci i Nostri Cani",
+                "hero-involved-btn": "Partecipa",
+                "adopt-title": "Presso l'Associazione Blue Paws, trasformiamo vite spezzate in anime in guarigione. Ora, aspettano una cosa soltanto.",
+                "adopt-subtitle": "❤️ Una casa dove l'amore, finalmente, resta per sempre. ❤️",
+                "contact-title": "Contattaci",
+                "message-title": "Inviaci un messaggio",
+                "name-placeholder": "Il tuo nome",
+                "email-placeholder": "Indirizzo email",
+                "message-placeholder": "Come possiamo aiutarti?",
+                "footer-logo": "Associazione Blue Paws",
+                "dog-ready": "❤️ Pronto per una casa per sempre ❤️",
+                "footer-facebook": "Blue Paws",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-follow-us": "Seguici",
+                "adopt-btn": "Adotta",
+                "footer-slogan": "Siamo il baluardo tra loro e la sofferenza.",
+                "2 Months": "2 Mesi",
+                "3 Months": "3 Mesi",
+                "5 Months": "5 Mesi",
+                "6 Months": "6 Mesi",
+                "2 Years": "2 Anni",
+                "4 Years": "4 Anni",
+                "5 Years": "5 Anni",
+                "Male": "Maschio",
+                "Female": "Femmina",
+                "donate-btn": "Dona"
+            },
+            de: {
+                "page-title": "Blue Paws Verein | Schenke einem Hund ein Für-immer-Zuhause",
+                "logo-text": "Blue Paws Verein",
+                "nav-home": "Start",
+                "nav-adopt": "Adoptieren",
+                "nav-about": "Über uns",
+                "nav-news": "Neuigkeiten",
+                "nav-impact": "Unser Impact",
+                "nav-stories": "Erfolgsgeschichten",
+                "nav-faq": "FAQ",
+                "hero-title": "Bei der Blue Paws Association stehen wir an der zerbrechlichen Linie zwischen Leid und Hoffnung. Wir retten die Vergessenen, schützen die Stimmlosen und kämpfen für eine Welt, in der Mitgefühl an die Stelle von Vernachlässigung tritt.",
+                "hero-subtitle": "Denn jedes Leben verdient mehr als nur das Überleben; es verdient Sicherheit, Würde und die Chance, geliebt zu werden.",
+                "meet-dogs-btn": "Lerne Unsere Hunde Kennen",
+                "hero-involved-btn": "Mach Mit",
+                "adopt-title": "Bei der Blue Paws Association verwandeln wir zerbrochene Leben in heilende Seelen. Jetzt warten sie nur noch auf eines.",
+                "adopt-subtitle": "❤️ Ein Zuhause, in dem die Liebe endlich bleibt. ❤️",
+                "contact-title": "Kontakt",
+                "message-title": "Schick uns eine Nachricht",
+                "name-placeholder": "Dein Name",
+                "email-placeholder": "E-Mail-Adresse",
+                "message-placeholder": "Wie können wir dir helfen?",
+                "footer-logo": "Blue Paws Verein",
+                "dog-ready": "❤️ Bereit für ein Für-immer-Zuhause ❤️",
+                "footer-facebook": "Blue Paws",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-follow-us": "Folge uns",
+                "adopt-btn": "Adoptieren",
+                "footer-slogan": "Wir stehen zwischen ihnen und dem Leid.",
+                "2 Months": "2 Monate",
+                "3 Months": "3 Monate",
+                "5 Months": "5 Monate",
+                "6 Months": "6 Monate",
+                "2 Years": "2 Jahre",
+                "4 Years": "4 Jahre",
+                "5 Years": "5 Jahre",
+                "Male": "Männlich",
+                "Female": "Weiblich",
+                "donate-btn": "Spenden"
+            },
+            fr: {
+                "page-title": "Association Blue Paws | Offrez à un Chien un Foyer Pour Toujours",
+                "logo-text": "Association Blue Paws",
+                "nav-home": "Accueil",
+                "nav-adopt": "Adopter",
+                "nav-about": "À Propos",
+                "nav-news": "Actualités",
+                "nav-impact": "Notre Impact",
+                "nav-stories": "Histoires",
+                "nav-faq": "FAQ",
+                "hero-title": "À l’Association Blue Paws, nous nous tenons sur la ligne fragile entre la souffrance et l’espoir. Nous sauvons les oubliés, protégeons les sans-voix et luttons pour un monde où la compassion remplace l’indifférence.",
+                "hero-subtitle": "Parce que chaque vie mérite plus que la simple survie ; elle mérite la sécurité, la dignité et la chance d’être aimée.",
+                "meet-dogs-btn": "Rencontrez Nos Chiens",
+                "hero-involved-btn": "Impliquez-vous",
+                "adopt-title": "À l’Association Blue Paws, nous transformons des vies brisées en âmes en guérison. Désormais, elles n’attendent plus qu’une seule chose.",
+                "adopt-subtitle": "❤️ Un foyer où l’amour, enfin, s’installe pour toujours. ❤️",
+                "contact-title": "Contactez-nous",
+                "message-title": "Envoyez-nous un message",
+                "name-placeholder": "Votre Nom",
+                "email-placeholder": "Adresse Email",
+                "message-placeholder": "Comment pouvons-nous vous aider ?",
+                "footer-logo": "Association Blue Paws",
+                "dog-ready": "❤️ Prêt pour un foyer pour toujours ❤️",
+                "footer-facebook": "Blue Paws",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-follow-us": "Suivez-nous",
+                "adopt-btn": "Adopter",
+                "footer-slogan": "Nous nous dressons entre eux et la souffrance.",
+                "2 Months": "2 Mois",
+                "3 Months": "3 Mois",
+                "5 Months": "5 Mois",
+                "6 Months": "6 Mois",
+                "2 Years": "2 Ans",
+                "4 Years": "4 Ans",
+                "5 Years": "5 Ans",
+                "Male": "Mâle",
+                "Female": "Femelle",
+                "donate-btn": "Faire un don"
+            }
+        };
+
+        function changeLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+            currentLanguage = lang;
+
+            const flagMap = { en: '🇬🇧', ro: '🇷🇴', hu: '🇭🇺', it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷' };
+            const codeMap = { en: 'EN', ro: 'RO', hu: 'HU', it: 'IT', de: 'DE', fr: 'FR' };
+
+            document.getElementById('current-flag').textContent = flagMap[lang];
+            document.getElementById('current-lang').textContent = codeMap[lang];
+            
+
+            Object.keys(translations[lang]).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            document.getElementById('page-title').textContent = translations[lang]["page-title"];
+            document.documentElement.lang = lang;
+
+            renderDogs();
+        }
+
+        // Dogs Data
+const dogs = [
+    { name: "Zephyr", age: "3 Months", gender: "Male", img: "Adopt11.jpeg" },
+    { name: "Veloura", age: "3 Months", gender: "Female", img: "Adopt12.jpeg" },
+    { name: "Enzo", age: "5 Months", gender: "Male", img: "Adopt2.jpeg" },
+    { name: "Elio", age: "5 Months", gender: "Male", img: "dog3.jpg" },
+    { name: "Arlo", age: "5 Months", gender: "Male", img: "Adopt3.jpeg" },
+    { name: "Ursa", age: "2 Months", gender: "Female", img: "Adopt18.jpg" },
+    { name: "Panda", age: "2 Months", gender: "Male", img: "Adopt13.jpg" },
+    { name: "Pufi", age: "2 Months", gender: "Male", img: "Adopt14.jpg" },
+    { name: "Latte", age: "2 Months", gender: "Male", img: "Adopt19.jpg" },
+    { name: "Mochi", age: "2 Months", gender: "Male", img: "Adopt16.jpg" },
+    { name: "Bambi", age: "2 Months", gender: "Female", img: "Adopt15.jpg" },
+    { name: "Jewel", age: "2 Months", gender: "Male", img: "Adopt20.jpg" },
+    { name: "Toby", age: "6 Months", gender: "Male", img: "Adopt4.jpeg" },
+    { name: "Lulu", age: "2y", gender: "Female", img: "Lulu.jpg" },
+    { name: "Luna", age: "4 Years", gender: "Female", img: "Adopt5.jpeg" },
+    { name: "Bobby", age: "2 Years", gender: "Male", img: "Adopt6.jpeg" },
+    { name: "Zara", age: "2 Years", gender: "Female", img: "Adopt7.jpeg" },
+    { name: "Lady", age: "5 Years", gender: "Female", img: "Adopt8.jpg" },
+    { name: "Aky", age: "2 Years", gender: "Female", img: "Adopt9.jpeg" },
+    { name: "Bamby", age: "2 Years", gender: "Female", img: "Adopt10.jpeg" }
+];
+
+        function renderDogs() {
+            const slider = document.getElementById('slider');
+slider.innerHTML = dogs.map(dog => `
+    <div class="w-full md:w-1/3 flex-shrink-0 p-4">
+
+        <div class="flip-card">
+
+            <div class="flip-card-inner shadow-xl rounded-3xl">
+
+                <!-- FRONT -->
+                <div class="flip-card-front">
+                    <img src="${dog.img}" 
+                         alt="${dog.name}" 
+                         class="w-full h-full object-cover">
+                </div>
+
+                <!-- BACK -->
+                <div class="flip-card-back">
+
+<h3 class="card-title text-2xl font-bold mb-2">
+    ${dog.name}
+</h3>
+
+<p class="card-meta mb-2">
+    ${translations[currentLanguage][dog.age]} • ${translations[currentLanguage][dog.gender]}
+</p>
+
+<p class="card-subtitle mb-8">
+    ${translations[currentLanguage]["dog-ready"]}
+</p>
+
+<div class="flex flex-col items-center">
+
+    <!-- Adopt Button -->
+<a href="#" class="adopt-ring-btn bg-white text-blue-700 px-8 py-4 rounded-full font-bold shadow-lg">
+    ${translations[currentLanguage]["adopt-btn"]} ${dog.name}
+</a>
+
+    <!-- Arrow -->
+    <i class="fa-solid fa-chevron-down text-blue-500 text-2xl mt-3 animate-bounce"></i>
+
+    <!-- Email -->
+    <p class="mt-2 text-sm font-semibold text-blue-700">
+        contact@pawsblue.org
+    </p>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+`).join('');
+        }
+
+let currentIndex = 0;
+const cardsPerView = 3;
+
+function updateSlider() {
+
+    const slider =
+        document.getElementById('slider');
+
+    const card =
+        slider.querySelector('.flex-shrink-0');
+
+    if (!card) return;
+
+    const cardWidth =
+        card.offsetWidth;
+
+    slider.style.transform =
+        `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+function nextSlide() {
+
+    const maxIndex =
+        dogs.length - cardsPerView;
+
+    if (currentIndex < maxIndex) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+
+    updateSlider();
+}
+
+function prevSlide() {
+
+    const maxIndex =
+        dogs.length - cardsPerView;
+
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = maxIndex;
+    }
+
+    updateSlider();
+}
+
+window.addEventListener('resize', updateSlider);
+        
+
+        // Language Dropdown
+        let dropdownOpen = false;
+        function toggleDropdown() {
+            const dd = document.getElementById('lang-dropdown');
+            const ch = document.getElementById('chevron');
+            dropdownOpen = !dropdownOpen;
+            dd.classList.toggle('hidden', !dropdownOpen);
+            ch.style.transform = dropdownOpen ? 'rotate(180deg)' : '';
+        }
+
+        document.getElementById('lang-btn').addEventListener('click', toggleDropdown);
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('lang-btn').contains(e.target)) {
+                const dd = document.getElementById('lang-dropdown');
+                if (!dd.classList.contains('hidden')) toggleDropdown();
+            }
+        });
+
+    window.onload = () => {
+    changeLanguage('en');
+
+    let heroImages = [
+        document.getElementById("hero1"),
+        document.getElementById("hero2"),
+        document.getElementById("hero3"),
+        document.getElementById("hero4")
+    ];
+
+    let heroIndex = 0;
+
+    function rotateHero() {
+        heroImages.forEach(img => {
+            img.classList.remove("opacity-100");
+            img.classList.add("opacity-0");
+        });
+
+        heroIndex = (heroIndex + 1) % heroImages.length;
+
+        heroImages[heroIndex].classList.remove("opacity-0");
+        heroImages[heroIndex].classList.add("opacity-100");
+    }
+
+    setInterval(rotateHero, 5000);
+};
+
+document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".adopt-ring-btn");
+    if (!btn) return;
+
+    // 🔥 HARD STOP navigation BEFORE browser reacts
+    e.preventDefault();
+    e.stopPropagation();
+
+    const woof = document.getElementById("woof-sound");
+
+    if (woof) {
+        woof.pause();
+        woof.currentTime = 0;
+
+        // small delay helps audio unlock in some browsers
+        setTimeout(() => {
+            woof.play().catch(err => {
+                console.log("Audio blocked until user interaction");
+            });
+        }, 10);
+    }
+}, true); // 🔥 CAPTURE MODE (important)
+    </script>
+
+    <audio id="woof-sound" src="woof.wav" preload="auto"></audio>
+</body>
+</html>

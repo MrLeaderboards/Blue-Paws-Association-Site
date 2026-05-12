@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Sterilization Campaign in Ernei - Blue Paws Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+        <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .accent-gradient {
+            background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+        }
+        .hero {
+            position: relative;
+            height: 60vh;
+            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
+                              url('Blue%20Paws%20Logo.jpeg');
+            background-size: contain;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .hero-text {
+            text-shadow: 0 0 10px rgba(0,0,0,0.9);
+        }
+        .date-badge {
+            background-color: rgba(255,255,255,0.95);
+            color: #1e40af;
+            padding: 10px 24px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .goal-card {
+            transition: all 0.3s ease;
+        }
+        .goal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+    .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 54px;
+    height: 54px;
+    font-size: 1rem; 
+    
+
+    border-radius: 9999px;
+    overflow: hidden;
+
+    padding-left: 19.4px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.45s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* expand capsule */
+.social-link:hover {
+    width: 270px;
+}
+
+/* icon */
+.social-link i {
+    font-size: 1.5rem;
+    min-width: 40px;
+}
+
+/* hidden text */
+.social-link span {
+    opacity: 0;
+    margin-left: 20px;
+    white-space: nowrap;
+
+    transform: translateX(-10px);
+    transition: all 0.35s ease;
+
+    font-weight: 600;
+}
+
+/* reveal text */
+.social-link:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* colors */
+.facebook { background: #1877f2; }
+
+.instagram {
+    background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.tiktok { background: #000; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Blue%20Paws%20Logo.jpeg" alt="Blue Paws Association" class="h-10 w-auto">
+                <h1 id="logo-text"class="text-2xl font-bold text-blue-700 font-[Nunito]">Blue Paws Association</h1>
+            </div>
+           
+            <div class="hidden md:flex gap-8 text-lg items-center">
+                <a href="index.html" id="nav-home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#adopt" id="nav-adopt" class="hover:text-blue-600 font-medium">Adopt</a>
+                <a href="about.html" id="nav-about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="impact.html" id="nav-impact" class="hover:text-blue-600 font-medium">Impact</a>
+                <a href="stories.html" id="nav-stories" class="hover:text-blue-600 font-medium">Stories</a>
+                <a href="news.html" id="nav-news" class="hover:text-blue-600 font-medium">News</a>
+                <a href="faq.html" id="nav-faq" class="hover:text-blue-600 font-medium">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button id="lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none">
+                        <span id="current-flag" class="text-2xl">🇬🇧</span>
+                        <span id="current-lang" class="font-medium text-gray-700">EN</span>
+                        <i id="chevron" class="fa-solid fa-chevron-down text-sm text-gray-500 transition-transform"></i>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl py-2 hidden z-50 border border-gray-100">
+<a href="#" onclick="changeLanguage('en'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/gb.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>English</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('ro'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/ro.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Romanian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('hu'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/hu.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Hungarian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('it'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/it.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Italian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('de'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/de.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>German</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('fr'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/fr.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>French</span>
+
+</a>
+                    </div>
+                </div>
+                <a href="donation.html" class="accent-gradient hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fa-solid fa-heart"></i> 
+                    <span id="donate-btn">Donate</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div id="campaign-date" class="date-badge mx-auto inline-block mb-6">
+                June 15, 2026
+            </div>
+            <h1 id="campaign-title" class="text-5xl md:text-6xl font-bold hero-text">Sterilization Campaign in Ernei</h1>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="max-w-5xl mx-auto px-6 py-16">
+        <h2 id="intro-title" class="text-3xl font-bold mb-6">Together with Ernei Local Council</h2>
+        <p id="intro-text" class="text-lg leading-relaxed text-gray-700 mb-16">
+            Blue Paws Association, in partnership with the Ernei Local Council, is launching a large-scale sterilization campaign to reduce the number of stray dogs and improve animal welfare in the community.
+        </p>
+
+        <h2 id="goals-title" class="text-3xl font-bold mb-10 text-center">Our Campaign Goals</h2>
+        <div class="w-32 h-1 bg-blue-600 mx-auto rounded-full mb-10"></div>
+        <div class="grid md:grid-cols-2 gap-8" id="goals-grid"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <img src="Blue%20Paws%20Logo.jpeg"
+     alt="Blue Paws Association"
+     class="h-16 w-16 object-cover rounded-full border border-white/10 shadow-md transition-all duration-300 hover:scale-105">
+                        <h2 id="footer-logo" class="text-3xl font-bold">Blue Paws Association</h2>
+                    </div>
+                    <p id="footer-slogan" class="text-lg">Saving one dog at a time.</p>
+                </div>
+                <div>
+                    <h3 id="contact-title" class="text-xl font-semibold mb-6 text-white">Contact Us</h3>
+                    <div class="space-y-3">
+                        <p><i class="fa-solid fa-location-dot"></i> Ernei-Mureș, Romania</p>
+                        <p><i class="fa-solid fa-phone"></i> +40 759 031 793</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact@pawsblue.org</p>
+                    </div>
+                </div>
+<div>
+
+<h3 id="footer-follow-us" class="text-xl font-semibold mb-6 text-white"></h3>
+
+<div class="flex flex-col gap-4">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/people/Blue-Paws/61562938898795/?sk=about"
+       target="_blank"
+       class="social-link facebook">
+
+        <i class="fa-brands fa-facebook-f"></i>
+        <span id="footer-facebook"></span>
+
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/bluepawsmax/"
+       target="_blank"
+       class="social-link instagram">
+
+        <i class="fa-brands fa-instagram"></i>
+        <span id="footer-instagram"></span>
+
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://tiktok.com"
+       target="_blank"
+       class="social-link tiktok">
+
+        <i class="fa-brands fa-tiktok"></i>
+        <span id="footer-tiktok"></span>
+
+    </a>
+
+</div>
+</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("lo6t5O7GTNxTHgV95");
+
+const translations = {
+
+en: {
+    "page-title": "Sterilization Campaign in Ernei - Blue Paws Association",
+    "logo-text": "Blue Paws Association",
+    "nav-home": "Home", "nav-adopt": "Adopt", "nav-about": "About",
+    "nav-impact": "Impact", "nav-stories": "Stories", "nav-news": "News", "nav-faq": "FAQ",
+    "campaign-date": "June 15, 2026",
+    "campaign-title": "Sterilization & Microchipping Campaign in Ernei & Districts",
+
+    "intro-title": "It's time to become responsible",
+    "intro-text": "This is where silence ends and responsibility begins. Where awareness, education, sterilization, microchipping, surveys and accountability collide with reality. Every level of society is called to act. Citizens, institutions and future generations because until we understand the cause, no solution is real and nothing truly changes.",
+
+    "goals-title": "Our Campaign Goals",
+
+    "goal1-title": "Mass Sterilization",
+    "goal1-desc": "Sterilization and microchipping are not optional measures. They are the baseline of responsible ownership, both moral and legal. Sterilization interrupts uncontrolled reproduction before it becomes suffering, abandonment and overpopulation. It is a preventive act rooted in health but enforced by consequence. Every unsterilized animal adds to a system already under strain. Microchipping establishes identity and accountability. It replaces anonymity with traceability making ownership a defined responsibility rather than a reversible choice. Together they form a non-negotiable standard. Pets are not possessions without consequence. They are lives taken into care under obligation, legal, ethical and continuous.",
+
+    "goal2-title": "Community Education",
+    "goal2-desc": "Education is not the collection of information, it is the refinement of perception. Without it, the mind doesn't think freely. It absorbs selectively, often without awareness of why. With it, you begin to see the difference between what is true, what is repeated and what is merely believed. Education is the discipline that interrupts illusion before it becomes certainty.",
+
+    "goal3-title": "Awareness",
+    "goal3-desc": "The stray dog situation is not a surface problem, it is a system outcome. Without confronting the root causes uncontrolled breeding, lack of sterilization, missing microchipping and weak ownership responsibility, every intervention becomes temporary, not structural. Awareness is not sentiment. It is precision in understanding how a problem is actually produced. Until the source is addressed, the outcome will keep repeating itself, predictably, relentlessly and without real change.",
+
+    "goal4-title": "Understanding the root cause",
+    "goal4-desc": "Real solutions don't come from fixing what you see, they come from understanding what creates it. If you ignore the root cause, you don't solve anything, you just delay it. The problem comes back, slightly changed but still there because nothing underneath has moved.",
+
+    "contact-title": "Contact Us",
+    "message-title": "Send us a message",
+    "name-placeholder": "Your Name",
+    "email-placeholder": "Email Address",
+    "message-placeholder": "How can we help you?",
+
+    "footer-logo": "Blue Paws Association",
+    "footer-slogan": "Standing Between Them and Suffering",
+
+    "footer-follow-us": "Follow Us",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+
+    "donate-btn": "Donate"
+},
+
+ro: {
+    "page-title": "Campanie de sterilizare în Ernei - Asociația Blue Paws",
+    "logo-text": "Asociația Blue Paws",
+    "nav-home": "Acasă", "nav-adopt": "Adoptă", "nav-about": "Despre",
+    "nav-impact": "Impact", "nav-stories": "Povești", "nav-news": "Știri", "nav-faq": "FAQ",
+    "campaign-date": "15 Iunie 2026",
+    "campaign-title": "Campanie de sterilizare și microcipare în Ernei și împrejurimi",
+
+    "intro-title": "Este timpul să devenim responsabili",
+    "intro-text": "Aici se termină tăcerea și începe responsabilitatea. Unde conștientizarea, educația, sterilizarea, microciparea, sondajele și responsabilitatea se ciocnesc de realitate. Toate nivelurile societății sunt chemate la acțiune. Cetățeni, instituții și generații viitoare pentru că până nu înțelegem cauza, nicio soluție nu este reală și nimic nu se schimbă cu adevărat.",
+
+    "goals-title": "Obiectivele campaniei noastre",
+
+    "goal1-title": "Sterilizare în masă",
+    "goal1-desc": "Sterilizarea și microciparea nu sunt măsuri opționale. Ele reprezintă standardul de bază al deținerii responsabile, atât din punct de vedere moral, cât și legal.Sterilizarea întrerupe reproducerea necontrolată înainte ca aceasta să se transforme în suferință, abandon și suprapopulare. Este un act preventiv fundamentat pe sănătate, dar impus prin consecințe. Fiecare animal nesterilizat pune presiune pe un sistem deja suprasolicitat.Microciparea stabilește identitatea și răspunderea. Aceasta înlocuiește anonimatul cu trasabilitatea, transformând deținerea unui animal într-o responsabilitate definită, nu o alegere reversibilă.Împreună, acestea formează un standard nenegociabil. Animalele de companie nu sunt bunuri fără consecințe. Sunt vieți luate în îngrijire sub o obligație legală, etică și continuă.",
+
+    "goal2-title": "Educația comunității",
+    "goal2-desc": "Educația nu este o colecție de informații, ci rafinarea percepției. Fără ea, mintea nu gândește liber. Ea absoarbe selectiv, adesea fără a conștientiza de ce. Cu ea, începi să vezi diferența dintre ceea ce este adevărat, ceea ce este repetat și ceea ce este doar crezut. Educația este disciplina care întrerupe iluzia înainte ca aceasta să devină certitudine.",
+
+    "goal3-title": "Conștientizare",
+    "goal3-desc": "Situația câinilor fără stăpân nu este o problemă de suprafață, ci rezultatul unui sistem. Fără a confrunta cauzele profunde – reproducerea necontrolată, lipsa sterilizării, absența microcipării și responsabilitatea precară a proprietarilor – orice intervenție rămâne temporară, nu structurală. Conștientizarea nu înseamnă sentiment. Înseamnă precizie în a înțelege cum este produsă, de fapt, o problemă. Până când sursa nu este adresată, rezultatul se va repeta predictibil, neîncetat și fără o schimbare reală.",
+
+    "goal4-title": "Înțelegerea cauzei reale",
+    "goal4-desc": "Soluțiile reale nu vin din repararea a ceea ce vezi, ci din înțelegerea a ceea ce creează acea situație. Dacă ignori cauza profundă, nu rezolvi nimic, ci doar amâni problema. Aceasta revine, ușor schimbată, dar prezentă, deoarece nimic din profunzime nu s-a mișcat.",
+
+    "contact-title": "Contactează-ne",
+    "message-title": "Trimite-ne un mesaj",
+    "name-placeholder": "Numele tău",
+    "email-placeholder": "Adresă de email",
+    "message-placeholder": "Cum te putem ajuta?",
+
+    "footer-logo": "Asociația Blue Paws",
+    "footer-slogan": "Între ei și suferință",
+
+    "footer-follow-us": "Urmărește-ne",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+
+    "donate-btn": "Donează"
+},
+
+hu: {
+    "page-title": "Ivartalanítási kampány Erneiben - Blue Paws Egyesület",
+    "logo-text": "Blue Paws Egyesület",
+    "nav-home": "Főoldal", "nav-adopt": "Örökbefogadás", "nav-about": "Rólunk",
+    "nav-impact": "Hatás", "nav-stories": "Történetek", "nav-news": "Hírek", "nav-faq": "GYIK",
+    "campaign-date": "2026. június 15.",
+    "campaign-title": "Ivartalanítási és mikrochip kampány Erneiben és környékén",
+
+    "intro-title": "Itt az ideje felelőssé válni",
+    "intro-text": "Itt ér véget a csend és itt kezdődik a felelősség. Ahol a tudatosság, oktatás, ivartalanítás, mikrochipelés és felelősség találkozik a valósággal.",
+
+    "goals-title": "Kampánycélok",
+
+    "goal1-title": "Tömeges ivartalanítás",
+    "goal1-desc": "Az ivartalanítás és a mikrochipezés nem választható intézkedések. Ezek a felelős állattartás alapkövei, erkölcsi és jogi értelemben egyaránt.Az ivartalanítás megállítja a kontrollálatlan szaporodást, mielőtt az szenvedéssé, elhagyatottsággá és túlszaporodássá válna. Ez egy egészségügyi alapokon nyugvó megelőző lépés, amelyet a következmények tesznek szükségessé. Minden ivaros állat terheli az amúgy is túlterhelt rendszert.A mikrochipezés megteremti az identitást és a számonkérhetőséget. A névtelenséget nyomonkövethetőséggel váltja fel, így a gazdi felelőssége egyértelmű kötelezettséggé válik, nem pedig visszavonható döntéssé.Ezek együtt egy nem alku tárgyát képező szabványt alkotnak. A kisállatok nem következmények nélküli tulajdontárgyak. Ők olyan életek, akiket folyamatos jogi és etikai kötelezettségvállalással fogadunk gondjainkba.",
+
+    "goal2-title": "Közösségi oktatás",
+    "goal2-desc": "Az oktatás nem információk gyűjtése, hanem az észlelés finomítása. Enélkül az elme nem gondolkodik szabadon. Szelektíven fogad be dolgokat, gyakran anélkül, hogy tudná, miért. Általa viszont elkezded látni a különbséget aközött, ami igaz, amit csupán ismételnek, és amiben csak hisznek. Az oktatás az a fegyelem, amely megszakítja az illúziót, mielőtt az bizonyossággá válna.",
+
+    "goal3-title": "Tudatosság",
+    "goal3-desc": "A kóbor kutya helyzet nem egy felszíni probléma, hanem egy rendszer eredménye. Anélkül, hogy szembenéznénk a kiváltó okokkal – a kontrollálatlan szaporodással, az ivartalanítás hiányával, a hiányzó mikrochipezéssel és a gyenge tulajdonosi felelősségvállalással –, minden beavatkozás csak ideiglenes marad, nem pedig strukturális.A tudatosság nem érzelem. Hanem pontosság annak megértésében, hogyan jön létre valójában egy probléma. Amíg a forrást nem kezelik, az eredmény kiszámíthatóan, könyörtelenül és valódi változás nélkül fogja ismételni önmagát.",
+
+    "goal4-title": "A gyökérok megértése",
+    "goal4-desc": "A valódi megoldások nem abból fakadnak, hogy kijavítjuk azt, amit látunk, hanem abból, hogy megértjük, mi hozza létre. Ha figyelmen kívül hagyod a kiváltó okot, nem oldasz meg semmit, csak elhalasztod. A probléma visszatér, kissé megváltozva, de továbbra is ott lesz, mert a mélyben semmi sem mozdult.",
+
+    "contact-title": "Kapcsolat",
+    "message-title": "Küldj üzenetet",
+    "name-placeholder": "Neved",
+    "email-placeholder": "Email cím",
+    "message-placeholder": "Hogyan segíthetünk?",
+
+    "footer-logo": "Blue Paws Egyesület",
+    "footer-slogan": "Közöttük és a szenvedés között",
+
+    "footer-follow-us": "Kövess minket",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+
+    "donate-btn": "Adományozás"
+},
+
+it: {
+    "page-title": "Campagna sterilizzazione Ernei - Associazione Blue Paws",
+    "logo-text": "Associazione Blue Paws",
+    "nav-home": "Home", "nav-adopt": "Adozione", "nav-about": "Chi siamo",
+    "nav-impact": "Impatto", "nav-stories": "Storie", "nav-news": "Notizie", "nav-faq": "FAQ",
+    "campaign-date": "15 giugno 2026",
+    "campaign-title": "Campagna sterilizzazione e microchip a Ernei e dintorni",
+
+    "intro-title": "È tempo di diventare responsabili",
+    "intro-text": "Qui finisce il silenzio e inizia la responsabilità. Dove consapevolezza, educazione e responsabilità incontrano la realtà.",
+
+    "goals-title": "Obiettivi della campagna",
+
+    "goal1-title": "Sterilizzazione di massa",
+    "goal1-desc": "La sterilizzazione e la microchippatura non sono misure opzionali. Rappresentano la base della proprietà responsabile, sia a livello morale che legale.La sterilizzazione interrompe la riproduzione incontrollata prima che si trasformi in sofferenza, abbandono e sovrappopolamento. È un atto preventivo radicato nella salute, ma imposto dalle conseguenze. Ogni animale non sterilizzato grava su un sistema già sotto pressione.La microchippatura stabilisce l'identità e la responsabilità. Sostituisce l'anonimato con la tracciabilità, rendendo la proprietà una responsabilità definita piuttosto che una scelta reversibile.Insieme, formano uno standard non negoziabile. Gli animali domestici non sono proprietà senza conseguenze. Sono vite prese in carico sotto un obbligo legale, etico e continuo.",
+
+    "goal2-title": "Educazione della comunità",
+    "goal2-desc": "L'istruzione non è l'accumulo di informazioni, è il raffinamento della percezione. Senza di essa, la mente non pensa liberamente. Assorbe selettivamente, spesso senza la consapevolezza del perché. Con essa, si inizia a vedere la differenza tra ciò che è vero, ciò che viene ripetuto e ciò che viene semplicemente creduto. L'istruzione è la disciplina che interrompe l'illusione prima che diventi certezza.",
+
+    "goal3-title": "Consapevolezza",
+    "goal3-desc": "La situazione dei cani randagi non è un problema superficiale, ma il risultato di un sistema. Senza affrontare le cause profonde – la riproduzione incontrollata, la mancanza di sterilizzazione, l'assenza di microchippatura e la scarsa responsabilità dei proprietari – ogni intervento rimane temporaneo, non strutturale.La consapevolezza non è un sentimento. È precisione nel comprendere come un problema venga effettivamente prodotto. Finché non si interviene sulla fonte, il risultato continuerà a ripetersi, in modo prevedibile, incessante e senza un vero cambiamento.",
+
+    "goal4-title": "Comprendere la causa",
+    "goal4-desc": "Le vere soluzioni non derivano dal riparare ciò che si vede, ma dal comprendere ciò che lo crea. Se ignori la causa alla radice, non risolvi nulla, lo rimandi soltanto. Il problema ritorna, leggermente cambiato ma sempre presente, perché alla base nulla è cambiato.",
+
+    "contact-title": "Contattaci",
+    "message-title": "Inviaci un messaggio",
+    "name-placeholder": "Il tuo nome",
+    "email-placeholder": "Email",
+    "message-placeholder": "Come possiamo aiutarti?",
+
+    "footer-logo": "Associazione Blue Paws",
+    "footer-slogan": "Tra loro e la sofferenza",
+
+    "footer-follow-us": "Seguici",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+
+    "donate-btn": "Dona"
+},
+
+de: {
+    "page-title": "Kastrationskampagne Ernei - Blue Paws Verein",
+    "logo-text": "Blue Paws Verein",
+    "nav-home": "Start", "nav-adopt": "Adoption", "nav-about": "Über uns",
+    "nav-impact": "Auswirkungen", "nav-stories": "Geschichten", "nav-news": "Nachrichten", "nav-faq": "FAQ",
+    "campaign-date": "15. Juni 2026",
+    "campaign-title": "Kastrations- und Mikrochip-Kampagne in Ernei und Umgebung",
+
+    "intro-title": "Es ist Zeit, Verantwortung zu übernehmen",
+    "intro-text": "Hier endet das Schweigen und Verantwortung beginnt. Wo Bewusstsein auf Realität trifft.",
+
+    "goals-title": "Unsere Kampagnenziele",
+
+    "goal1-title": "Massenkastration",
+    "goal1-desc": "Kastration und Kennzeichnung per Mikrochip sind keine optionalen Maßnahmen. Sie sind die Grundvoraussetzung für verantwortungsbewusste Tierhaltung, sowohl moralisch als auch rechtlich.Die Kastration unterbricht die unkontrollierte Vermehrung, bevor sie zu Leid, Aussetzung und Überpopulation führt. Es ist ein präventiver Akt, der in der Gesundheit begründet liegt, aber durch die Konsequenzen erzwungen wird. Jedes nicht kastrierte Tier belastet ein System, das bereits an seine Grenzen stößt.Die Kennzeichnung per Mikrochip schafft Identität und Rechenschaftspflicht. Sie ersetzt Anonymität durch Rückverfolgbarkeit und macht Tierhaltung zu einer definierten Verantwortung anstatt zu einer umkehrbaren Entscheidung.Zusammen bilden sie einen nicht verhandelbaren Standard. Haustiere sind kein Besitz ohne Folgen. Sie sind Leben, die unter einer rechtlichen, ethischen und dauerhaften Verpflichtung in Obhut genommen werden.",
+
+    "goal2-title": "Gemeinschaftsbildung",
+    "goal2-desc": "Bildung ist nicht das Sammeln von Informationen, sondern die Verfeinerung der Wahrnehmung. Ohne sie denkt der Geist nicht frei. Er absorbiert selektiv, oft ohne sich bewusst zu sein, warum. Mit ihr beginnt man, den Unterschied zwischen dem zu erkennen, was wahr ist, was wiederholt wird und was lediglich geglaubt wird. Bildung ist die Disziplin, die die Illusion unterbricht, bevor sie zur Gewissheit wird.",
+
+    "goal3-title": "Bewusstsein",
+    "goal3-desc": "Die Situation der Straßenhunde ist kein oberflächliches Problem, sondern das Ergebnis eines Systems. Ohne die Ursachen zu bekämpfen – unkontrollierte Vermehrung, mangelnde Kastration, fehlende Mikrochip-Kennzeichnung und schwache Eigenverantwortung der Besitzer – bleibt jeder Eingriff nur vorübergehend und nicht strukturell.Bewusstsein ist kein bloßes Gefühl. Es ist die Präzision im Verständnis darüber, wie ein Problem tatsächlich entsteht. Solange die Quelle nicht angegangen wird, wird sich das Ergebnis immer wieder wiederholen – vorhersehbar, unerbittlich und ohne echte Veränderung.",
+
+    "goal4-title": "Ursachen verstehen",
+    "goal4-desc": "Echte Lösungen entstehen nicht dadurch, dass man repariert, was man sieht, sondern dadurch, dass man versteht, was es verursacht. Wenn man die Grundursache ignoriert, löst man nichts, man zögert es nur hinaus. Das Problem kehrt zurück, leicht verändert, aber immer noch da, weil sich an der Basis nichts bewegt hat.",
+
+    "contact-title": "Kontakt",
+    "message-title": "Schreib uns eine Nachricht",
+    "name-placeholder": "Dein Name",
+    "email-placeholder": "E-Mail",
+    "message-placeholder": "Wie können wir helfen?",
+
+    "footer-logo": "Blue Paws Verein",
+    "footer-slogan": "Zwischen ihnen und dem Leid",
+
+    "footer-follow-us": "Folge uns",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+
+    "donate-btn": "Spenden"
+},
+
+fr: {
+    "page-title": "Campagne de stérilisation Ernei - Association Blue Paws",
+    "logo-text": "Association Blue Paws",
+    "nav-home": "Accueil", "nav-adopt": "Adoption", "nav-about": "À propos",
+    "nav-impact": "Impact", "nav-stories": "Histoires", "nav-news": "Actualités", "nav-faq": "FAQ",
+    "campaign-date": "15 juin 2026",
+    "campaign-title": "Campagne de stérilisation et micropuçage à Ernei et environs",
+
+    "intro-title": "Il est temps de devenir responsable",
+    "intro-text": "Ici le silence s’arrête et la responsabilité commence. Où la conscience rencontre la réalité.",
+
+    "goals-title": "Objectifs de la campagne",
+
+    "goal1-title": "Stérilisation de masse",
+    "goal1-desc": "La stérilisation et l'identification par puce électronique ne sont pas des mesures optionnelles. Elles constituent le socle de la possession responsable, tant sur le plan moral que juridique.La stérilisation interrompt la reproduction incontrôlée avant qu'elle ne se transforme en souffrance, en abandon et en surpopulation. C'est un acte préventif ancré dans la santé, mais imposé par ses conséquences. Chaque animal non stérilisé pèse sur un système déjà sous tension.Le pucage établit l'identité et la responsabilité. Il remplace l'anonymat par la traçabilité, faisant de la possession une responsabilité définie plutôt qu'un choix réversible.Ensemble, ils forment une norme non négociable. Les animaux de compagnie ne sont pas des possessions sans conséquence. Ce sont des vies prises en charge sous une obligation légale, éthique et continue.",
+
+    "goal2-title": "Éducation communautaire",
+    "goal2-desc": "L'éducation n'est pas une accumulation d'informations, c'est le raffinement de la perception. Sans elle, l'esprit ne pense pas librement. Il absorbe de manière sélective, souvent sans conscience du pourquoi. Grâce à elle, on commence à percevoir la différence entre ce qui est vrai, ce qui est répété et ce qui est simplement cru. L'éducation est la discipline qui interrompt l'illusion avant qu'elle ne devienne certitude.",
+
+    "goal3-title": "Sensibilisation",
+    "goal3-desc": "La situation des chiens errants n'est pas un problème de surface, mais le résultat d'un système. Sans s'attaquer aux causes profondes — la reproduction incontrôlée, le manque de stérilisation, l'absence d'identification par puce et la faible responsabilité des propriétaires — chaque intervention reste temporaire et non structurelle.La sensibilisation n'est pas une affaire de sentiment. C'est la précision avec laquelle on comprend comment un problème est réellement produit. Tant que la source n'est pas traitée, le résultat continuera de se répéter, de manière prévisible, implacable et sans changement réel.",
+
+    "goal4-title": "Comprendre la cause",
+    "goal4-desc": "Les vraies solutions ne consistent pas à réparer ce que l'on voit, mais à comprendre ce qui le crée. Si vous ignorez la cause profonde, vous ne résolvez rien, vous ne faites que retarder l'échéance. Le problème revient, légèrement modifié mais toujours présent, car rien n'a bougé en profondeur.",
+
+    "contact-title": "Contactez-nous",
+    "message-title": "Envoyez-nous un message",
+    "name-placeholder": "Votre nom",
+    "email-placeholder": "Email",
+    "message-placeholder": "Comment pouvons-nous aider ?",
+
+    "footer-logo": "Association Blue Paws",
+    "footer-slogan": "Entre eux et la souffrance",
+
+    "footer-follow-us": "Suivez-nous",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+
+    "donate-btn": "Faire un don"
+}
+
+};
+
+        function changeLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+
+            const flagMap = { en: '🇬🇧', ro: '🇷🇴', hu: '🇭🇺', it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷' };
+            const codeMap = { en: 'EN', ro: 'RO', hu: 'HU', it: 'IT', de: 'DE', fr: 'FR' };
+
+            document.getElementById('current-flag').textContent = flagMap[lang];
+            document.getElementById('current-lang').textContent = codeMap[lang];
+
+            Object.keys(translations[lang]).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            document.getElementById('page-title').textContent = translations[lang]["page-title"];
+            document.documentElement.lang = lang;
+
+            renderGoals(lang);
+        }
+
+        function renderGoals(lang = 'en') {
+            const t = translations[lang] || translations.en;
+            const container = document.getElementById('goals-grid');
+
+            const goals = [
+                { title: t["goal1-title"], desc: t["goal1-desc"], img: "Blue%20Paws%20Logo.jpeg" },
+                { title: t["goal2-title"], desc: t["goal2-desc"], img: "education.png" },
+                { title: t["goal3-title"], desc: t["goal3-desc"], img: "awareness.png" },
+                { title: t["goal4-title"], desc: t["goal4-desc"], img: "rootcause.png" }
+            ];
+
+            container.innerHTML = goals.map(g => `
+                <div class="goal-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <img src="${g.img}" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">${g.title}</h3>
+                        <p class="text-gray-600">${g.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        let dropdownOpen = false;
+        function toggleDropdown() {
+            const dd = document.getElementById('lang-dropdown');
+            const ch = document.getElementById('chevron');
+            dropdownOpen = !dropdownOpen;
+            dd.classList.toggle('hidden', !dropdownOpen);
+            ch.style.transform = dropdownOpen ? 'rotate(180deg)' : '';
+        }
+
+        document.getElementById('lang-btn').addEventListener('click', toggleDropdown);
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('lang-btn').contains(e.target)) {
+                const dd = document.getElementById('lang-dropdown');
+                if (!dd.classList.contains('hidden')) toggleDropdown();
+            }
+        });
+
+        window.onload = () => {
+            changeLanguage('en');
+        };
+    </script>
+</body>
+</html>

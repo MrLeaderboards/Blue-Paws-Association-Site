@@ -1,0 +1,2654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Our Impact - Blue Paws Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        .impact-hero {
+            position: relative;
+            height: 65vh;
+            background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('Blue%20Paws%20Logo.jpeg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+        }
+        .dog-impact-card {
+            transition: all 0.3s ease;
+        }
+        .dog-impact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .hero-text {
+            text-shadow: 
+                0 0 8px rgba(0,0,0,0.9),
+                -2px -2px 3px rgba(0,0,0,0.85),
+                2px -2px 3px rgba(0,0,0,0.85),
+                -2px 2px 3px rgba(0,0,0,0.85),
+                2px 2px 3px rgba(0,0,0,0.85);
+        }
+
+    .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 54px;
+    height: 54px;
+    font-size: 1rem; 
+    
+
+    border-radius: 9999px;
+    overflow: hidden;
+
+    padding-left: 19.4px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.45s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* expand capsule */
+.social-link:hover {
+    width: 270px;
+}
+
+/* icon */
+.social-link i {
+    font-size: 1.5rem;
+    min-width: 40px;
+}
+
+/* hidden text */
+.social-link span {
+    opacity: 0;
+    margin-left: 20px;
+    white-space: nowrap;
+
+    transform: translateX(-10px);
+    transition: all 0.35s ease;
+
+    font-weight: 600;
+}
+
+/* reveal text */
+.social-link:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* colors */
+.facebook { background: #1877f2; }
+
+.instagram {
+    background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.tiktok { background: #000; }
+
+.line-animate {
+    height: 4px;
+    width: 0;
+    background: #3b82f6;
+    border-radius: 9999px;
+    animation: expandLine 1.8s ease-out forwards;
+}
+
+@keyframes expandLine {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 140px; /* same as w-24 */
+        opacity: 1;
+    }
+}
+
+.impact-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    text-align: center;
+}
+
+/* Paw styling */
+.left-paw,
+.right-paw {
+    color: #3b82f6; /* blue-500 */
+    font-size: 1.6rem;
+    animation: pawPulse 2s ease-in-out infinite;
+}
+
+/* Slight variation so they don't move identically */
+.right-paw {
+    animation-delay: 0.3s;
+}
+
+/* Pulse animation */
+@keyframes pawPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}
+
+@keyframes fadeUpHero {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text {
+    opacity: 0;
+    animation: fadeUpHero 1s ease forwards;
+}
+
+/* Slider Buttons */
+.slider-btn {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 9999px;
+
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+
+    color: #2563eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.slider-btn:hover {
+    transform: translateY(-50%) scale(1.08);
+    background: white;
+}
+
+/* Smooth image animation */
+.impact-slider img {
+    min-width: 100%;
+}
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Blue%20Paws%20Logo.jpeg" alt="Blue Paws Association" class="h-10 w-auto">
+                <h1 id="logo-text"class="text-2xl font-bold text-blue-700 font-[Nunito]">Blue Paws Association</h1>
+            </div>
+           
+            <div class="hidden md:flex gap-8 text-lg items-center">
+                <a href="index.html" id="nav-home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#adopt" id="nav-adopt" class="hover:text-blue-600 font-medium">Adopt</a>
+                <a href="about.html" id="nav-about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="impact.html" id="nav-impact" class="text-blue-600 font-semibold">Impact</a>
+                <a href="stories.html" id="nav-stories" class="hover:text-blue-600 font-medium">Stories</a>
+                <a href="news.html" id="nav-news" class="hover:text-blue-600 font-medium">News</a>
+                <a href="faq.html" id="nav-faq" class="hover:text-blue-600 font-medium">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button id="lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none">
+                        <span id="current-flag" class="text-2xl">🇬🇧</span>
+                        <span id="current-lang" class="font-medium text-gray-700">EN</span>
+                        <i id="chevron" class="fa-solid fa-chevron-down text-sm text-gray-500 transition-transform"></i>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl py-2 hidden z-50 border border-gray-100">
+<a href="#" onclick="changeLanguage('en'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/gb.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>English</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('ro'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/ro.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Romanian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('hu'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/hu.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Hungarian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('it'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/it.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Italian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('de'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/de.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>German</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('fr'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/fr.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>French</span>
+
+</a>
+                    </div>
+                </div>
+                <a href="donation.html" class="accent-gradient hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fa-solid fa-heart"></i> 
+                    <span id="donate-btn">Donate</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Impact Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+
+<h2 id="impact-title-main" class="impact-title text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 mb-6">
+
+    <i class="fa-solid fa-paw left-paw"></i>
+
+    <span id="impact-title-text"></span>
+
+    <i class="fa-solid fa-paw right-paw"></i>
+
+</h2>
+
+        <div class="line-animate mx-auto mb-4 rounded-full"></div>
+
+        <p id="impact-p1" class="text-lg md:text-xl text-gray-600 leading-relaxed mt-9 mb-6"></p>
+
+        <p id="impact-p2" class="text-lg md:text-xl text-gray-600 leading-relaxed mb-6"></p>
+
+        <p id="impact-p3" class="text-lg md:text-xl text-gray-600 leading-relaxed mb-6"></p>
+
+        <p id="impact-p4" class="text-lg md:text-xl text-gray-600 leading-relaxed"></p>
+
+    </div>
+</section>
+
+    <!-- Dog Impact Stories -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 id="dogs-helped-title" class="text-4xl font-bold text-center mb-12">Lives Rewritten. Voices Pulled from Silence</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Impact Card -->
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="Bella2.JPG" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="Bella4.JPG" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="Bella3.JPG" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="Bella1.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card1-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue2.JPG" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="StrayRescue1.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card2-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue3.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card3-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue4.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card4-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue5.JPG" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="StrayRescue6.JPG" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="StrayRescue7.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card5-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="Stories4.jpg" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="PUPPY.JPG" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="Puppy2.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card6-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="Stories7.jpg" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="Eva2.JPG" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="Eva.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card7-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="ShortTail.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card8-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue8.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card9-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue9.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card10-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue10.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card11-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue11.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card12-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue12.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card13-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue14.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card14-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue15.JPG" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card15-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue16.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card16-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue17.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card17-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue18.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card18-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue20.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+            <img src="StrayRescue19.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card19-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue21.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card20-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue22.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card21-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue23.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card22-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue24.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card23-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue25.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card24-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue26.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card25-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue27.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card26-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue28.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card27-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue29.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card28-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue30.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card29-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue31.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card30-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue32.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card31-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue33.jpeg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card32-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue34.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card33-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue35.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card34-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue36.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card35-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue51.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card36-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue38.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card37-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue39.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card38-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue40.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card39-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue41.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card40-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue42.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card41-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue43.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card42-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue44.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card43-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue45.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card44-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue46.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card45-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue47.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card46-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue48.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card47-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue49.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card48-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue50.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card49-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+
+<div class="impact-card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE SLIDER -->
+    <div class="relative h-72 overflow-hidden">
+
+        <!-- Slides -->
+        <div class="impact-slider flex transition-transform duration-500">
+
+            <img src="StrayRescue51.jpg" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="slider-btn prev absolute left-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next absolute right-4 top-1/2 -translate-y-1/2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Content -->
+    <div class="p-8 text-center">
+        <h3 id="impact-card50-title"class="text-3xl font-bold mb-3">Street Rescues</h3>
+
+    </div>
+
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <img src="Blue%20Paws%20Logo.jpeg"
+     alt="Blue Paws Association"
+     class="h-16 w-16 object-cover rounded-full border border-white/10 shadow-md transition-all duration-300 hover:scale-105">
+                        <h2 id="footer-logo" class="text-3xl font-bold">Blue Paws Association</h2>
+                    </div>
+                    <p id="footer-slogan" class="text-lg">Saving one dog at a time.</p>
+                </div>
+                <div>
+                    <h3 id="contact-title" class="text-xl font-semibold mb-6 text-white">Contact Us</h3>
+                    <div class="space-y-3">
+                        <p><i class="fa-solid fa-location-dot"></i> Ernei-Mureș, Romania</p>
+                        <p><i class="fa-solid fa-phone"></i> +40 759 031 793</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact@pawsblue.org</p>
+                    </div>
+                </div>
+<div>
+<h3 id="footer-follow-us" class="text-xl font-semibold mb-6 text-white"></h3>
+
+<div class="flex flex-col gap-4">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/people/Blue-Paws/61562938898795/?sk=about"
+       target="_blank"
+       class="social-link facebook">
+
+        <i class="fa-brands fa-facebook-f"></i>
+        <span id="footer-facebook"></span>
+
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/bluepawsmax/"
+       target="_blank"
+       class="social-link instagram">
+
+        <i class="fa-brands fa-instagram"></i>
+        <span id="footer-instagram"></span>
+
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://tiktok.com"
+       target="_blank"
+       class="social-link tiktok">
+
+        <i class="fa-brands fa-tiktok"></i>
+        <span id="footer-tiktok"></span>
+
+    </a>
+
+</div>
+</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("lo6t5O7GTNxTHgV95");
+
+const translations = {
+  en: {
+    "page-title": "Our Impact - Blue Paws Association",
+    "logo-text": "Blue Paws Association",
+    "nav-home": "Home",
+    "nav-adopt": "Adopt",
+    "nav-about": "About",
+    "nav-impact": "Impact",
+    "nav-stories": "Stories",
+    "nav-news": "News",
+    "nav-faq": "FAQ",
+    "impact-title": "Our Impact So Far",
+    "dogs-helped-title": "❤️ Lives Rewritten. Voices Pulled from Silence. ❤️",
+    "bella-desc": "Found severely malnourished on the streets. Now thriving in her forever home.",
+    "bruno-desc": "Rescued with a broken leg. After surgery and rehab, he’s now a happy boy.",
+    "mia-desc": "Pregnant when rescued. All 6 puppies and Mia found loving homes.",
+    "stat-rescued-label": "Dogs Rescued",
+    "stat-sterilized-label": "Sterilized",
+    "stat-adopted-label": "Dogs Adopted",
+    "stat-vaccinated-label": "Vaccinated",
+    "contact-title": "Contact Us",
+    "message-title": "Send us a message",
+    "name-placeholder": "Your Name",
+    "email-placeholder": "Email Address",
+    "message-placeholder": "How can we help you?",
+    "footer-follow-us": "Follow Us",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "impact-title-text": "Every soul is a life that changed forever",
+    "impact-p1": "At Blue Paws Association, we don’t measure success in statistics — we measure it in second chances.",
+    "impact-p2": "Every rescued dog carries a story of survival, fear turned into trust, and loneliness replaced by care.",
+    "impact-p3": "Every adoption is not just a new home, but a broken past finally finding peace.",
+    "impact-p4": "And every moment of love given to them is a reminder that kindness still changes everything.",
+    "footer-logo": "Blue Paws Association",
+    "donate-btn": "Donate",
+    "impact-card1-title": "🐾 ❤️ 🐾",
+"impact-card2-title": "🐾 ❤️ 🐾",
+"impact-card3-title": "🐾 ❤️ 🐾",
+"impact-card4-title": "🐾 ❤️ 🐾",
+"impact-card5-title": "🐾 ❤️ 🐾",
+"impact-card6-title": "🐾 ❤️ 🐾",
+"impact-card7-title": "🐾 ❤️ 🐾",
+"impact-card8-title": "🐾 ❤️ 🐾",
+"impact-card9-title": "🐾 ❤️ 🐾",
+"impact-card10-title": "🐾 ❤️ 🐾",
+"impact-card11-title": "🐾 ❤️ 🐾",
+"impact-card12-title": "🐾 ❤️ 🐾",
+"impact-card13-title": "🐾 ❤️ 🐾",
+"impact-card14-title": "🐾 ❤️ 🐾",
+"impact-card15-title": "🐾 ❤️ 🐾",
+"impact-card16-title": "🐾 ❤️ 🐾",
+"impact-card17-title": "🐾 ❤️ 🐾",
+"impact-card18-title": "🐾 ❤️ 🐾",
+"impact-card19-title": "🐾 ❤️ 🐾",
+"impact-card20-title": "🐾 ❤️ 🐾",
+"impact-card21-title": "🐾 ❤️ 🐾",
+"impact-card22-title": "🐾 ❤️ 🐾",
+"impact-card23-title": "🐾 ❤️ 🐾",
+"impact-card24-title": "🐾 ❤️ 🐾",
+"impact-card25-title": "🐾 ❤️ 🐾",
+"impact-card26-title": "🐾 ❤️ 🐾",
+"impact-card27-title": "🐾 ❤️ 🐾",
+"impact-card28-title": "🐾 ❤️ 🐾",
+"impact-card29-title": "🐾 ❤️ 🐾",
+"impact-card30-title": "🐾 ❤️ 🐾",
+"impact-card31-title": "🐾 ❤️ 🐾",
+"impact-card32-title": "🐾 ❤️ 🐾",
+"impact-card33-title": "🐾 ❤️ 🐾",
+"impact-card34-title": "🐾 ❤️ 🐾",
+"impact-card35-title": "🐾 ❤️ 🐾",
+"impact-card36-title": "🐾 ❤️ 🐾",
+"impact-card37-title": "🐾 ❤️ 🐾",
+"impact-card38-title": "🐾 ❤️ 🐾",
+"impact-card39-title": "🐾 ❤️ 🐾",
+"impact-card40-title": "🐾 ❤️ 🐾",
+"impact-card41-title": "🐾 ❤️ 🐾",
+"impact-card42-title": "🐾 ❤️ 🐾",
+"impact-card43-title": "🐾 ❤️ 🐾",
+"impact-card44-title": "🐾 ❤️ 🐾",
+"impact-card45-title": "🐾 ❤️ 🐾",
+"impact-card46-title": "🐾 ❤️ 🐾",
+"impact-card47-title": "🐾 ❤️ 🐾",
+"impact-card48-title": "🐾 ❤️ 🐾",
+"impact-card49-title": "🐾 ❤️ 🐾",
+"impact-card50-title": "🐾 ❤️ 🐾",
+  "footer-slogan": "Standing Between Them and Suffering"
+  },
+
+  ro: {
+    "page-title": "Impactul Nostru - Asociația Blue Paws",
+    "logo-text": "Asociația Blue Paws",
+    "nav-home": "Acasă",
+    "nav-adopt": "Adoptă",
+    "nav-about": "Despre Noi",
+    "nav-impact": "Impact",
+    "nav-stories": "Povești",
+    "nav-news": "Știri",
+    "nav-faq": "Întrebări Frecvente",
+    "impact-title": "Impactul Nostru Până Acum",
+    "impact-subtitle": "Împreună, am salvat, vindecat și rehomed sute de câini din județul Mureș.",
+    "dogs-helped-title": "❤️ Vieți rescrise. Voci scoase din tăcere. ❤️",
+    "bella-desc": "Găsită sever subnutrită pe străzi. Acum are o viață fericită în noua ei casă.",
+    "bruno-desc": "Salvat cu piciorul rupt. După operație și recuperare, este acum un câine fericit.",
+    "mia-desc": "Era însărcinată când a fost salvată. Toți cei 6 pui și Mia și-au găsit familii iubitoare.",
+    "stat-rescued-label": "Câini salvați",
+    "stat-sterilized-label": "Sterilizați",
+    "stat-adopted-label": "Adoptați",
+    "stat-vaccinated-label": "Vaccinați",
+    "contact-title": "Contactează-ne",
+    "message-title": "Trimite-ne un mesaj",
+    "name-placeholder": "Numele tău",
+    "email-placeholder": "Adresa de email",
+    "message-placeholder": "Cum te putem ajuta?",
+    "footer-follow-us": "Urmărește-ne",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "impact-title-text": "Fiecare suflet este o viață schimbată pentru totdeauna",
+    "impact-p1": "La Asociația Blue Paws, nu măsurăm succesul în statistici — îl măsurăm în a doua șansă.",
+    "impact-p2": "Fiecare câine salvat poartă o poveste de supraviețuire, frică transformată în încredere și singurătate înlocuită de grijă.",
+    "impact-p3": "Fiecare adopție nu este doar un nou cămin, ci un trecut frânt care își găsește în sfârșit liniștea.",
+    "impact-p4": "Și fiecare moment de iubire oferit este o amintire că bunătatea schimbă totul.",
+    "footer-logo": "Asociația Blue Paws",
+    "donate-btn": "Donează",
+        "impact-card1-title": "🐾 ❤️ 🐾",
+"impact-card2-title": "🐾 ❤️ 🐾",
+"impact-card3-title": "🐾 ❤️ 🐾",
+"impact-card4-title": "🐾 ❤️ 🐾",
+"impact-card5-title": "🐾 ❤️ 🐾",
+"impact-card6-title": "🐾 ❤️ 🐾",
+"impact-card7-title": "🐾 ❤️ 🐾",
+"impact-card8-title": "🐾 ❤️ 🐾",
+"impact-card9-title": "🐾 ❤️ 🐾",
+"impact-card10-title": "🐾 ❤️ 🐾",
+"impact-card11-title": "🐾 ❤️ 🐾",
+"impact-card12-title": "🐾 ❤️ 🐾",
+"impact-card13-title": "🐾 ❤️ 🐾",
+"impact-card14-title": "🐾 ❤️ 🐾",
+"impact-card15-title": "🐾 ❤️ 🐾",
+"impact-card16-title": "🐾 ❤️ 🐾",
+"impact-card17-title": "🐾 ❤️ 🐾",
+"impact-card18-title": "🐾 ❤️ 🐾",
+"impact-card19-title": "🐾 ❤️ 🐾",
+"impact-card20-title": "🐾 ❤️ 🐾",
+"impact-card21-title": "🐾 ❤️ 🐾",
+"impact-card22-title": "🐾 ❤️ 🐾",
+"impact-card23-title": "🐾 ❤️ 🐾",
+"impact-card24-title": "🐾 ❤️ 🐾",
+"impact-card25-title": "🐾 ❤️ 🐾",
+"impact-card26-title": "🐾 ❤️ 🐾",
+"impact-card27-title": "🐾 ❤️ 🐾",
+"impact-card28-title": "🐾 ❤️ 🐾",
+"impact-card29-title": "🐾 ❤️ 🐾",
+"impact-card30-title": "🐾 ❤️ 🐾",
+"impact-card31-title": "🐾 ❤️ 🐾",
+"impact-card32-title": "🐾 ❤️ 🐾",
+"impact-card33-title": "🐾 ❤️ 🐾",
+"impact-card34-title": "🐾 ❤️ 🐾",
+"impact-card35-title": "🐾 ❤️ 🐾",
+"impact-card36-title": "🐾 ❤️ 🐾",
+"impact-card37-title": "🐾 ❤️ 🐾",
+"impact-card38-title": "🐾 ❤️ 🐾",
+"impact-card39-title": "🐾 ❤️ 🐾",
+"impact-card40-title": "🐾 ❤️ 🐾",
+"impact-card41-title": "🐾 ❤️ 🐾",
+"impact-card42-title": "🐾 ❤️ 🐾",
+"impact-card43-title": "🐾 ❤️ 🐾",
+"impact-card44-title": "🐾 ❤️ 🐾",
+"impact-card45-title": "🐾 ❤️ 🐾",
+"impact-card46-title": "🐾 ❤️ 🐾",
+"impact-card47-title": "🐾 ❤️ 🐾",
+"impact-card48-title": "🐾 ❤️ 🐾",
+"impact-card49-title": "🐾 ❤️ 🐾",
+"impact-card50-title": "🐾 ❤️ 🐾",
+  "footer-slogan": "Stăm între ei și suferință."
+  },
+
+  hu: {
+    "page-title": "Hatásunk - Blue Paws Egyesület",
+    "logo-text": "Blue Paws Egyesület",
+    "nav-home": "Kezdőlap",
+    "nav-adopt": "Örökbefogadás",
+    "nav-about": "Rólunk",
+    "nav-impact": "Hatásunk",
+    "nav-stories": "Történetek",
+    "nav-news": "Hírek",
+    "nav-faq": "GYIK",
+    "impact-title": "Eddigi Hatásunk",
+    "impact-subtitle": "Együtt több száz kutyát mentettünk, gyógyítottunk és helyeztünk új otthonba Maros megyében.",
+    "dogs-helped-title": "❤️ Újraírt életek. A csendből visszahozott hangok. ❤️",
+    "bella-desc": "Súlyosan alultápláltan találták az utcán. Most boldog új otthonában él.",
+    "bruno-desc": "Eltört lábbal mentettük meg. Műtét és rehabilitáció után most boldog kutya.",
+    "mia-desc": "Már vemhes volt, amikor megmentettük. Mind a 6 kölyke és Mia is szerető otthonra talált.",
+    "stat-rescued-label": "Megmentett kutyák",
+    "stat-sterilized-label": "Ivartalanított",
+    "stat-adopted-label": "Örökbefogadott",
+    "stat-vaccinated-label": "Beoltott",
+    "contact-title": "Kapcsolat",
+    "message-title": "Küldj nekünk üzenetet",
+    "name-placeholder": "Neved",
+    "email-placeholder": "Email címed",
+    "message-placeholder": "Miben segíthetünk?",
+    "footer-follow-us": "Kövess minket",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "impact-title-text": "Minden lélek egy örökre megváltozott élet",
+    "impact-p1": "A Blue Paws Egyesületnél nem a statisztikákban mérjük a sikert — hanem a második esélyekben.",
+    "impact-p2": "Minden megmentett kutya egy túlélés történetét hordozza: a félelem bizalommá, a magány pedig gondoskodássá változik.",
+    "impact-p3": "Minden örökbefogadás nem csak egy új otthon, hanem egy megtört múlt végső békére találása.",
+    "impact-p4": "És minden nekik adott szeretet emlékeztet arra, hogy a kedvesség mindent megváltoztat.",
+    "footer-logo": "Blue Paws Egyesület",
+    "donate-btn": "Adományozás",
+     "impact-card1-title": "🐾 ❤️ 🐾",
+"impact-card2-title": "🐾 ❤️ 🐾",
+"impact-card3-title": "🐾 ❤️ 🐾",
+"impact-card4-title": "🐾 ❤️ 🐾",
+"impact-card5-title": "🐾 ❤️ 🐾",
+"impact-card6-title": "🐾 ❤️ 🐾",
+"impact-card7-title": "🐾 ❤️ 🐾",
+"impact-card8-title": "🐾 ❤️ 🐾",
+"impact-card9-title": "🐾 ❤️ 🐾",
+"impact-card10-title": "🐾 ❤️ 🐾",
+"impact-card11-title": "🐾 ❤️ 🐾",
+"impact-card12-title": "🐾 ❤️ 🐾",
+"impact-card13-title": "🐾 ❤️ 🐾",
+"impact-card14-title": "🐾 ❤️ 🐾",
+"impact-card15-title": "🐾 ❤️ 🐾",
+"impact-card16-title": "🐾 ❤️ 🐾",
+"impact-card17-title": "🐾 ❤️ 🐾",
+"impact-card18-title": "🐾 ❤️ 🐾",
+"impact-card19-title": "🐾 ❤️ 🐾",
+"impact-card20-title": "🐾 ❤️ 🐾",
+"impact-card21-title": "🐾 ❤️ 🐾",
+"impact-card22-title": "🐾 ❤️ 🐾",
+"impact-card23-title": "🐾 ❤️ 🐾",
+"impact-card24-title": "🐾 ❤️ 🐾",
+"impact-card25-title": "🐾 ❤️ 🐾",
+"impact-card26-title": "🐾 ❤️ 🐾",
+"impact-card27-title": "🐾 ❤️ 🐾",
+"impact-card28-title": "🐾 ❤️ 🐾",
+"impact-card29-title": "🐾 ❤️ 🐾",
+"impact-card30-title": "🐾 ❤️ 🐾",
+"impact-card31-title": "🐾 ❤️ 🐾",
+"impact-card32-title": "🐾 ❤️ 🐾",
+"impact-card33-title": "🐾 ❤️ 🐾",
+"impact-card34-title": "🐾 ❤️ 🐾",
+"impact-card35-title": "🐾 ❤️ 🐾",
+"impact-card36-title": "🐾 ❤️ 🐾",
+"impact-card37-title": "🐾 ❤️ 🐾",
+"impact-card38-title": "🐾 ❤️ 🐾",
+"impact-card39-title": "🐾 ❤️ 🐾",
+"impact-card40-title": "🐾 ❤️ 🐾",
+"impact-card41-title": "🐾 ❤️ 🐾",
+"impact-card42-title": "🐾 ❤️ 🐾",
+"impact-card43-title": "🐾 ❤️ 🐾",
+"impact-card44-title": "🐾 ❤️ 🐾",
+"impact-card45-title": "🐾 ❤️ 🐾",
+"impact-card46-title": "🐾 ❤️ 🐾",
+"impact-card47-title": "🐾 ❤️ 🐾",
+"impact-card48-title": "🐾 ❤️ 🐾",
+"impact-card49-title": "🐾 ❤️ 🐾",
+"impact-card50-title": "🐾 ❤️ 🐾",
+"footer-slogan": "Ott állunk köztük és a szenvedés között."
+  },
+
+  it: {
+    "page-title": "Il Nostro Impatto - Associazione Blue Paws",
+    "logo-text": "Associazione Blue Paws",
+    "nav-home": "Home",
+    "nav-adopt": "Adotta",
+    "nav-about": "Chi Siamo",
+    "nav-impact": "Impatto",
+    "nav-stories": "Storie",
+    "nav-news": "Notizie",
+    "nav-faq": "FAQ",
+    "impact-title": "Il Nostro Impatto Finora",
+    "impact-subtitle": "Insieme abbiamo salvato, curato e dato una casa a centinaia di cani nella contea di Mureș.",
+    "dogs-helped-title": "❤️ Vite riscritte. Voci riportate dal silenzio. ❤️",
+    "bella-desc": "Trovata gravemente malnutrita per strada. Ora vive felice nella sua casa per sempre.",
+    "bruno-desc": "Salvato con una zampa rotta. Dopo chirurgia e riabilitazione, ora è un cane felice.",
+    "mia-desc": "Era incinta quando è stata salvata. Tutti i 6 cuccioli e Mia hanno trovato una casa.",
+    "stat-rescued-label": "Cani salvati",
+    "stat-sterilized-label": "Sterilizzati",
+    "stat-adopted-label": "Adottati",
+    "stat-vaccinated-label": "Vaccinati",
+    "contact-title": "Contattaci",
+    "message-title": "Inviaci un messaggio",
+    "name-placeholder": "Il tuo nome",
+    "email-placeholder": "Indirizzo email",
+    "message-placeholder": "Come possiamo aiutarti?",
+    "footer-follow-us": "Seguici",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "impact-title-text": "Ogni anima è una vita cambiata per sempre",
+    "impact-p1": "Presso l’Associazione Blue Paws, non misuriamo il successo nelle statistiche — ma nelle seconde possibilità.",
+    "impact-p2": "Ogni cane salvato porta con sé una storia di sopravvivenza, paura trasformata in fiducia e solitudine sostituita dall’amore.",
+    "impact-p3": "Ogni adozione non è solo una nuova casa, ma un passato spezzato che finalmente trova pace.",
+    "impact-p4": "E ogni momento di amore donato è un promemoria che la gentilezza cambia tutto.",
+    "footer-logo": "Associazione Blue Paws",
+    "donate-btn": "Dona",
+        "impact-card1-title": "🐾 ❤️ 🐾",
+"impact-card2-title": "🐾 ❤️ 🐾",
+"impact-card3-title": "🐾 ❤️ 🐾",
+"impact-card4-title": "🐾 ❤️ 🐾",
+"impact-card5-title": "🐾 ❤️ 🐾",
+"impact-card6-title": "🐾 ❤️ 🐾",
+"impact-card7-title": "🐾 ❤️ 🐾",
+"impact-card8-title": "🐾 ❤️ 🐾",
+"impact-card9-title": "🐾 ❤️ 🐾",
+"impact-card10-title": "🐾 ❤️ 🐾",
+"impact-card11-title": "🐾 ❤️ 🐾",
+"impact-card12-title": "🐾 ❤️ 🐾",
+"impact-card13-title": "🐾 ❤️ 🐾",
+"impact-card14-title": "🐾 ❤️ 🐾",
+"impact-card15-title": "🐾 ❤️ 🐾",
+"impact-card16-title": "🐾 ❤️ 🐾",
+"impact-card17-title": "🐾 ❤️ 🐾",
+"impact-card18-title": "🐾 ❤️ 🐾",
+"impact-card19-title": "🐾 ❤️ 🐾",
+"impact-card20-title": "🐾 ❤️ 🐾",
+"impact-card21-title": "🐾 ❤️ 🐾",
+"impact-card22-title": "🐾 ❤️ 🐾",
+"impact-card23-title": "🐾 ❤️ 🐾",
+"impact-card24-title": "🐾 ❤️ 🐾",
+"impact-card25-title": "🐾 ❤️ 🐾",
+"impact-card26-title": "🐾 ❤️ 🐾",
+"impact-card27-title": "🐾 ❤️ 🐾",
+"impact-card28-title": "🐾 ❤️ 🐾",
+"impact-card29-title": "🐾 ❤️ 🐾",
+"impact-card30-title": "🐾 ❤️ 🐾",
+"impact-card31-title": "🐾 ❤️ 🐾",
+"impact-card32-title": "🐾 ❤️ 🐾",
+"impact-card33-title": "🐾 ❤️ 🐾",
+"impact-card34-title": "🐾 ❤️ 🐾",
+"impact-card35-title": "🐾 ❤️ 🐾",
+"impact-card36-title": "🐾 ❤️ 🐾",
+"impact-card37-title": "🐾 ❤️ 🐾",
+"impact-card38-title": "🐾 ❤️ 🐾",
+"impact-card39-title": "🐾 ❤️ 🐾",
+"impact-card40-title": "🐾 ❤️ 🐾",
+"impact-card41-title": "🐾 ❤️ 🐾",
+"impact-card42-title": "🐾 ❤️ 🐾",
+"impact-card43-title": "🐾 ❤️ 🐾",
+"impact-card44-title": "🐾 ❤️ 🐾",
+"impact-card45-title": "🐾 ❤️ 🐾",
+"impact-card46-title": "🐾 ❤️ 🐾",
+"impact-card47-title": "🐾 ❤️ 🐾",
+"impact-card48-title": "🐾 ❤️ 🐾",
+"impact-card49-title": "🐾 ❤️ 🐾",
+"impact-card50-title": "🐾 ❤️ 🐾",
+"footer-slogan": "Siamo il baluardo tra loro e la sofferenza."
+  },
+
+  de: {
+    "page-title": "Unser Einfluss - Blue Paws Verein",
+    "logo-text": "Blue Paws Verein",
+    "nav-home": "Start",
+    "nav-adopt": "Adoptieren",
+    "nav-about": "Über uns",
+    "nav-impact": "Impact",
+    "nav-stories": "Geschichten",
+    "nav-news": "Nachrichten",
+    "nav-faq": "FAQ",
+    "impact-title": "Unser bisheriger Einfluss",
+    "impact-subtitle": "Gemeinsam haben wir Hunderte Hunde im Kreis Mureș gerettet, geheilt und vermittelt.",
+    "dogs-helped-title": "❤️ Neu geschriebene Leben. Stimmen aus der Stille zurückgeholt. ❤️",
+    "bella-desc": "Stark unterernährt auf der Straße gefunden. Jetzt in ihrem liebevollen Zuhause.",
+    "bruno-desc": "Mit gebrochenem Bein gerettet. Nach Operation und Reha nun ein glücklicher Hund.",
+    "mia-desc": "Sie war trächtig, als sie gerettet wurde. Alle 6 Welpen und Mia fanden ein Zuhause.",
+    "stat-rescued-label": "Gerettete Hunde",
+    "stat-sterilized-label": "Sterilisiert",
+    "stat-adopted-label": "Adoptiert",
+    "stat-vaccinated-label": "Geimpft",
+    "contact-title": "Kontakt",
+    "message-title": "Schick uns eine Nachricht",
+    "name-placeholder": "Dein Name",
+    "email-placeholder": "E-Mail-Adresse",
+    "message-placeholder": "Wie können wir dir helfen?",
+    "footer-follow-us": "Folge uns",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "impact-title-text": "Jede Seele ist ein Leben, das sich für immer verändert hat",
+    "impact-p1": "Bei der Blue Paws Association messen wir Erfolg nicht in Statistiken — sondern in zweiten Chancen.",
+    "impact-p2": "Jeder gerettete Hund trägt eine Geschichte von Überleben in sich: Angst wird zu Vertrauen, Einsamkeit zu Fürsorge.",
+    "impact-p3": "Jede Adoption ist nicht nur ein neues Zuhause, sondern ein gebrochenes Leben, das endlich Frieden findet.",
+    "impact-p4": "Und jeder Moment der Liebe erinnert uns daran, dass Freundlichkeit alles verändern kann.",
+    "footer-logo": "Blue Paws Verein",
+    "donate-btn": "Spenden",
+       "impact-card1-title": "🐾 ❤️ 🐾",
+"impact-card2-title": "🐾 ❤️ 🐾",
+"impact-card3-title": "🐾 ❤️ 🐾",
+"impact-card4-title": "🐾 ❤️ 🐾",
+"impact-card5-title": "🐾 ❤️ 🐾",
+"impact-card6-title": "🐾 ❤️ 🐾",
+"impact-card7-title": "🐾 ❤️ 🐾",
+"impact-card8-title": "🐾 ❤️ 🐾",
+"impact-card9-title": "🐾 ❤️ 🐾",
+"impact-card10-title": "🐾 ❤️ 🐾",
+"impact-card11-title": "🐾 ❤️ 🐾",
+"impact-card12-title": "🐾 ❤️ 🐾",
+"impact-card13-title": "🐾 ❤️ 🐾",
+"impact-card14-title": "🐾 ❤️ 🐾",
+"impact-card15-title": "🐾 ❤️ 🐾",
+"impact-card16-title": "🐾 ❤️ 🐾",
+"impact-card17-title": "🐾 ❤️ 🐾",
+"impact-card18-title": "🐾 ❤️ 🐾",
+"impact-card19-title": "🐾 ❤️ 🐾",
+"impact-card20-title": "🐾 ❤️ 🐾",
+"impact-card21-title": "🐾 ❤️ 🐾",
+"impact-card22-title": "🐾 ❤️ 🐾",
+"impact-card23-title": "🐾 ❤️ 🐾",
+"impact-card24-title": "🐾 ❤️ 🐾",
+"impact-card25-title": "🐾 ❤️ 🐾",
+"impact-card26-title": "🐾 ❤️ 🐾",
+"impact-card27-title": "🐾 ❤️ 🐾",
+"impact-card28-title": "🐾 ❤️ 🐾",
+"impact-card29-title": "🐾 ❤️ 🐾",
+"impact-card30-title": "🐾 ❤️ 🐾",
+"impact-card31-title": "🐾 ❤️ 🐾",
+"impact-card32-title": "🐾 ❤️ 🐾",
+"impact-card33-title": "🐾 ❤️ 🐾",
+"impact-card34-title": "🐾 ❤️ 🐾",
+"impact-card35-title": "🐾 ❤️ 🐾",
+"impact-card36-title": "🐾 ❤️ 🐾",
+"impact-card37-title": "🐾 ❤️ 🐾",
+"impact-card38-title": "🐾 ❤️ 🐾",
+"impact-card39-title": "🐾 ❤️ 🐾",
+"impact-card40-title": "🐾 ❤️ 🐾",
+"impact-card41-title": "🐾 ❤️ 🐾",
+"impact-card42-title": "🐾 ❤️ 🐾",
+"impact-card43-title": "🐾 ❤️ 🐾",
+"impact-card44-title": "🐾 ❤️ 🐾",
+"impact-card45-title": "🐾 ❤️ 🐾",
+"impact-card46-title": "🐾 ❤️ 🐾",
+"impact-card47-title": "🐾 ❤️ 🐾",
+"impact-card48-title": "🐾 ❤️ 🐾",
+"impact-card49-title": "🐾 ❤️ 🐾",
+"impact-card50-title": "🐾 ❤️ 🐾",
+"footer-slogan": "Wir stehen zwischen ihnen und dem Leid."
+  },
+
+  fr: {
+    "page-title": "Notre Impact - Association Blue Paws",
+    "logo-text": "Association Blue Paws",
+    "nav-home": "Accueil",
+    "nav-adopt": "Adopter",
+    "nav-about": "À Propos",
+    "nav-impact": "Impact",
+    "nav-stories": "Histoires",
+    "nav-news": "Actualités",
+    "nav-faq": "FAQ",
+    "impact-title": "Notre Impact Jusqu’à Présent",
+    "impact-subtitle": "Ensemble, nous avons sauvé, soigné et placé des centaines de chiens dans des foyers.",
+    "dogs-helped-title": "❤️ Vies réécrites. Voix sorties du silence. ❤️",
+    "bella-desc": "Trouvée gravement mal nourrie dans la rue. Aujourd’hui heureuse dans son foyer.",
+    "bruno-desc": "Sauvé avec une patte cassée. Après chirurgie et rééducation, il est heureux.",
+    "mia-desc": "Gestante lors de son sauvetage. Ses 6 chiots et elle ont tous trouvé un foyer.",
+    "stat-rescued-label": "Chiens sauvés",
+    "stat-sterilized-label": "Stérilisés",
+    "stat-adopted-label": "Adoptés",
+    "stat-vaccinated-label": "Vaccinés",
+    "contact-title": "Contactez-nous",
+    "message-title": "Envoyez-nous un message",
+    "name-placeholder": "Votre nom",
+    "email-placeholder": "Adresse e-mail",
+    "message-placeholder": "Comment pouvons-nous vous aider?",
+    "footer-follow-us": "Suivez-nous",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "impact-title-text": "Chaque âme est une vie changée à jamais",
+    "impact-p1": "À l’Association Blue Paws, nous ne mesurons pas le succès en statistiques — mais en secondes chances.",
+    "impact-p2": "Chaque chien sauvé porte une histoire de survie : la peur devient confiance et la solitude devient soin.",
+    "impact-p3": "Chaque adoption n’est pas seulement un nouveau foyer, mais un passé brisé qui trouve enfin la paix.",
+    "impact-p4": "Et chaque moment d’amour donné rappelle que la gentillesse change tout.",
+    "footer-logo": "Association Blue Paws",
+    "donate-btn": "Faire un don",
+        "impact-card1-title": "🐾 ❤️ 🐾",
+"impact-card2-title": "🐾 ❤️ 🐾",
+"impact-card3-title": "🐾 ❤️ 🐾",
+"impact-card4-title": "🐾 ❤️ 🐾",
+"impact-card5-title": "🐾 ❤️ 🐾",
+"impact-card6-title": "🐾 ❤️ 🐾",
+"impact-card7-title": "🐾 ❤️ 🐾",
+"impact-card8-title": "🐾 ❤️ 🐾",
+"impact-card9-title": "🐾 ❤️ 🐾",
+"impact-card10-title": "🐾 ❤️ 🐾",
+"impact-card11-title": "🐾 ❤️ 🐾",
+"impact-card12-title": "🐾 ❤️ 🐾",
+"impact-card13-title": "🐾 ❤️ 🐾",
+"impact-card14-title": "🐾 ❤️ 🐾",
+"impact-card15-title": "🐾 ❤️ 🐾",
+"impact-card16-title": "🐾 ❤️ 🐾",
+"impact-card17-title": "🐾 ❤️ 🐾",
+"impact-card18-title": "🐾 ❤️ 🐾",
+"impact-card19-title": "🐾 ❤️ 🐾",
+"impact-card20-title": "🐾 ❤️ 🐾",
+"impact-card21-title": "🐾 ❤️ 🐾",
+"impact-card22-title": "🐾 ❤️ 🐾",
+"impact-card23-title": "🐾 ❤️ 🐾",
+"impact-card24-title": "🐾 ❤️ 🐾",
+"impact-card25-title": "🐾 ❤️ 🐾",
+"impact-card26-title": "🐾 ❤️ 🐾",
+"impact-card27-title": "🐾 ❤️ 🐾",
+"impact-card28-title": "🐾 ❤️ 🐾",
+"impact-card29-title": "🐾 ❤️ 🐾",
+"impact-card30-title": "🐾 ❤️ 🐾",
+"impact-card31-title": "🐾 ❤️ 🐾",
+"impact-card32-title": "🐾 ❤️ 🐾",
+"impact-card33-title": "🐾 ❤️ 🐾",
+"impact-card34-title": "🐾 ❤️ 🐾",
+"impact-card35-title": "🐾 ❤️ 🐾",
+"impact-card36-title": "🐾 ❤️ 🐾",
+"impact-card37-title": "🐾 ❤️ 🐾",
+"impact-card38-title": "🐾 ❤️ 🐾",
+"impact-card39-title": "🐾 ❤️ 🐾",
+"impact-card40-title": "🐾 ❤️ 🐾",
+"impact-card41-title": "🐾 ❤️ 🐾",
+"impact-card42-title": "🐾 ❤️ 🐾",
+"impact-card43-title": "🐾 ❤️ 🐾",
+"impact-card44-title": "🐾 ❤️ 🐾",
+"impact-card45-title": "🐾 ❤️ 🐾",
+"impact-card46-title": "🐾 ❤️ 🐾",
+"impact-card47-title": "🐾 ❤️ 🐾",
+"impact-card48-title": "🐾 ❤️ 🐾",
+"impact-card49-title": "🐾 ❤️ 🐾",
+"impact-card50-title": "🐾 ❤️ 🐾",
+"footer-slogan": "Nous nous dressons entre eux et la souffrance."
+  }
+};
+
+        function changeLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+
+            const flagMap = { en: '🇬🇧', ro: '🇷🇴', hu: '🇭🇺', it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷' };
+            const codeMap = { en: 'EN', ro: 'RO', hu: 'HU', it: 'IT', de: 'DE', fr: 'FR' };
+
+            document.getElementById('current-flag').textContent = flagMap[lang];
+            document.getElementById('current-lang').textContent = codeMap[lang];
+
+            Object.keys(translations[lang]).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            document.getElementById('page-title').textContent = translations[lang]["page-title"];
+            document.documentElement.lang = lang;
+        }
+
+        let dropdownOpen = false;
+        function toggleDropdown() {
+            const dd = document.getElementById('lang-dropdown');
+            const ch = document.getElementById('chevron');
+            dropdownOpen = !dropdownOpen;
+            dd.classList.toggle('hidden', !dropdownOpen);
+            ch.style.transform = dropdownOpen ? 'rotate(180deg)' : '';
+        }
+
+        document.getElementById('lang-btn').addEventListener('click', toggleDropdown);
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('lang-btn').contains(e.target)) {
+                const dd = document.getElementById('lang-dropdown');
+                if (!dd.classList.contains('hidden')) toggleDropdown();
+            }
+        });
+
+        window.onload = () => changeLanguage('en');
+
+            document.querySelectorAll('.impact-card').forEach(card => {
+
+        const slider = card.querySelector('.impact-slider');
+        const slides = card.querySelectorAll('.impact-slider img');
+
+        const prevBtn = card.querySelector('.prev');
+        const nextBtn = card.querySelector('.next');
+
+        let index = 0;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            updateSlider();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            updateSlider();
+        });
+
+    });
+    </script>
+</body>
+</html>

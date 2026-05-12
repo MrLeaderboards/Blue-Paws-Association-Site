@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Success Stories - Blue Paws Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .accent-gradient {
+            background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+        }
+        .story-card {
+            transition: all 0.3s ease;
+        }
+        .story-card:hover {
+            transform: translateY(-10px);
+        }
+        .stories-hero {
+            position: relative;
+            height: 65vh;
+            background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), 
+                              url('Blue%20Paws%20Logo.jpeg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-text {
+            text-shadow: 
+                0 0 8px rgba(0,0,0,0.9),
+                -2px -2px 3px rgba(0,0,0,0.85),
+                2px -2px 3px rgba(0,0,0,0.85),
+                -2px 2px 3px rgba(0,0,0,0.85),
+                2px 2px 3px rgba(0,0,0,0.85);
+        }
+
+    .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 54px;
+    height: 54px;
+    font-size: 1rem; 
+    
+
+    border-radius: 9999px;
+    overflow: hidden;
+
+    padding-left: 19.4px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.45s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* expand capsule */
+.social-link:hover {
+    width: 270px;
+}
+
+/* icon */
+.social-link i {
+    font-size: 1.5rem;
+    min-width: 40px;
+}
+
+/* hidden text */
+.social-link span {
+    opacity: 0;
+    margin-left: 20px;
+    white-space: nowrap;
+
+    transform: translateX(-10px);
+    transition: all 0.35s ease;
+
+    font-weight: 600;
+}
+
+/* reveal text */
+.social-link:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* colors */
+.facebook { background: #1877f2; }
+
+.instagram {
+    background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.tiktok { background: #000; }
+
+
+.animate-title {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.animate-subtitle {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* Key animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Blue%20Paws%20Logo.jpeg" alt="Blue Paws Association" class="h-10 w-auto">
+                <h1 id="logo-text"class="text-2xl font-bold text-blue-700 font-[Nunito]">Blue Paws Association</h1>
+            </div>
+           
+            <div class="hidden md:flex gap-8 text-lg items-center">
+                <a href="index.html" id="nav-home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#adopt" id="nav-adopt" class="hover:text-blue-600 font-medium">Adopt</a>
+                <a href="about.html" id="nav-about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="impact.html" id="nav-impact" class="hover:text-blue-600 font-medium">Impact</a>
+                <a href="stories.html" id="nav-stories" class="text-blue-600 font-semibold">Stories</a>
+                <a href="news.html" id="nav-news" class="hover:text-blue-600 font-medium">News</a>
+                <a href="faq.html" id="nav-faq" class="hover:text-blue-600 font-medium">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button id="lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none">
+                        <span id="current-flag" class="text-2xl">🇬🇧</span>
+                        <span id="current-lang" class="font-medium text-gray-700">EN</span>
+                        <i id="chevron" class="fa-solid fa-chevron-down text-sm text-gray-500 transition-transform"></i>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl py-2 hidden z-50 border border-gray-100">
+<a href="#" onclick="changeLanguage('en'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/gb.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>English</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('ro'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/ro.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Romanian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('hu'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/hu.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Hungarian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('it'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/it.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Italian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('de'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/de.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>German</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('fr'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/fr.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>French</span>
+
+</a>
+                    </div>
+                </div>
+                <a href="donation.html" class="accent-gradient hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fa-solid fa-heart"></i> 
+                    <span id="donate-btn">Donate</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero -->
+<section class="stories-hero text-white font-[Nunito]">
+
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+
+        <h1 id="stories-title"
+            class="text-xl md:text-1xl lg:text-4xl font-black mb-6 hero-text animate-title tracking-tight leading-snug">
+            They were left behind, broken and forgotten, yet somehow they still chose love.
+        </h1>
+
+<p id="stories-subtitle"
+   style="font-family: 'Inter', sans-serif;"
+   class="text-base md:text-lg max-w-xl mx-auto hero-text mt-6 font-normal leading-relaxed text-white/150 drop-shadow-sm">
+    Every scar they carry tells the story of a soul that never gave up hope.
+</p>
+
+    </div>
+
+</section>
+
+    <!-- Stories Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <div class="story-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <img src="Stories6.JPG" alt="Bella" class="w-full h-72 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-3">Lady's New Beginning</h3>
+                        <p id="story1-text" class="text-gray-600 leading-relaxed">
+                
+                        </p>
+                        <div class="mt-6 text-sm text-emerald-600 font-medium">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <img src="Stories7.JPG" alt="Bruno" class="w-full h-72 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-3">Eva's Second Chance</h3>
+                        <p id="story2-text" class="text-gray-600 leading-relaxed">
+        
+                        </p>
+                        <div class="mt-6 text-sm text-emerald-600 font-medium">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <img src="Stories5.JPG" alt="Bruno" class="w-full h-72 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-3"></h3>
+                        <p id="story3-text" class="text-gray-600 leading-relaxed">
+            
+                        </p>
+                        <div class="mt-6 text-sm text-emerald-600 font-medium">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <img src="Stories3.JPG" alt="Bruno" class="w-full h-72 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-3">Buddy</h3>
+                        <p id="story4-text" class="text-gray-600 leading-relaxed">
+
+                        </p>
+                        <div class="mt-6 text-sm text-emerald-600 font-medium">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <img src="Lulu.JPG" alt="Lulu" class="w-full h-72 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-3">Lulu</h3>
+                        <p id="story5-text" class="text-gray-600 leading-relaxed">
+                    
+                        </p>
+                        <div class="mt-6 text-sm text-emerald-600 font-medium">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <img src="Stories4.JPG" alt="Mia & Puppies" class="w-full h-72 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-3">Puppy</h3>
+                        <p id="story6-text" class="text-gray-600 leading-relaxed">
+        
+                        </p>
+                        <div class="mt-6 text-sm text-emerald-600 font-medium">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <img src="Blue%20Paws%20Logo.jpeg"
+     alt="Blue Paws Association"
+     class="h-16 w-16 object-cover rounded-full border border-white/10 shadow-md transition-all duration-300 hover:scale-105">
+                        <h2 id="footer-logo" class="text-3xl font-bold">Blue Paws Association</h2>
+                    </div>
+                    <p id="footer-slogan" class="text-lg">Saving one dog at a time.</p>
+                </div>
+                <div>
+                    <h3 id="contact-title" class="text-xl font-semibold mb-6 text-white">Contact Us</h3>
+                    <div class="space-y-3">
+                        <p><i class="fa-solid fa-location-dot"></i> Ernei-Mureș, Romania</p>
+                        <p><i class="fa-solid fa-phone"></i> +40 759 031 793</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact@pawsblue.org</p>
+                    </div>
+                </div>
+<div>
+<h3 id="footer-follow-us" class="text-xl font-semibold mb-6 text-white"></h3>
+
+<div class="flex flex-col gap-4">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/people/Blue-Paws/61562938898795/?sk=about"
+       target="_blank"
+       class="social-link facebook">
+
+        <i class="fa-brands fa-facebook-f"></i>
+        <span id="footer-facebook"></span>
+
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/bluepawsmax/"
+       target="_blank"
+       class="social-link instagram">
+
+        <i class="fa-brands fa-instagram"></i>
+        <span id="footer-instagram"></span>
+
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://tiktok.com"
+       target="_blank"
+       class="social-link tiktok">
+
+        <i class="fa-brands fa-tiktok"></i>
+        <span id="footer-tiktok"></span>
+
+    </a>
+
+</div>
+</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("lo6t5O7GTNxTHgV95");
+
+const translations = {
+  en: {
+    "page-title": "Success Stories - Blue Paws Association",
+    "logo-text": "Blue Paws Association",
+    "nav-home": "Home",
+    "nav-adopt": "Adopt",
+    "nav-about": "About",
+    "nav-impact": "Impact",
+    "nav-stories": "Stories",
+    "nav-news": "News",
+    "nav-faq": "FAQ",
+    "stories-title": "They were left behind, broken and forgotten. Yet somehow they still chose love.",
+    "stories-subtitle": "Every scar they carry tells the story of a soul that never gave up hope.",
+    "story1-text": "",
+    "story2-text": "",
+    "story3-text": "❤️❤️❤️❤️❤️❤️❤️",
+    "story4-text": "",
+    "story5-text": "",
+    "story6-text": "",
+    "contact-title": "Contact Us",
+    "message-title": "Send us a message",
+    "name-placeholder": "Your Name",
+    "email-placeholder": "Email Address",
+    "message-placeholder": "How can we help you?",
+    "footer-follow-us": "Follow Us",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "footer-logo": "Blue Paws Association",
+    "donate-btn": "Donate",
+    "footer-slogan": "Standing Between Them and Suffering"
+  },
+
+  ro: {
+    "page-title": "Povești de Succes - Asociația Blue Paws",
+    "logo-text": "Asociația Blue Paws",
+    "nav-home": "Acasă",
+    "nav-adopt": "Adoptă",
+    "nav-about": "Despre Noi",
+    "nav-impact": "Impact",
+    "nav-stories": "Povești",
+    "nav-news": "Știri",
+    "nav-faq": "Întrebări Frecvente",
+    "stories-title": "Au fost lăsați în urmă, rupți și uitați. Și totuși, cumva, au ales iubirea.",
+    "stories-subtitle": "Fiecare cicatrice spune povestea unui suflet care nu a renunțat niciodată la speranță.",
+    "story1-text": "",
+    "story2-text": "",
+    "story3-text": "❤️❤️❤️❤️❤️❤️❤️",
+    "story4-text": "",
+    "story5-text": "",
+    "story6-text": "",
+    "contact-title": "Contactează-ne",
+    "message-title": "Trimite-ne un mesaj",
+    "name-placeholder": "Numele tău",
+    "email-placeholder": "Adresa de email",
+    "message-placeholder": "Cum te putem ajuta?",
+    "footer-follow-us": "Urmărește-ne",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "footer-logo": "Asociația Blue Paws",
+    "donate-btn": "Donează",
+    "footer-slogan": "Stăm între ei și suferință."
+  },
+
+  hu: {
+    "page-title": "Sikertörténetek - Blue Paws Egyesület",
+    "logo-text": "Blue Paws Egyesület",
+    "nav-home": "Kezdőlap",
+    "nav-adopt": "Örökbefogadás",
+    "nav-about": "Rólunk",
+    "nav-impact": "Hatásunk",
+    "nav-stories": "Történetek",
+    "nav-news": "Hírek",
+    "nav-faq": "GYIK",
+    "stories-title": "Elhagyták, összetörtek és elfelejtették őket. Mégis valahogy mégis a szeretetet választották.",
+    "stories-subtitle": "Minden seb egy olyan lélek történetét meséli el, amely soha nem adta fel a reményt.",
+    "story1-text": "",
+    "story2-text": "",
+    "story3-text": "❤️❤️❤️❤️❤️❤️❤️",
+    "story4-text": "",
+    "story5-text": "",
+    "story6-text": "",
+    "contact-title": "Kapcsolat",
+    "message-title": "Küldj nekünk üzenetet",
+    "name-placeholder": "Neved",
+    "email-placeholder": "Email címed",
+    "message-placeholder": "Miben segíthetünk?",
+    "footer-follow-us": "Kövess minket",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "footer-logo": "Blue Paws Egyesület",
+    "donate-btn": "Adományozás",
+    "footer-slogan": "Ott állunk köztük és a szenvedés között."
+  },
+
+  it: {
+    "page-title": "Storie di Successo - Associazione Blue Paws",
+    "logo-text": "Associazione Blue Paws",
+    "nav-home": "Home",
+    "nav-adopt": "Adotta",
+    "nav-about": "Chi Siamo",
+    "nav-impact": "Impatto",
+    "nav-stories": "Storie",
+    "nav-news": "Notizie",
+    "nav-faq": "FAQ",
+    "stories-title": "Sono stati lasciati indietro, rotti e dimenticati. Eppure in qualche modo hanno scelto l’amore.",
+    "stories-subtitle": "Ogni cicatrice racconta la storia di un’anima che non ha mai rinunciato alla speranza.",
+    "story1-text": "",
+    "story2-text": "",
+    "story3-text": "❤️❤️❤️❤️❤️❤️❤️",
+    "story4-text": "",
+    "story5-text": "",
+    "story6-text": "",
+    "contact-title": "Contattaci",
+    "message-title": "Inviaci un messaggio",
+    "name-placeholder": "Il tuo nome",
+    "email-placeholder": "Indirizzo email",
+    "message-placeholder": "Come possiamo aiutarti?",
+    "footer-follow-us": "Seguici",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "footer-logo": "Associazione Blue Paws",
+    "donate-btn": "Dona",
+    "footer-slogan": "Siamo il baluardo tra loro e la sofferenza."
+  },
+
+  de: {
+    "page-title": "Erfolgsgeschichten - Blue Paws Verein",
+    "logo-text": "Blue Paws Verein",
+    "nav-home": "Start",
+    "nav-adopt": "Adoptieren",
+    "nav-about": "Über uns",
+    "nav-impact": "Impact",
+    "nav-stories": "Geschichten",
+    "nav-news": "Nachrichten",
+    "nav-faq": "FAQ",
+    "stories-title": "Sie wurden zurückgelassen, gebrochen und vergessen. Doch irgendwie wählten sie dennoch die Liebe.",
+    "stories-subtitle": "Jede Narbe erzählt die Geschichte einer Seele, die nie die Hoffnung aufgegeben hat.",
+    "story1-text": "",
+    "story2-text": "",
+    "story3-text": "❤️❤️❤️❤️❤️❤️❤️",
+    "story4-text": "",
+    "story5-text": "",
+    "story6-text": "",
+    "contact-title": "Kontakt",
+    "message-title": "Schick uns eine Nachricht",
+    "name-placeholder": "Dein Name",
+    "email-placeholder": "E-Mail-Adresse",
+    "message-placeholder": "Wie können wir dir helfen?",
+    "footer-follow-us": "Folge uns",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "footer-logo": "Blue Paws Verein",
+    "donate-btn": "Spenden",
+    "footer-slogan": "Wir stehen zwischen ihnen und dem Leid."
+  },
+
+  fr: {
+    "page-title": "Histoires de Succès - Association Blue Paws",
+    "logo-text": "Association Blue Paws",
+    "nav-home": "Accueil",
+    "nav-adopt": "Adopter",
+    "nav-about": "À Propos",
+    "nav-impact": "Impact",
+    "nav-stories": "Histoires",
+    "nav-news": "Actualités",
+    "nav-faq": "FAQ",
+    "stories-title": "Ils ont été laissés derrière, brisés et oubliés. Pourtant, ils ont malgré tout choisi l’amour.",
+    "stories-subtitle": "Chaque cicatrice raconte l’histoire d’une âme qui n’a jamais abandonné l’espoir.",
+    "story1-text": "",
+    "story2-text": "",
+    "story3-text": "❤️❤️❤️❤️❤️❤️❤️",
+    "story4-text": "",
+    "story5-text": "",
+    "story6-text": "",
+    "contact-title": "Contactez-nous",
+    "message-title": "Envoyez-nous un message",
+    "name-placeholder": "Votre nom",
+    "email-placeholder": "Adresse e-mail",
+    "message-placeholder": "Comment pouvons-nous vous aider?",
+    "footer-follow-us": "Suivez-nous",
+    "footer-facebook": "Facebook",
+    "footer-instagram": "BluePawsMax",
+    "footer-tiktok": "BluePaws Association",
+    "footer-logo": "Association Blue Paws",
+    "donate-btn": "Faire un don",
+    "footer-slogan": "Nous nous dressons entre eux et la souffrance."
+  }
+};
+
+        function changeLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+
+            const flagMap = { en: '🇬🇧', ro: '🇷🇴', hu: '🇭🇺', it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷' };
+            const codeMap = { en: 'EN', ro: 'RO', hu: 'HU', it: 'IT', de: 'DE', fr: 'FR' };
+
+            document.getElementById('current-flag').textContent = flagMap[lang];
+            document.getElementById('current-lang').textContent = codeMap[lang];
+
+            Object.keys(translations[lang]).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            document.getElementById('page-title').textContent = translations[lang]["page-title"];
+            document.documentElement.lang = lang;
+        }
+
+        let dropdownOpen = false;
+        function toggleDropdown() {
+            const dd = document.getElementById('lang-dropdown');
+            const ch = document.getElementById('chevron');
+            dropdownOpen = !dropdownOpen;
+            dd.classList.toggle('hidden', !dropdownOpen);
+            ch.style.transform = dropdownOpen ? 'rotate(180deg)' : '';
+        }
+
+        document.getElementById('lang-btn').addEventListener('click', toggleDropdown);
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('lang-btn').contains(e.target)) {
+                const dd = document.getElementById('lang-dropdown');
+                if (!dd.classList.contains('hidden')) toggleDropdown();
+            }
+        });
+
+        window.onload = () => changeLanguage('en');
+    </script>
+</body>
+</html>

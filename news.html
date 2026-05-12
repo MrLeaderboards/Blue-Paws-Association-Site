@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">News & Updates - Blue Paws Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+        <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .accent-gradient {
+            background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+        }
+        .news-hero {
+            position: relative;
+            height: 65vh;
+            background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), 
+                              url('Blue%20Paws%20Logo.jpeg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-text {
+            text-shadow: 
+                0 0 8px rgba(0,0,0,0.9),
+                -2px -2px 3px rgba(0,0,0,0.85),
+                2px -2px 3px rgba(0,0,0,0.85),
+                -2px 2px 3px rgba(0,0,0,0.85),
+                2px 2px 3px rgba(0,0,0,0.85);
+        }
+        .news-card {
+            transition: all 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-8px);
+        }
+
+    .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 54px;
+    height: 54px;
+    font-size: 1rem; 
+    
+
+    border-radius: 9999px;
+    overflow: hidden;
+
+    padding-left: 19.4px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.45s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* expand capsule */
+.social-link:hover {
+    width: 270px;
+}
+
+/* icon */
+.social-link i {
+    font-size: 1.5rem;
+    min-width: 40px;
+}
+
+/* hidden text */
+.social-link span {
+    opacity: 0;
+    margin-left: 20px;
+    white-space: nowrap;
+
+    transform: translateX(-10px);
+    transition: all 0.35s ease;
+
+    font-weight: 600;
+}
+
+/* reveal text */
+.social-link:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* colors */
+.facebook { background: #1877f2; }
+
+.instagram {
+    background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.tiktok { background: #000; }
+
+@keyframes fadeUpNews {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-hero .hero-text {
+    opacity: 0;
+    animation: fadeUpNews 1s ease forwards;
+}
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Blue%20Paws%20Logo.jpeg" alt="Blue Paws Association" class="h-10 w-auto">
+                <h1 id="logo-text"class="text-2xl font-bold text-blue-700 font-[Nunito]">Blue Paws Association</h1>
+            </div>
+           
+            <div class="hidden md:flex gap-8 text-lg items-center">
+                <a href="index.html" id="nav-home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#adopt" id="nav-adopt" class="hover:text-blue-600 font-medium">Adopt</a>
+                <a href="about.html" id="nav-about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="impact.html" id="nav-impact" class="hover:text-blue-600 font-medium">Impact</a>
+                <a href="stories.html" id="nav-stories" class="hover:text-blue-600 font-medium">Stories</a>
+                <a href="news.html" id="nav-news" class="text-blue-600 font-semibold">News</a>
+                <a href="faq.html" id="nav-faq" class="hover:text-blue-600 font-medium">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button id="lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none">
+                        <span id="current-flag" class="text-2xl">🇬🇧</span>
+                        <span id="current-lang" class="font-medium text-gray-700">EN</span>
+                        <i id="chevron" class="fa-solid fa-chevron-down text-sm text-gray-500 transition-transform"></i>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl py-2 hidden z-50 border border-gray-100">
+<a href="#" onclick="changeLanguage('en'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/gb.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>English</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('ro'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/ro.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Romanian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('hu'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/hu.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Hungarian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('it'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/it.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Italian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('de'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/de.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>German</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('fr'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/fr.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>French</span>
+
+</a>
+                    </div>
+                </div>
+                <a href="donation.html" class="accent-gradient hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fa-solid fa-heart"></i> 
+                    <span id="donate-btn">Donate</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero -->
+<section class="news-hero text-white font-[Nunito]">
+
+    <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+
+        <h1 id="news-title"
+            class="text-5xl md:text-6xl font-black mb-4 hero-text tracking-tight"
+            style="animation-delay: 0.2s;">
+            Latest News & Updates
+        </h1>
+
+        <p id="news-subtitle"
+           class="text-xl md:text-2xl max-w-2xl mx-auto hero-text font-medium leading-relaxed"
+           style="animation-delay: 0.5s;">
+            Stay informed about our rescues, successes, and upcoming events
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- News Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10" id="news-grid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <img src="Blue%20Paws%20Logo.jpeg"
+     alt="Blue Paws Association"
+     class="h-16 w-16 object-cover rounded-full border border-white/10 shadow-md transition-all duration-300 hover:scale-105">
+                        <h2 id="footer-logo" class="text-3xl font-bold">Blue Paws Association</h2>
+                    </div>
+                    <p id="footer-slogan" class="text-lg">Saving one dog at a time.</p>
+                </div>
+                <div>
+                    <h3 id="contact-title" class="text-xl font-semibold mb-6 text-white">Contact Us</h3>
+                    <div class="space-y-3">
+                        <p><i class="fa-solid fa-location-dot"></i> Ernei-Mureș, Romania</p>
+                        <p><i class="fa-solid fa-phone"></i> +40 759 031 793</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact@pawsblue.org</p>
+                    </div>
+                </div>
+<div>
+<h3 id="footer-follow-us" class="text-xl font-semibold mb-6 text-white"></h3>
+
+<div class="flex flex-col gap-4">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/people/Blue-Paws/61562938898795/?sk=about"
+       target="_blank"
+       class="social-link facebook">
+
+        <i class="fa-brands fa-facebook-f"></i>
+        <span id="footer-facebook"></span>
+
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/bluepawsmax/"
+       target="_blank"
+       class="social-link instagram">
+
+        <i class="fa-brands fa-instagram"></i>
+        <span id="footer-instagram"></span>
+
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://tiktok.com"
+       target="_blank"
+       class="social-link tiktok">
+
+        <i class="fa-brands fa-tiktok"></i>
+        <span id="footer-tiktok"></span>
+
+    </a>
+
+</div>
+</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("lo6t5O7GTNxTHgV95");
+
+        const translations = {
+            en: {
+                "page-title": "News & Updates - Blue Paws Association",
+                "logo-text": "Blue Paws Association",
+                "nav-home": "Home", "nav-adopt": "Adopt", "nav-about": "About",
+                "nav-impact": "Impact", "nav-stories": "Stories", "nav-news": "News", "nav-faq": "FAQ",
+                "news-title": "Latest News & Updates",
+                "news-subtitle": "Stay informed about our rescues, successes, and upcoming events",
+                "news1-title": "Sterilization Campaign in Ernei",
+                "news1-date": "June 15, 2026",
+                "news1-excerpt": "Blue Paws Association is launching a major sterilization campaign in Ernei, supported and endorsed by local city officials.",
+                "news2-title": "Targu Mures Zoo Dog Show",
+                "news2-date": "May 10, 2026",
+                "news2-excerpt": "Blue Paws Association made an appearance at Targu Mures Zoo to show it's support to stray dogs in the area.",
+                "news3-title": "Successful Adoption Day Event",
+                "news3-date": "April 15, 2026",
+                "news3-excerpt": "12 dogs found their forever homes during our spring adoption event.",
+                "news4-title": "Veterinary Clinic Partnership",
+                "news4-date": "April 2, 2026",
+                "news4-excerpt": "We are proud to announce a new partnership with local vets for free sterilization campaigns.",
+                "read-more": "Read Full Story",
+                "contact-title": "Contact Us",
+                "message-title": "Send us a message",
+                "name-placeholder": "Your Name",
+                "email-placeholder": "Email Address",
+                "message-placeholder": "How can we help you?",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-logo": "Blue Paws Association",
+                "footer-slogan": "Standing Between Them and Suffering",
+                "donate-btn": "Donate"
+            },
+            ro: {
+                "page-title": "Știri & Actualizări - Asociația Blue Paws",
+                "logo-text": "Asociația Blue Paws",
+                "nav-home": "Acasă", "nav-adopt": "Adoptă", "nav-about": "Despre Noi",
+                "nav-impact": "Impact", "nav-stories": "Povești", "nav-news": "Știri", "nav-faq": "Întrebări Frecvente",
+                "news-title": "Cele Mai Noi Știri & Actualizări",
+                "news-subtitle": "Rămâi informat despre salvările, succesele și evenimentele noastre viitoare",
+                "news1-title": "Campanie de Sterilizare la Ernei",
+                "news1-date": "8 Mai 2026",
+                "news1-excerpt": "Asociația Blue Paws lansează o amplă campanie de sterilizare la Ernei, susținută și aprobată de autoritățile locale.",
+                "news2-title": "Extinderea Adăpostului Finalizată",
+                "news2-date": "28 Aprilie 2026",
+                "news2-excerpt": "Mulțumită donațiilor voastre, am dublat capacitatea de a ajuta mai mulți câini.",
+                "news3-title": "Eveniment de Adopție de Succes",
+                "news3-date": "15 Aprilie 2026",
+                "news3-excerpt": "12 câini și-au găsit casele pentru totdeauna în timpul evenimentului de primăvară.",
+                "news4-title": "Parteneriat cu Clinica Veterinară",
+                "news4-date": "2 Aprilie 2026",
+                "news4-excerpt": "Suntem mândri să anunțăm un nou parteneriat cu veterinar locali pentru campanii gratuite de sterilizare.",
+                "read-more": "Citește Articolul Complet",
+                "contact-title": "Contactează-ne",
+                "message-title": "Trimite-ne un mesaj",
+                "name-placeholder": "Numele tău",
+                "email-placeholder": "Adresa de email",
+                "message-placeholder": "Cum te putem ajuta?",
+                "footer-follow-us": "Urmărește-ne",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-logo": "Asociația Blue Paws",
+                "footer-slogan": "Salvăm un câine odată.",
+                "donate-btn": "Donează"
+            },
+            hu: {
+                "page-title": "Hírek & Frissítések - Blue Paws Egyesület",
+                "logo-text": "Blue Paws Egyesület",
+                "nav-home": "Kezdőlap", "nav-adopt": "Örökbefogadás", "nav-about": "Rólunk",
+                "nav-impact": "Hatásunk", "nav-stories": "Sikertörténetek", "nav-news": "Hírek", "nav-faq": "GYIK",
+                "news-title": "Legfrissebb Hírek & Frissítések",
+                "news-subtitle": "Maradj naprakész mentéseinkről, sikereinkről és közelgő eseményeinkről",
+                "news1-title": "Sterilizációs Kampány Erneiben",
+                "news1-date": "2026. május 8.",
+                "news1-excerpt": "A Blue Paws Egyesület nagyszabású sterilizációs kampányt indít Erneiben, amelyet a helyi hatóságok támogatnak.",
+                "news2-title": "Új Menhely Bővítés Elkészült",
+                "news2-date": "2026. április 28.",
+                "news2-excerpt": "Köszönhetően a ti adományaitoknak, megdupláztuk a kapacitásunkat.",
+                "news3-title": "Sikeres Örökbefogadási Nap",
+                "news3-date": "2026. április 15.",
+                "news3-excerpt": "12 kutya talált örök otthonra a tavaszi eseményünkön.",
+                "news4-title": "Állatorvosi Klinika Partnerség",
+                "news4-date": "2026. április 2.",
+                "news4-excerpt": "Büszkén jelentjük be új partnerségünket helyi állatorvosokkal.",
+                "read-more": "Olvasd el a teljes cikket",
+                "contact-title": "Kapcsolat",
+                "message-title": "Küldj nekünk üzenetet",
+                "name-placeholder": "Neved",
+                "email-placeholder": "Email címed",
+                "message-placeholder": "Miben segíthetünk?",
+                "footer-follow-us": "Kövess minket",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-logo": "Blue Paws Egyesület",
+                "footer-slogan": "Egy kutyát mentünk egyszerre.",
+                "donate-btn": "Adományozás"
+            },
+            it: {
+                "page-title": "Notizie & Aggiornamenti - Associazione Blue Paws",
+                "logo-text": "Associazione Blue Paws",
+                "nav-home": "Home", "nav-adopt": "Adotta", "nav-about": "Chi Siamo",
+                "nav-impact": "Il Nostro Impatto", "nav-stories": "Storie", "nav-news": "Notizie", "nav-faq": "FAQ",
+                "news-title": "Ultime Notizie & Aggiornamenti",
+                "news-subtitle": "Resta informato sui nostri salvataggi, successi ed eventi futuri",
+                "news1-title": "Campagna di Sterilizzazione a Ernei",
+                "news1-date": "8 Maggio 2026",
+                "news1-excerpt": "L'Associazione Blue Paws lancia una grande campagna di sterilizzazione a Ernei, sostenuta dalle autorità locali.",
+                "news2-title": "Nuova Espansione del Rifugio Completata",
+                "news2-date": "28 Aprile 2026",
+                "news2-excerpt": "Grazie alle vostre donazioni, abbiamo raddoppiato la nostra capacità.",
+                "news3-title": "Giornata di Adozione di Successo",
+                "news3-date": "15 Aprile 2026",
+                "news3-excerpt": "12 cani hanno trovato la loro casa per sempre durante il nostro evento primaverile.",
+                "news4-title": "Partnership con Clinica Veterinaria",
+                "news4-date": "2 Aprile 2026",
+                "news4-excerpt": "Siamo orgogliosi di annunciare una nuova partnership con veterinari locali.",
+                "read-more": "Leggi l'articolo completo",
+                "contact-title": "Contattaci",
+                "message-title": "Inviaci un messaggio",
+                "name-placeholder": "Il tuo nome",
+                "email-placeholder": "Indirizzo email",
+                "message-placeholder": "Come possiamo aiutarti?",
+                "footer-follow-us": "Seguici",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-logo": "Associazione Blue Paws",
+                "footer-slogan": "Salviamo un cane alla volta.",
+                "donate-btn": "Dona"
+            },
+            de: {
+                "page-title": "Neuigkeiten & Updates - Blue Paws Verein",
+                "logo-text": "Blue Paws Verein",
+                "nav-home": "Start", "nav-adopt": "Adoptieren", "nav-about": "Über uns",
+                "nav-impact": "Unser Impact", "nav-stories": "Erfolgsgeschichten", "nav-news": "Neuigkeiten", "nav-faq": "FAQ",
+                "news-title": "Neueste Nachrichten & Updates",
+                "news-subtitle": "Bleiben Sie über unsere Rettungen, Erfolge und bevorstehenden Veranstaltungen informiert",
+                "news1-title": "Sterilisationskampagne in Ernei",
+                "news1-date": "8. Mai 2026",
+                "news1-excerpt": "Der Blue Paws Verein startet eine große Sterilisationskampagne in Ernei, unterstützt von den lokalen Behörden.",
+                "news2-title": "Neue Tierheim-Erweiterung abgeschlossen",
+                "news2-date": "28. April 2026",
+                "news2-excerpt": "Dank Ihrer Spenden haben wir unsere Kapazität verdoppelt.",
+                "news3-title": "Erfolgreicher Adoptionstag",
+                "news3-date": "15. April 2026",
+                "news3-excerpt": "12 Hunde haben während unseres Frühlings-Adoptions-events ihr Zuhause gefunden.",
+                "news4-title": "Partnerschaft mit Tierarztpraxis",
+                "news4-date": "2. April 2026",
+                "news4-excerpt": "Wir sind stolz auf die neue Partnerschaft mit lokalen Tierärzten.",
+                "read-more": "Vollständigen Artikel lesen",
+                "contact-title": "Kontakt",
+                "message-title": "Schick uns eine Nachricht",
+                "name-placeholder": "Dein Name",
+                "email-placeholder": "E-Mail-Adresse",
+                "message-placeholder": "Wie können wir dir helfen?",
+                "footer-follow-us": "Folge uns",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-logo": "Blue Paws Verein",
+                "footer-slogan": "Wir retten einen Hund nach dem anderen.",
+                "donate-btn": "Spenden"
+            },
+            fr: {
+                "page-title": "Actualités & Mises à Jour - Association Blue Paws",
+                "logo-text": "Association Blue Paws",
+                "nav-home": "Accueil", "nav-adopt": "Adopter", "nav-about": "À Propos",
+                "nav-impact": "Notre Impact", "nav-stories": "Histoires", "nav-news": "Actualités", "nav-faq": "FAQ",
+                "news-title": "Dernières Actualités & Mises à Jour",
+                "news-subtitle": "Restez informé sur nos sauvetages, succès et événements à venir",
+                "news1-title": "Campagne de Stérilisation à Ernei",
+                "news1-date": "8 Mai 2026",
+                "news1-excerpt": "L'Association Blue Paws lance une grande campagne de stérilisation à Ernei, soutenue par les autorités locales.",
+                "news2-title": "Nouvelle Extension du Refuge Terminée",
+                "news2-date": "28 Avril 2026",
+                "news2-excerpt": "Grâce à vos dons, nous avons doublé notre capacité.",
+                "news3-title": "Journée d'Adoption Réussie",
+                "news3-date": "15 Avril 2026",
+                "news3-excerpt": "12 chiens ont trouvé leur foyer pour toujours lors de notre événement de printemps.",
+                "news4-title": "Partenariat avec Clinique Vétérinaire",
+                "news4-date": "2 Avril 2026",
+                "news4-excerpt": "Nous sommes fiers d'annoncer un nouveau partenariat avec des vétérinaires locaux.",
+                "read-more": "Lire l'article complet",
+                "contact-title": "Contactez-nous",
+                "message-title": "Envoyez-nous un message",
+                "name-placeholder": "Votre Nom",
+                "email-placeholder": "Adresse Email",
+                "message-placeholder": "Comment pouvons-nous vous aider ?",
+                "footer-follow-us": "Suivez-nous",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-logo": "Association Blue Paws",
+                "footer-slogan": "Sauver un chien à la fois.",
+                "donate-btn": "Faire un don"
+            }
+        };
+
+        function changeLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+
+            const flagMap = { en: '🇬🇧', ro: '🇷🇴', hu: '🇭🇺', it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷' };
+            const codeMap = { en: 'EN', ro: 'RO', hu: 'HU', it: 'IT', de: 'DE', fr: 'FR' };
+
+            document.getElementById('current-flag').textContent = flagMap[lang];
+            document.getElementById('current-lang').textContent = codeMap[lang];
+
+            Object.keys(translations[lang]).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            document.getElementById('page-title').textContent = translations[lang]["page-title"];
+            document.documentElement.lang = lang;
+
+            renderNews(lang);
+        }
+
+        function renderNews(lang = 'en') {
+            const t = translations[lang] || translations.en;
+            const container = document.getElementById('news-grid');
+
+            const newsItems = [
+                { 
+                    title: t["news1-title"], 
+                    date: t["news1-date"], 
+                    excerpt: t["news1-excerpt"], 
+                    img: "Blue%20Paws%20Logo.jpeg",
+                    link: "sterilizationcampaign.html"
+                },
+
+                                { 
+                    title: t["news2-title"], 
+                    date: t["news2-date"], 
+                    excerpt: t["news2-excerpt"], 
+                    img: "Blue%20Paws%20Logo.jpeg",
+                    link: "zoo.html"
+                },
+            ];
+
+            container.innerHTML = newsItems.map(item => `
+                <div class="news-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <img src="${item.img}" alt="${item.title}" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <p class="text-sm text-gray-500">${item.date}</p>
+                        <h3 class="text-2xl font-bold mt-3 mb-4">${item.title}</h3>
+                        <p class="text-gray-600">${item.excerpt}</p>
+                        <a href="${item.link}" class="mt-6 inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
+                            ${t["read-more"]} <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        let dropdownOpen = false;
+        function toggleDropdown() {
+            const dd = document.getElementById('lang-dropdown');
+            const ch = document.getElementById('chevron');
+            dropdownOpen = !dropdownOpen;
+            dd.classList.toggle('hidden', !dropdownOpen);
+            ch.style.transform = dropdownOpen ? 'rotate(180deg)' : '';
+        }
+
+        document.getElementById('lang-btn').addEventListener('click', toggleDropdown);
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('lang-btn').contains(e.target)) {
+                const dd = document.getElementById('lang-dropdown');
+                if (!dd.classList.contains('hidden')) toggleDropdown();
+            }
+        });
+
+        window.onload = () => {
+            changeLanguage('en');
+        };
+    </script>
+</body>
+</html>
