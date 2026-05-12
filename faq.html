@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">FAQ - Blue Paws Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .accent-gradient {
+            background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+        }
+        .faq-hero {
+            position: relative;
+            height: 65vh;
+            background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), 
+                              url('Blue%20Paws%20Logo.jpeg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-text {
+            text-shadow: 
+                0 0 8px rgba(0,0,0,0.9),
+                -2px -2px 3px rgba(0,0,0,0.85),
+                2px -2px 3px rgba(0,0,0,0.85),
+                -2px 2px 3px rgba(0,0,0,0.85),
+                2px 2px 3px rgba(0,0,0,0.85);
+        }
+
+    .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 54px;
+    height: 54px;
+    font-size: 1rem; 
+    
+
+    border-radius: 9999px;
+    overflow: hidden;
+
+    padding-left: 19.4px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.45s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* expand capsule */
+.social-link:hover {
+    width: 270px;
+}
+
+/* icon */
+.social-link i {
+    font-size: 1.5rem;
+    min-width: 40px;
+}
+
+/* hidden text */
+.social-link span {
+    opacity: 0;
+    margin-left: 20px;
+    white-space: nowrap;
+
+    transform: translateX(-10px);
+    transition: all 0.35s ease;
+
+    font-weight: 600;
+}
+
+/* reveal text */
+.social-link:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* colors */
+.facebook { background: #1877f2; }
+
+.instagram {
+    background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.tiktok { background: #000; }
+
+.faq-question {
+    transition: all 0.3s ease;
+}
+
+.faq-question.active {
+    background: #1d4ed8;
+    border-color: #2563eb;
+    color: white;
+    box-shadow: 0 10px 25px rgba(37,99,235,0.25);
+}
+
+.faq-question.active .faq-answer {
+    color: #dbeafe;
+}
+
+@keyframes fadeUpHero {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text {
+    opacity: 0;
+    animation: fadeUpHero 1s ease forwards;
+}
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Blue%20Paws%20Logo.jpeg" alt="Blue Paws Association" class="h-10 w-auto">
+                <h1 id="logo-text"class="text-2xl font-bold text-blue-700 font-[Nunito]">Blue Paws Association</h1>
+            </div>
+           
+            <div class="hidden md:flex gap-8 text-lg items-center">
+                <a href="index.html" id="nav-home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#adopt" id="nav-adopt" class="hover:text-blue-600 font-medium">Adopt</a>
+                <a href="about.html" id="nav-about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="impact.html" id="nav-impact" class="hover:text-blue-600 font-medium">Impact</a>
+                <a href="stories.html" id="nav-stories" class="hover:text-blue-600 font-medium">Stories</a>
+                <a href="news.html" id="nav-news" class="hover:text-blue-600 font-medium">News</a>
+                <a href="faq.html" id="nav-faq" class="text-blue-600 font-semibold">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button id="lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none">
+                        <span id="current-flag" class="text-2xl">🇬🇧</span>
+                        <span id="current-lang" class="font-medium text-gray-700">EN</span>
+                        <i id="chevron" class="fa-solid fa-chevron-down text-sm text-gray-500 transition-transform"></i>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl py-2 hidden z-50 border border-gray-100">
+<a href="#" onclick="changeLanguage('en'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/gb.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>English</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('ro'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/ro.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Romanian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('hu'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/hu.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Hungarian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('it'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/it.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Italian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('de'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/de.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>German</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('fr'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/fr.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>French</span>
+
+</a>
+                    </div>
+                </div>
+                <a href="donation.html" class="accent-gradient hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fa-solid fa-heart"></i> 
+                    <span id="donate-btn">Donate</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero -->
+<section class="faq-hero text-white font-[Nunito]">
+
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+
+        <h1 id="faq-title"
+            class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 hero-text tracking-tight leading-tight"
+            style="animation-delay: 0.2s;">
+            Frequently Asked Questions
+        </h1>
+
+    </div>
+
+</section>
+
+<!-- FAQ Content -->
+<section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <!-- FAQ 1 -->
+            <div class="faq-question bg-white border border-gray-200 rounded-2xl p-6 shadow-sm transition">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full flex justify-between items-center text-left font-semibold text-lg">
+                    <span id="faq1-q">Do you have adoption fees?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p id="faq1-a">
+                        Yes, a small adoption fee helps cover vaccinations,
+                        microchipping, sterilization, and initial veterinary care.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-question bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full flex justify-between items-center text-left font-semibold text-lg">
+                    <span id="faq2-q">Can I adopt if I live in an apartment?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p id="faq2-a">
+                        Absolutely! We evaluate each situation individually
+                        based on the dog's needs and your living situation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-question bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full flex justify-between items-center text-left font-semibold text-lg">
+                    <span id="faq3-q">Are all dogs vaccinated?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p id="faq3-a">
+                        Yes, every dog receives the necessary vaccinations
+                        before adoption whenever medically possible.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-question bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full flex justify-between items-center text-left font-semibold text-lg">
+                    <span id="faq4-q">Are the dogs microchipped?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p id="faq4-a">
+                        Yes, all adoptable dogs are microchipped for safety
+                        and identification purposes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-question bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full flex justify-between items-center text-left font-semibold text-lg">
+                    <span id="faq5-q">Can I volunteer at Blue Paws?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p id="faq5-a">
+                        Of course! We always welcome volunteers to help with
+                        rescues, events, transport, and dog care.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-question bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full flex justify-between items-center text-left font-semibold text-lg">
+                    <span id="faq6-q">Do you organize sterilization campaigns?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p id="faq6-a">
+                        Yes, sterilization campaigns are one of our main missions
+                        to reduce stray animal suffering.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-question bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full flex justify-between items-center text-left font-semibold text-lg">
+                    <span id="faq7-q">Can I donate food or supplies?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p id="faq7-a">
+                        Yes! Food, blankets, medicine, toys, and cleaning
+                        supplies are always appreciated.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-question bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full flex justify-between items-center text-left font-semibold text-lg">
+                    <span id="faq8-q">What should I do if I find a stray dog?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p id="faq8-a">
+                        Try to secure the dog safely, provide water if possible,
+                        and contact us or a local veterinarian immediately.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <img src="Blue%20Paws%20Logo.jpeg"
+     alt="Blue Paws Association"
+     class="h-16 w-16 object-cover rounded-full border border-white/10 shadow-md transition-all duration-300 hover:scale-105">
+                        <h2 id="footer-logo" class="text-3xl font-bold">Blue Paws Association</h2>
+                    </div>
+                    <p id="footer-slogan" class="text-lg">Saving one dog at a time.</p>
+                </div>
+                <div>
+                    <h3 id="contact-title" class="text-xl font-semibold mb-6 text-white">Contact Us</h3>
+                    <div class="space-y-3">
+                        <p><i class="fa-solid fa-location-dot"></i> Ernei-Mureș, Romania</p>
+                        <p><i class="fa-solid fa-phone"></i> +40 759 031 793</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact@pawsblue.org</p>
+                    </div>
+                </div>
+<div>
+<h3 id="footer-follow-us" class="text-xl font-semibold mb-6 text-white"></h3>
+
+<div class="flex flex-col gap-4">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/people/Blue-Paws/61562938898795/?sk=about"
+       target="_blank"
+       class="social-link facebook">
+
+        <i class="fa-brands fa-facebook-f"></i>
+        <span id="footer-facebook"></span>
+
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/bluepawsmax/"
+       target="_blank"
+       class="social-link instagram">
+
+        <i class="fa-brands fa-instagram"></i>
+        <span id="footer-instagram"></span>
+
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://tiktok.com"
+       target="_blank"
+       class="social-link tiktok">
+
+        <i class="fa-brands fa-tiktok"></i>
+        <span id="footer-tiktok"></span>
+
+    </a>
+
+</div>
+</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("lo6t5O7GTNxTHgV95");
+
+const translations = {
+    en: {
+        "page-title": "FAQ - Blue Paws Association",
+        "logo-text": "Blue Paws Association",
+        "nav-home": "Home",
+        "nav-adopt": "Adopt",
+        "nav-about": "About",
+        "nav-impact": "Impact",
+        "nav-stories": "Stories",
+        "nav-news": "News",
+        "nav-faq": "FAQ",
+        "faq-title": "Frequently Asked Questions",
+        "faq-subtitle": "Find answers to common questions about adoption and our work",
+        "faq1-q": "I want to adopt, where do I start?",
+        "faq1-a": "Contact us via email or phone. We will guide you through the process and match you with a suitable dog based on your situation.",
+        "faq2-q": "How can I support Blue Paws?",
+        "faq2-a": "You can support our mission in multiple ways. Financial donations, food, supplies, volunteering, fostering, or awareness sharing. Every form of help directly contributes to the wellbeing, health and dignity of the animals we care for.",
+        "faq3-q": "What if I want to support but I have questions first?",
+        "faq3-a": "You are welcome to contact us at any time. We are open to discussing all forms of support and finding the best way for you to get involved with our work.",
+        "faq4-q": "Do you only adopt locally or can dogs travel internationally to approved homes?",
+        "faq4-a": "Dogs can be adopted internationally if the home is approved and all EU/international transport and veterinary rules are respected.",
+        "faq5-q": "Can I meet a dog before deciding to adopt and how does the process work?",
+        "faq5-a": "Yes! Meet and greets are possible. After an initial discussion, we arrange a meeting and guide you through the adoption process step by step.",
+        "faq6-q": "Are dogs vaccinated, sterilized and microchipped before adoption?",
+        "faq6-a": "Yes. All dogs are fully vaccinated, microchipped and sterilized when age allows in accordance to EU and international adoption standards. A formal adoption contract is always required.",
+        "faq7-q": "What is the best way for someone to contribute meaningfully to animal welfare through Blue Paws?",
+        "faq7-a": "There is no single best way. What matters is consistency and intention. Through Blue Paws, you can contribute by adopting, fostering, volunteering, donating (financially or with supplies), or simply helping us spread awareness. Each of these actions directly supports rescue efforts, care and responsible ownership. If you're unsure where to start, we can guide you toward the form of involvement that best fits your situation.",
+        "faq8-q": "What if my question isn't listed in the FAQ?",
+        "faq8-a": "If your question is not included here, you can contact us directly via email or phone. We will review your request and respond as quickly as possible. We are always available to clarify any situation and support you in understanding how to get involved with Blue Paws.",
+        "contact-title": "Contact Us",
+        "message-title": "Send us a message",
+        "name-placeholder": "Your Name",
+        "email-placeholder": "Email Address",
+        "footer-follow-us": "Follow Us",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "message-placeholder": "How can we help you?",
+        "footer-logo": "Blue Paws Association",
+        "donate-btn": "Donate",
+        "footer-slogan": "Standing Between Them and Suffering"
+    },
+
+    ro: {
+        "page-title": "Întrebări frecvente - Asociația Blue Paws",
+        "logo-text": "Asociația Blue Paws",
+        "nav-home": "Acasă",
+        "nav-adopt": "Adoptă",
+        "nav-about": "Despre noi",
+        "nav-impact": "Impact",
+        "nav-stories": "Povești",
+        "nav-news": "Știri",
+        "nav-faq": "FAQ",
+        "faq-title": "Întrebări frecvente",
+        "faq-subtitle": "Găsește răspunsuri la întrebările comune despre adopție și activitatea noastră",
+        "faq1-q": "Vreau să adopt, de unde încep?",
+        "faq1-a": "Contactează-ne prin email sau telefon. Te vom ghida prin proces și te vom ajuta să găsești un câine potrivit pentru situația ta.",
+        "faq2-q": "Cum pot susține Blue Paws?",
+        "faq2-a": "Ne poți susține în mai multe moduri: donații financiare, hrană, materiale, voluntariat, foster sau promovare. Fiecare formă de ajutor contribuie direct la bunăstarea și salvarea animalelor.",
+        "faq3-q": "Ce fac dacă vreau să ajut, dar am întrebări?",
+        "faq3-a": "Ne poți contacta oricând. Suntem deschiși să discutăm toate formele de implicare și să găsim cea mai bună variantă pentru tine.",
+        "faq4-q": "Adoptați doar local sau câinii pot ajunge și în străinătate?",
+        "faq4-a": "Câinii pot fi adoptați internațional dacă familia este aprobată și sunt respectate toate regulile veterinare și de transport.",
+        "faq5-q": "Pot întâlni câinele înainte de adopție?",
+        "faq5-a": "Da! Organizăm întâlniri. După o discuție inițială, stabilim o întâlnire și te ghidăm pas cu pas în procesul de adopție.",
+        "faq6-q": "Câinii sunt vaccinați, sterilizați și microcipați?",
+        "faq6-a": "Da. Toți câinii sunt vaccinați, microcipați și sterilizați când vârsta permite, conform standardelor europene. Se semnează întotdeauna un contract de adopție.",
+        "faq7-q": "Care este cea mai bună modalitate de a ajuta prin Blue Paws?",
+        "faq7-a": "Nu există o singură modalitate. Contează implicarea constantă. Poți adopta, fosteriza, face voluntariat, dona sau ajuta la promovare. Fiecare acțiune ajută direct animalele salvate.",
+        "faq8-q": "Ce fac dacă întrebarea mea nu apare aici?",
+        "faq8-a": "Ne poți contacta direct prin email sau telefon. Îți vom răspunde cât mai repede și te vom ajuta cu orice informație ai nevoie.",
+        "contact-title": "Contactează-ne",
+        "message-title": "Trimite-ne un mesaj",
+        "name-placeholder": "Numele tău",
+        "email-placeholder": "Adresa de email",
+        "message-placeholder": "Cum te putem ajuta?",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "footer-logo": "Asociația Blue Paws",
+        "footer-follow-us": "Urmărește-ne",
+        "donate-btn": "Donează",
+        "footer-slogan": "Stăm între ei și suferință"
+    },
+
+    hu: {
+        "page-title": "GYIK - Blue Paws Egyesület",
+        "logo-text": "Blue Paws Egyesület",
+        "nav-home": "Kezdőlap",
+        "nav-adopt": "Örökbefogadás",
+        "nav-about": "Rólunk",
+        "nav-impact": "Hatás",
+        "nav-stories": "Történetek",
+        "nav-news": "Hírek",
+        "nav-faq": "GYIK",
+        "faq-title": "Gyakran ismételt kérdések",
+        "faq-subtitle": "Válaszok az örökbefogadással és munkánkkal kapcsolatos kérdésekre",
+        "faq1-q": "Szeretnék örökbe fogadni, hol kezdjem?",
+        "faq1-a": "Vegye fel velünk a kapcsolatot e-mailben vagy telefonon. Végigvezetjük a folyamaton és segítünk megfelelő kutyát találni.",
+        "faq2-q": "Hogyan támogathatom a Blue Paws-t?",
+        "faq2-a": "Többféleképpen támogathatsz: pénzadomány, étel, felszerelés, önkéntesség, ideiglenes befogadás vagy megosztás. Minden segítség számít.",
+        "faq3-q": "Mi van, ha segítenék, de előbb kérdéseim vannak?",
+        "faq3-a": "Bármikor kapcsolatba léphetsz velünk. Szívesen megbeszéljük a lehetőségeket és segítünk megtalálni a számodra megfelelő módot.",
+        "faq4-q": "Csak helyben fogadtok örökbe vagy külföldre is kerülhetnek a kutyák?",
+        "faq4-a": "A kutyák külföldre is örökbe fogadhatók, ha a család megfelel a feltételeknek és minden szabály teljesül.",
+        "faq5-q": "Meg lehet nézni a kutyát örökbefogadás előtt?",
+        "faq5-a": "Igen! Találkozót szervezünk, majd végigvezetünk az örökbefogadási folyamaton.",
+        "faq6-q": "A kutyák oltva, chipelve és ivartalanítva vannak?",
+        "faq6-a": "Igen. Minden kutya oltott, chippelt és ivartalanított korának megfelelően. Szerződés aláírása kötelező.",
+        "faq7-q": "Mi a legjobb módja az állatvédelem támogatásának?",
+        "faq7-a": "Nincs egyetlen helyes út. Lehetsz örökbefogadó, ideiglenes befogadó, önkéntes vagy adományozó. Minden számít.",
+        "faq8-q": "Mi van, ha nincs itt a kérdésem?",
+        "faq8-a": "Lépj kapcsolatba velünk e-mailben vagy telefonon, és segítünk minden kérdésben.",
+        "contact-title": "Kapcsolat",
+        "message-title": "Küldj üzenetet",
+        "name-placeholder": "Neved",
+        "email-placeholder": "E-mail címed",
+        "message-placeholder": "Miben segíthetünk?",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "footer-logo": "Blue Paws Egyesület",
+        "footer-follow-us": "Kövess minket",
+        "donate-btn": "Adományozás",
+        "footer-slogan": "Ott állunk köztük és a szenvedés között"
+    },
+
+    it: {
+        "page-title": "FAQ - Associazione Blue Paws",
+        "logo-text": "Associazione Blue Paws",
+        "nav-home": "Home",
+        "nav-adopt": "Adotta",
+        "nav-about": "Chi siamo",
+        "nav-impact": "Impatto",
+        "nav-stories": "Storie",
+        "nav-news": "Notizie",
+        "nav-faq": "FAQ",
+        "faq-title": "Domande frequenti",
+        "faq-subtitle": "Trova risposte alle domande più comuni su adozione e attività",
+        "faq1-q": "Voglio adottare, da dove inizio?",
+        "faq1-a": "Contattaci via email o telefono. Ti guideremo nel processo e ti aiuteremo a trovare il cane giusto.",
+        "faq2-q": "Come posso supportare Blue Paws?",
+        "faq2-a": "Puoi aiutarci con donazioni, cibo, materiali, volontariato, affido o condivisione. Ogni aiuto è importante.",
+        "faq3-q": "E se voglio aiutare ma ho prima delle domande?",
+        "faq3-a": "Puoi contattarci in qualsiasi momento. Ti aiuteremo a capire il modo migliore per contribuire.",
+        "faq4-q": "Adottate solo localmente?",
+        "faq4-a": "I cani possono essere adottati anche all’estero se tutti i requisiti sono rispettati.",
+        "faq5-q": "Posso incontrare il cane prima dell’adozione?",
+        "faq5-a": "Sì! Organizziamo incontri e ti guidiamo passo dopo passo.",
+        "faq6-q": "I cani sono vaccinati e sterilizzati?",
+        "faq6-a": "Sì. Tutti i cani sono vaccinati, microchippati e sterilizzati quando possibile.",
+        "faq7-q": "Qual è il modo migliore per aiutare?",
+        "faq7-a": "Puoi adottare, fare volontariato, donare o aiutare a diffondere il messaggio. Ogni contributo è prezioso.",
+        "faq8-q": "E se la mia domanda non è qui?",
+        "faq8-a": "Contattaci direttamente e ti risponderemo al più presto.",
+        "contact-title": "Contattaci",
+        "message-title": "Inviaci un messaggio",
+        "name-placeholder": "Il tuo nome",
+        "email-placeholder": "Email",
+        "message-placeholder": "Come possiamo aiutarti?",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "footer-follow-us": "Seguici",
+        "footer-logo": "Associazione Blue Paws",
+        "donate-btn": "Dona",
+        "footer-slogan": "Siamo tra loro e la sofferenza"
+    },
+
+    de: {
+        "page-title": "FAQ - Blue Paws Verein",
+        "logo-text": "Blue Paws Verein",
+        "nav-home": "Start",
+        "nav-adopt": "Adoptieren",
+        "nav-about": "Über uns",
+        "nav-impact": "Impact",
+        "nav-stories": "Geschichten",
+        "nav-news": "Nachrichten",
+        "nav-faq": "FAQ",
+        "faq-title": "Häufig gestellte Fragen",
+        "faq-subtitle": "Antworten zu Adoption und unserer Arbeit",
+        "faq1-q": "Ich möchte adoptieren, wo beginne ich?",
+        "faq1-a": "Kontaktiere uns per E-Mail oder Telefon. Wir begleiten dich durch den Prozess.",
+        "faq2-q": "Wie kann ich Blue Paws unterstützen?",
+        "faq2-a": "Du kannst uns durch Spenden, Futter, Material, Freiwilligenarbeit oder Teilen unterstützen.",
+        "faq3-q": "Was wenn ich Fragen habe bevor ich helfe?",
+        "faq3-a": "Du kannst uns jederzeit kontaktieren. Wir helfen dir gerne weiter.",
+        "faq4-q": "Adoptiert ihr nur lokal?",
+        "faq4-a": "Hunde können auch international adoptiert werden, wenn alle Bedingungen erfüllt sind.",
+        "faq5-q": "Kann ich den Hund vorher treffen?",
+        "faq5-a": "Ja! Wir organisieren Treffen vor der Adoption.",
+        "faq6-q": "Sind die Hunde geimpft und gechippt?",
+        "faq6-a": "Ja. Alle Hunde sind geimpft, gechippt und kastriert wenn möglich.",
+        "faq7-q": "Wie kann ich am besten helfen?",
+        "faq7-a": "Adoption, Spenden oder Freiwilligenarbeit – alles hilft.",
+        "faq8-q": "Was wenn meine Frage nicht dabei ist?",
+        "faq8-a": "Kontaktiere uns direkt und wir helfen dir weiter.",
+        "contact-title": "Kontakt",
+        "message-title": "Schreib uns",
+        "name-placeholder": "Dein Name",
+        "email-placeholder": "E-Mail",
+        "message-placeholder": "Wie können wir helfen?",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "footer-follow-us": "Folge uns",
+        "footer-logo": "Blue Paws Verein",
+        "donate-btn": "Spenden",
+        "footer-slogan": "Zwischen ihnen und dem Leid"
+    },
+
+    fr: {
+        "page-title": "FAQ - Association Blue Paws",
+        "logo-text": "Association Blue Paws",
+        "nav-home": "Accueil",
+        "nav-adopt": "Adopter",
+        "nav-about": "À propos",
+        "nav-impact": "Impact",
+        "nav-stories": "Histoires",
+        "nav-news": "Actualités",
+        "nav-faq": "FAQ",
+        "faq-title": "Questions fréquentes",
+        "faq-subtitle": "Réponses sur l’adoption et notre travail",
+        "faq1-q": "Je veux adopter, par où commencer ?",
+        "faq1-a": "Contactez-nous par email ou téléphone. Nous vous guiderons.",
+        "faq2-q": "Comment soutenir Blue Paws ?",
+        "faq2-a": "Dons, nourriture, matériel, bénévolat ou partage.",
+        "faq3-q": "Et si j’ai des questions avant ?",
+        "faq3-a": "Vous pouvez nous contacter à tout moment.",
+        "faq4-q": "Adoptions locales uniquement ?",
+        "faq4-a": "Les chiens peuvent être adoptés à l’international si les conditions sont respectées.",
+        "faq5-q": "Puis-je rencontrer le chien avant ?",
+        "faq5-a": "Oui, nous organisons des rencontres.",
+        "faq6-q": "Les chiens sont-ils vaccinés ?",
+        "faq6-a": "Oui, tous les chiens sont vaccinés et stérilisés quand possible.",
+        "faq7-q": "Meilleure façon d’aider ?",
+        "faq7-a": "Adoption, dons ou bénévolat.",
+        "faq8-q": "Ma question n’est pas ici ?",
+        "faq8-a": "Contactez-nous directement.",
+        "contact-title": "Contact",
+        "message-title": "Envoyez-nous un message",
+        "name-placeholder": "Votre nom",
+        "email-placeholder": "Email",
+        "message-placeholder": "Comment pouvons-nous aider ?",
+        "footer-facebook": "Facebook",
+        "footer-instagram": "BluePawsMax",
+        "footer-tiktok": "BluePaws Association",
+        "footer-follow-us": "Suivez-nous",
+        "footer-logo": "Association Blue Paws",
+        "donate-btn": "Faire un don",
+        "footer-slogan": "Entre eux et la souffrance"
+    }
+};
+
+        function changeLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+
+            const flagMap = { en: '🇬🇧', ro: '🇷🇴', hu: '🇭🇺', it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷' };
+            const codeMap = { en: 'EN', ro: 'RO', hu: 'HU', it: 'IT', de: 'DE', fr: 'FR' };
+
+            document.getElementById('current-flag').textContent = flagMap[lang];
+            document.getElementById('current-lang').textContent = codeMap[lang];
+
+            Object.keys(translations[lang]).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            document.getElementById('page-title').textContent = translations[lang]["page-title"];
+            document.documentElement.lang = lang;
+        }
+
+function toggleFAQ(btn) {
+
+    const card = btn.parentElement;
+    const answer = card.querySelector('.faq-answer');
+    const icon = btn.querySelector('i');
+
+    answer.classList.toggle('hidden');
+
+    card.classList.toggle('active');
+
+    icon.style.transform =
+        answer.classList.contains('hidden')
+        ? ''
+        : 'rotate(180deg)';
+}
+
+        let dropdownOpen = false;
+        function toggleDropdown() {
+            const dd = document.getElementById('lang-dropdown');
+            const ch = document.getElementById('chevron');
+            dropdownOpen = !dropdownOpen;
+            dd.classList.toggle('hidden', !dropdownOpen);
+            ch.style.transform = dropdownOpen ? 'rotate(180deg)' : '';
+        }
+
+        document.getElementById('lang-btn').addEventListener('click', toggleDropdown);
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('lang-btn').contains(e.target)) {
+                const dd = document.getElementById('lang-dropdown');
+                if (!dd.classList.contains('hidden')) toggleDropdown();
+            }
+        });
+
+        window.onload = () => changeLanguage('en');
+    </script>
+</body>
+</html>

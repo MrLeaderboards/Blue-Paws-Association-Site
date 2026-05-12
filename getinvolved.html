@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Get Involved - Blue Paws Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .accent-gradient {
+            background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+        }
+        .involved-hero {
+            position: relative;
+            height: 65vh;
+            background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), 
+                              url('Blue%20Paws%20Logo.jpeg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-text {
+            text-shadow: 
+                0 0 8px rgba(0,0,0,0.9),
+                -2px -2px 3px rgba(0,0,0,0.85),
+                2px -2px 3px rgba(0,0,0,0.85),
+                -2px 2px 3px rgba(0,0,0,0.85),
+                2px 2px 3px rgba(0,0,0,0.85);
+        }
+        .role-card {
+            transition: all 0.3s ease;
+        }
+        .role-card:hover {
+            transform: translateY(-8px);
+        }
+
+    .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 54px;
+    height: 54px;
+    font-size: 1rem; 
+    
+
+    border-radius: 9999px;
+    overflow: hidden;
+
+    padding-left: 19.4px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.45s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* expand capsule */
+.social-link:hover {
+    width: 270px;
+}
+
+/* icon */
+.social-link i {
+    font-size: 1.5rem;
+    min-width: 40px;
+}
+
+/* hidden text */
+.social-link span {
+    opacity: 0;
+    margin-left: 20px;
+    white-space: nowrap;
+
+    transform: translateX(-10px);
+    transition: all 0.35s ease;
+
+    font-weight: 600;
+}
+
+/* reveal text */
+.social-link:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* colors */
+.facebook { background: #1877f2; }
+
+.instagram {
+    background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.tiktok { background: #000; }
+
+@keyframes fadeUpHero {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text {
+    opacity: 0;
+    animation: fadeUpHero 1s ease forwards;
+}
+
+.role-card:hover {
+    transform: translateY(-8px);
+    border-color: #3b82f6; /* Tailwind blue-500 */
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+}
+
+.volunteer-card {
+    transition: all 0.35s ease;
+}
+
+.volunteer-card:hover {
+    transform: translateY(-6px);
+    border-color: #3b82f6; /* brighter blue */
+    box-shadow: 0 18px 40px rgba(59, 130, 246, 0.18);
+}
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Blue%20Paws%20Logo.jpeg" alt="Blue Paws Association" class="h-10 w-auto">
+                <h1 id="logo-text"class="text-2xl font-bold text-blue-700 font-[Nunito]">Blue Paws Association</h1>
+            </div>
+           
+            <div class="hidden md:flex gap-8 text-lg items-center">
+                <a href="index.html" id="nav-home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#adopt" id="nav-adopt" class="hover:text-blue-600 font-medium">Adopt</a>
+                <a href="about.html" id="nav-about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="impact.html" id="nav-impact" class="hover:text-blue-600 font-medium">Impact</a>
+                <a href="stories.html" id="nav-stories" class="hover:text-blue-600 font-medium">Stories</a>
+                <a href="news.html" id="nav-news" class="hover:text-blue-600 font-medium">News</a>
+                <a href="faq.html" id="nav-faq" class="hover:text-blue-600 font-medium">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button id="lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none">
+                        <span id="current-flag" class="text-2xl">🇬🇧</span>
+                        <span id="current-lang" class="font-medium text-gray-700">EN</span>
+                        <i id="chevron" class="fa-solid fa-chevron-down text-sm text-gray-500 transition-transform"></i>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl py-2 hidden z-50 border border-gray-100">
+<a href="#" onclick="changeLanguage('en'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/gb.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>English</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('ro'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/ro.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Romanian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('hu'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/hu.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Hungarian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('it'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/it.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>Italian</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('de'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/de.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>German</span>
+
+</a>
+
+<a href="#" onclick="changeLanguage('fr'); return false;"
+class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
+
+    <img src="https://flagcdn.com/w40/fr.png"
+         class="w-6 h-4 rounded-sm object-cover">
+
+    <span>French</span>
+
+</a>
+                    </div>
+                </div>
+                <a href="donation.html" class="accent-gradient hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fa-solid fa-heart"></i> 
+                    <span id="donate-btn">Donate</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Volunteer Opportunities -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 id="roles-title" class="text-4xl font-bold text-center mb-12">Ways You Can Help</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="role-card border-2 border-blue-300 shadow-sm rounded-3xl p-8">
+                    <div class="text-5xl mb-6">🐾</div>
+                    <h3 id="role1-title" class="text-2xl font-semibold mb-3">Dog Walking & Socialising</h3>
+                    <p id="role1-desc" class="text-gray-600">Help our dogs get exercise and socialization while they wait for their forever homes.</p>
+                </div>
+
+                <div class="role-card border-2 border-blue-300 shadow-sm rounded-3xl p-8">
+                    <div class="text-5xl mb-6">🏠</div>
+                    <h3 id="role2-title" class="text-2xl font-semibold mb-3">Shelter Support</h3>
+                    <p id="role2-desc" class="text-gray-600">Assist with daily care, cleaning, feeding, and enrichment activities at the shelter.</p>
+                </div>
+
+                <div class="role-card border-2 border-blue-300 shadow-sm rounded-3xl p-8">
+                    <div class="text-5xl mb-6">🎉</div>
+                    <h3 id="role3-title" class="text-2xl font-semibold mb-3">Events & Fundraising</h3>
+                    <p id="role3-desc" class="text-gray-600">Help organize adoption events, fundraisers, and awareness campaigns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Volunteer Application -->
+<section class="py-20 bg-gray-100">
+
+    <div class="max-w-3xl mx-auto px-6">
+
+        <!-- Title -->
+        <h2 id="apply-title" class="text-4xl font-bold text-center mb-10"></h2>
+
+<form id="volunteer-form"
+      class="volunteer-card bg-white rounded-3xl shadow-lg border-2 border-blue-300 p-10 space-y-6">
+
+            <!-- Name -->
+            <div>
+                <label id="label-name"
+                       class="block text-sm font-medium mb-2"></label>
+
+                <input type="text"
+                       id="input-name"
+                       name="name"
+                       required
+                       class="w-full p-4 rounded-2xl border border-gray-300 focus:outline-none focus:border-blue-500">
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label id="label-email"
+                       class="block text-sm font-medium mb-2"></label>
+
+                <input type="email"
+                       id="input-email"
+                       name="email"
+                       required
+                       class="w-full p-4 rounded-2xl border border-gray-300 focus:outline-none focus:border-blue-500">
+            </div>
+
+            <!-- Phone -->
+            <div>
+                <label id="label-phone"
+                       class="block text-sm font-medium mb-2"></label>
+
+                <input type="tel"
+                       id="input-phone"
+                       name="phone"
+                       required
+                       class="w-full p-4 rounded-2xl border border-gray-300 focus:outline-none focus:border-blue-500">
+            </div>
+
+            <!-- Why -->
+            <div>
+                <label id="label-why"
+                       class="block text-sm font-medium mb-2"></label>
+
+                <textarea id="input-why"
+                          name="why"
+                          rows="4"
+                          required
+                          class="w-full p-4 rounded-2xl border border-gray-300 focus:outline-none focus:border-blue-500"></textarea>
+            </div>
+
+            <!-- Availability -->
+            <div>
+                <label id="label-availability"
+                       class="block text-sm font-medium mb-2"></label>
+
+                <input type="text"
+                       id="input-availability"
+                       name="availability"
+                       required
+                       class="w-full p-4 rounded-2xl border border-gray-300 focus:outline-none focus:border-blue-500">
+            </div>
+
+            <!-- Submit -->
+            <button type="submit"
+                    id="submit-application"
+                    class="w-full accent-gradient hover:brightness-110 text-white py-5 rounded-2xl font-semibold text-lg">
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <img src="Blue%20Paws%20Logo.jpeg"
+     alt="Blue Paws Association"
+     class="h-16 w-16 object-cover rounded-full border border-white/10 shadow-md transition-all duration-300 hover:scale-105">
+                        <h2 id="footer-logo" class="text-3xl font-bold">Blue Paws Association</h2>
+                    </div>
+                    <p id="footer-slogan" class="text-lg">Saving one dog at a time.</p>
+                </div>
+                <div>
+                    <h3 id="contact-title" class="text-xl font-semibold mb-6 text-white">Contact Us</h3>
+                    <div class="space-y-3">
+                        <p><i class="fa-solid fa-location-dot"></i> Ernei-Mureș, Romania</p>
+                        <p><i class="fa-solid fa-phone"></i> +40 759 031 793</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact@pawsblue.org</p>
+                    </div>
+                </div>
+<div>
+<h3 id="footer-follow-title" class="text-xl font-semibold mb-6 text-white"></h3>
+
+<div class="flex flex-col gap-4">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/people/Blue-Paws/61562938898795/?sk=about"
+       target="_blank"
+       class="social-link facebook">
+
+        <i class="fa-brands fa-facebook-f"></i>
+        <span id="footer-facebook"></span>
+
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/bluepawsmax/"
+       target="_blank"
+       class="social-link instagram">
+
+        <i class="fa-brands fa-instagram"></i>
+        <span id="footer-instagram"></span>
+
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://tiktok.com"
+       target="_blank"
+       class="social-link tiktok">
+
+        <i class="fa-brands fa-tiktok"></i>
+        <span id="footer-tiktok"></span>
+
+    </a>
+
+</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("lo6t5O7GTNxTHgV95");
+
+        const translations = {
+            en: {
+                "page-title": "Get Involved - Blue Paws Association",
+                "logo-text": "Blue Paws Association",
+                "nav-home": "Home",
+                "nav-adopt": "Adopt",
+                "nav-about": "About",
+                "nav-impact": "Impact",
+                "nav-stories": "Stories",
+                "nav-news": "News",
+                "nav-faq": "FAQ",
+                "involved-title": "Get Involved",
+                "involved-subtitle": "Join us in making a difference in the lives of abandoned dogs",
+                "roles-title": "Ways You Can Help",
+                "role1-title": "Dog Walking & Socialising",
+                "role1-desc": "Help our dogs get exercise and socialization while they wait for their forever homes.",
+                "role2-title": "Shelter Support",
+                "role2-desc": "Assist with daily care, cleaning, feeding, and enrichment activities at the shelter.",
+                "role3-title": "Events & Fundraising",
+                "role3-desc": "Help organize adoption events, fundraisers, and awareness campaigns.",
+                "apply-title": "Volunteer Application",
+                "contact-title": "Contact Us",
+                "message-title": "Send us a message",
+                "name-placeholder": "Your Name",
+                "email-placeholder": "Email Address",
+                "message-placeholder": "How can we help you?",
+                "name2-placeholder": "Your Name",
+                "email2-placeholder": "Email Address",
+                "message2-placeholder": "How can we help you?",
+                "footer-logo": "Blue Paws Association",
+                "donate-btn": "Donate",
+                "apply-title": "Volunteer Application",
+                "label-name": "Full Name",
+                "label-email": "Email Address",
+                "label-phone": "Phone Number",
+                "label-why": "Why do you want to volunteer?",
+                "label-availability": "Availability (hours per week)",
+                "submit-application": "Submit Application",
+                "footer-follow-title": "Follow Us",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-slogan": "Standing Between Them and Suffering"
+            },
+            ro: {
+                "page-title": "Implică-te - Asociația Blue Paws",
+                "logo-text": "Asociația Blue Paws",
+                "nav-home": "Acasă",
+                "nav-adopt": "Adoptă",
+                "nav-about": "Despre Noi",
+                "nav-impact": "Impact",
+                "nav-stories": "Povești",
+                "nav-news": "Știri",
+                "nav-faq": "Întrebări Frecvente",
+                "involved-title": "Implică-te",
+                "involved-subtitle": "Alătură-te nouă pentru a schimba viețile câinilor abandonați",
+                "roles-title": "Cum Poți Ajuta",
+                "role1-title": "Plimbare și Socializare Câini",
+                "role1-desc": "Ajută câinii noștri să facă mișcare și să socializeze în timp ce așteaptă casa lor definitivă.",
+                "role2-title": "Suport la Adăpost",
+                "role2-desc": "Ajută cu îngrijirea zilnică, curățenie, hrănire și activități de îmbogățire la adăpost.",
+                "role3-title": "Evenimente și Strângere de Fonduri",
+                "role3-desc": "Ajută la organizarea evenimentelor de adopție, strângeri de fonduri și campanii de conștientizare.",
+                "apply-title": "Formular de Voluntariat",
+                "contact-title": "Contactează-ne",
+                "message-title": "Trimite-ne un mesaj",
+                "name-placeholder": "Numele tău",
+                "email-placeholder": "Adresa de email",
+                "message-placeholder": "Cum te putem ajuta?",
+                "name2-placeholder": "Numele tău",
+                "email2-placeholder": "Adresa de email",
+                "message2-placeholder": "Cum te putem ajuta?",
+                "footer-logo": "Asociația Blue Paws",
+                "donate-btn": "Donează",
+                "apply-title": "Formular de Voluntariat",
+                "label-name": "Nume complet",
+                "label-email": "Adresă de email",
+                "label-phone": "Număr de telefon",
+                "label-why": "De ce vrei să faci voluntariat?",
+                "label-availability": "Disponibilitate (ore pe săptămână)",
+                "submit-application": "Trimite cererea",
+                "footer-follow-title": "Urmărește-ne",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-slogan": "Stând între ei și suferință"
+            },
+            hu: {
+                "page-title": "Csatlakozz Hozzánk - Blue Paws Egyesület",
+                "logo-text": "Blue Paws Egyesület",
+                "nav-home": "Kezdőlap",
+                "nav-adopt": "Örökbefogadás",
+                "nav-about": "Rólunk",
+                "nav-impact": "Hatásunk",
+                "nav-stories": "Sikertörténetek",
+                "nav-news": "Hírek",
+                "nav-faq": "GYIK",
+                "involved-title": "Csatlakozz Hozzánk",
+                "involved-subtitle": "Csatlakozz hozzánk, hogy megváltoztassuk az elhagyott kutyák életét",
+                "roles-title": "Hogyan Segíthetsz",
+                "role1-title": "Kutyasétáltatás & Szocializáció",
+                "role1-desc": "Segíts kutyáinknak mozgásban maradni és szocializálódni, amíg várják örök otthonukat.",
+                "role2-title": "Menhelyi Segítség",
+                "role2-desc": "Segíts a napi gondozásban, takarításban, etetésben és gazdagítási tevékenységekben.",
+                "role3-title": "Események & Adománygyűjtés",
+                "role3-desc": "Segíts az örökbefogadási események, adománygyűjtések és tudatosító kampányok szervezésében.",
+                "apply-title": "Önkéntes Jelentkezés",
+                "contact-title": "Kapcsolat",
+                "message-title": "Küldj nekünk üzenetet",
+                "name-placeholder": "Neved",
+                "email-placeholder": "Email címed",
+                "message-placeholder": "Miben segíthetünk?",
+                "name2-placeholder": "Neved",
+                "email2-placeholder": "Email címed",
+                "message2-placeholder": "Miben segíthetünk?",
+                "footer-logo": "Blue Paws Egyesület",
+                "donate-btn": "Adományozás",
+                "apply-title": "Önkéntes Jelentkezés",
+                "label-name": "Teljes név",
+                "label-email": "E-mail cím",
+                "label-phone": "Telefonszám",
+                "label-why": "Miért szeretnél önkénteskedni?",
+                "label-availability": "Rendelkezésre állás (óra/hét)",
+                "submit-application": "Jelentkezés beküldése",
+                "footer-follow-title": "Kövess minket",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-slogan": "Közöttük és a szenvedés között állunk"
+            },
+            it: {
+                "page-title": "Unisciti a Noi - Associazione Blue Paws",
+                "logo-text": "Associazione Blue Paws",
+                "nav-home": "Home",
+                "nav-adopt": "Adotta",
+                "nav-about": "Chi Siamo",
+                "nav-impact": "Il Nostro Impatto",
+                "nav-stories": "Storie di Successo",
+                "nav-news": "Notizie",
+                "nav-faq": "FAQ",
+                "involved-title": "Unisciti a Noi",
+                "involved-subtitle": "Unisciti a noi per fare la differenza nella vita dei cani abbandonati",
+                "roles-title": "Come Puoi Aiutare",
+                "role1-title": "Passeggiate e Socializzazione",
+                "role1-desc": "Aiuta i nostri cani a fare esercizio e socializzare mentre aspettano la loro casa per sempre.",
+                "role2-title": "Supporto al Rifugio",
+                "role2-desc": "Aiuta con la cura quotidiana, pulizia, alimentazione e attività di arricchimento.",
+                "role3-title": "Eventi e Raccolta Fondi",
+                "role3-desc": "Aiuta a organizzare eventi di adozione, raccolte fondi e campagne di sensibilizzazione.",
+                "apply-title": "Modulo di Volontariato",
+                "contact-title": "Contattaci",
+                "message-title": "Inviaci un messaggio",
+                "name-placeholder": "Il tuo nome",
+                "email-placeholder": "Indirizzo email",
+                "message-placeholder": "Come possiamo aiutarti?",
+                "name2-placeholder": "Il tuo nome",
+                "email2-placeholder": "Indirizzo email",
+                "message2-placeholder": "Come possiamo aiutarti?",
+                "footer-logo": "Associazione Blue Paws",
+                "donate-btn": "Dona",
+                "apply-title": "Candidatura Volontari",
+                "label-name": "Nome completo",
+                "label-email": "Indirizzo email",
+                "label-phone": "Numero di telefono",
+                "label-why": "Perché vuoi fare volontariato?",
+                "label-availability": "Disponibilità (ore a settimana)",
+                "submit-application": "Invia candidatura",
+                "footer-follow-title": "Seguici",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-slogan": "In piedi tra loro e la sofferenza"
+            },
+            de: {
+                "page-title": "Werde Aktiv - Blue Paws Verein",
+                "logo-text": "Blue Paws Verein",
+                "nav-home": "Start",
+                "nav-adopt": "Adoptieren",
+                "nav-about": "Über uns",
+                "nav-impact": "Unser Impact",
+                "nav-stories": "Erfolgsgeschichten",
+                "nav-news": "Neuigkeiten",
+                "nav-faq": "FAQ",
+                "involved-title": "Werde Aktiv",
+                "involved-subtitle": "Schließe dich uns an und verändere das Leben von ausgesetzten Hunden",
+                "roles-title": "Wie Du Helfen Kannst",
+                "role1-title": "Gassi gehen & Sozialisierung",
+                "role1-desc": "Hilf unseren Hunden bei Bewegung und Sozialisation, während sie auf ihr Für-immer-Zuhause warten.",
+                "role2-title": "Unterstützung im Tierheim",
+                "role2-desc": "Hilf bei der täglichen Pflege, Reinigung, Fütterung und Beschäftigungsaktivitäten.",
+                "role3-title": "Veranstaltungen & Spendenaktionen",
+                "role3-desc": "Hilf bei der Organisation von Adoptionsveranstaltungen, Spendenaktionen und Aufklärungskampagnen.",
+                "apply-title": "Freiwilligenbewerbung",
+                "contact-title": "Kontakt",
+                "message-title": "Schick uns eine Nachricht",
+                "name-placeholder": "Dein Name",
+                "email-placeholder": "E-Mail-Adresse",
+                "message-placeholder": "Wie können wir dir helfen?",
+                "name2-placeholder": "Dein Name",
+                "email2-placeholder": "E-Mail-Adresse",
+                "message2-placeholder": "Wie können wir dir helfen?",
+                "footer-logo": "Blue Paws Verein",
+                "donate-btn": "Spenden",
+                "apply-title": "Freiwilligenbewerbung",
+                "label-name": "Vollständiger Name",
+                "label-email": "E-Mail-Adresse",
+                "label-phone": "Telefonnummer",
+                "label-why": "Warum möchtest du dich engagieren?",
+                "label-availability": "Verfügbarkeit (Stunden pro Woche)",
+                "submit-application": "Bewerbung senden",
+                "footer-follow-title": "Folge uns",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-slogan": "Zwischen ihnen und dem Leid stehend"
+            },
+            fr: {
+                "page-title": "Impliquez-Vous - Association Blue Paws",
+                "logo-text": "Association Blue Paws",
+                "nav-home": "Accueil",
+                "nav-adopt": "Adopter",
+                "nav-about": "À Propos",
+                "nav-impact": "Notre Impact",
+                "nav-stories": "Histoires",
+                "nav-news": "Actualités",
+                "nav-faq": "FAQ",
+                "involved-title": "Impliquez-Vous",
+                "involved-subtitle": "Rejoignez-nous pour faire une différence dans la vie des chiens abandonnés",
+                "roles-title": "Comment Vous Pouvez Aider",
+                "role1-title": "Promenades & Socialisation",
+                "role1-desc": "Aidez nos chiens à faire de l'exercice et à socialiser en attendant leur foyer pour toujours.",
+                "role2-title": "Soutien au Refuge",
+                "role2-desc": "Aidez avec les soins quotidiens, le nettoyage, l'alimentation et les activités d'enrichissement.",
+                "role3-title": "Événements & Collecte de Fonds",
+                "role3-desc": "Aidez à organiser des événements d'adoption, des collectes de fonds et des campagnes de sensibilisation.",
+                "apply-title": "Candidature de Bénévolat",
+                "contact-title": "Contactez-nous",
+                "message-title": "Envoyez-nous un message",
+                "name-placeholder": "Votre Nom",
+                "email-placeholder": "Adresse Email",
+                "message-placeholder": "Comment pouvons-nous vous aider ?",
+                "name2-placeholder": "Votre Nom",
+                "email2-placeholder": "Adresse Email",
+                "message2-placeholder": "Comment pouvons-nous vous aider ?",
+                "footer-logo": "Association Blue Paws",
+                "donate-btn": "Faire un don",
+                "apply-title": "Candidature Bénévole",
+                "label-name": "Nom complet",
+                "label-email": "Adresse e-mail",
+                "label-phone": "Numéro de téléphone",
+                "label-why": "Pourquoi souhaitez-vous être bénévole ?",
+                "label-availability": "Disponibilité (heures par semaine)",
+                "submit-application": "Envoyer la candidature",
+                "footer-follow-title": "Suivez-nous",
+                "footer-facebook": "Facebook",
+                "footer-instagram": "BluePawsMax",
+                "footer-tiktok": "BluePaws Association",
+                "footer-slogan": "Entre eux et la souffrance"
+            }
+        };
+
+        function changeLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+
+            const flagMap = { en: '🇬🇧', ro: '🇷🇴', hu: '🇭🇺', it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷' };
+            const codeMap = { en: 'EN', ro: 'RO', hu: 'HU', it: 'IT', de: 'DE', fr: 'FR' };
+
+            document.getElementById('current-flag').textContent = flagMap[lang];
+            document.getElementById('current-lang').textContent = codeMap[lang];
+
+            Object.keys(translations[lang]).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            document.getElementById('page-title').textContent = translations[lang]["page-title"];
+            document.documentElement.lang = lang;
+        }
+
+        // Volunteer Form
+emailjs.init({
+    publicKey: "9gHiw7IXVuE23LL8-"
+});
+
+document.getElementById('volunteer-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('submit-application');
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    emailjs.send("service_wuzoz6s", "template_w63r9r9", {
+        name: document.getElementById("input-name").value,
+        email: document.getElementById("input-email").value,
+        phone: document.getElementById("input-phone").value,
+        why: document.getElementById("input-why").value,
+        availability: document.getElementById("input-availability").value
+    })
+    .then(() => {
+        alert("✅ Application sent successfully!");
+        this.reset();
+    })
+    .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("❌ Failed to send. Check console for details.");
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Application";
+    });
+});
+
+        let dropdownOpen = false;
+        function toggleDropdown() {
+            const dd = document.getElementById('lang-dropdown');
+            const ch = document.getElementById('chevron');
+            dropdownOpen = !dropdownOpen;
+            dd.classList.toggle('hidden', !dropdownOpen);
+            ch.style.transform = dropdownOpen ? 'rotate(180deg)' : '';
+        }
+
+        document.getElementById('lang-btn').addEventListener('click', toggleDropdown);
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('lang-btn').contains(e.target)) {
+                const dd = document.getElementById('lang-dropdown');
+                if (!dd.classList.contains('hidden')) toggleDropdown();
+            }
+        });
+
+        window.onload = () => changeLanguage('en');
+    </script>
+</body>
+</html>
