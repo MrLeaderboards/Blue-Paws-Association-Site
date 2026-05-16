@@ -326,12 +326,29 @@ class="flex items-center gap-3 px-6 py-3 hover:bg-blue-50">
 
                     <div class="bg-gray-50 rounded-2xl p-5 border border-gray-200">
                         <p id="paypal-label" class="font-semibold text-blue-700 mb-2"></p>
-                        <a href="https://www.paypal.com/ncp/payment/Y3D6PEBDKZQMG"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="font-Nunito font-semibold tracking-wide inline-flex items-center gap-2 px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-500 transition">
-   PayPal
-</a>
+                        <form action="https://www.paypal.com/donate"
+      method="post"
+      target="_top">
+
+    <input type="hidden"
+           name="hosted_button_id"
+           value="P8AVUWQL5ZCQ4" />
+
+    <input type="image"
+           src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+           border="0"
+           name="submit"
+           title="PayPal - The safer, easier way to pay online!"
+           alt="Donate with PayPal button"
+           class="hover:scale-105 transition duration-300" />
+
+    <img alt=""
+         border="0"
+         src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+         width="1"
+         height="1" />
+
+</form>
                     </div>
 
                     <div class="bg-gray-50 rounded-2xl p-5 border border-gray-200">
