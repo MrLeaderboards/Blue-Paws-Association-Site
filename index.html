@@ -1091,24 +1091,27 @@ class="text-3xl md:text-4xl font-black tracking-tight mb-6 leading-snug max-w-4x
 
         // Dogs Data
 const dogs = [
-    { name: "Zephyr", age: "3 Months", gender: "Male", img: "Adopt11.jpeg" },
-    { name: "Veloura", age: "3 Months", gender: "Female", img: "Adopt12.jpeg" },
-    { name: "Enzo", age: "5 Months", gender: "Male", img: "Adopt2.jpeg" },
-    { name: "Elio", age: "5 Months", gender: "Male", img: "dog3.jpg" },
-    { name: "Arlo", age: "5 Months", gender: "Male", img: "Adopt3.jpeg" },
-    { name: "Ursa", age: "2 Months", gender: "Female", img: "Adopt18.jpg" },
-    { name: "Panda", age: "2 Months", gender: "Male", img: "Adopt13.jpg" },
-    { name: "Pufi", age: "2 Months", gender: "Male", img: "Adopt14.jpg" },
-    { name: "Latte", age: "2 Months", gender: "Male", img: "Adopt19.jpg" },
-    { name: "Mochi", age: "2 Months", gender: "Male", img: "Adopt16.jpg" },
-    { name: "Bambi", age: "2 Months", gender: "Female", img: "Adopt15.jpg" },
-    { name: "Jewel", age: "2 Months", gender: "Male", img: "Adopt20.jpg" },
-    { name: "Toby", age: "6 Months", gender: "Male", img: "Adopt4.jpeg" },
-    { name: "Luna", age: "4 Years", gender: "Female", img: "Adopt5.jpeg" },
-    { name: "Bobby", age: "2 Years", gender: "Male", img: "Adopt6.jpeg" },
-    { name: "Zara", age: "2 Years", gender: "Female", img: "Adopt7.jpeg" },
-    { name: "Aky", age: "2 Years", gender: "Female", img: "Adopt9.jpeg" },
-    { name: "Bamby", age: "2 Years", gender: "Female", img: "Adopt10.jpeg" }
+    { name: "Zephyr", age: "3 Months", gender: "Male", type: "image", src: "Adopt11.jpeg"},
+    { name: "Veloura", age: "3 Months", gender: "Female", type: "image", src: "Adopt12.jpeg" },
+    { name: "Enzo", age: "5 Months", gender: "Male", type: "image", src: "Adopt2.jpeg" },
+    { name: "Elio", age: "5 Months", gender: "Male", type: "image", src: "dog3.jpg" },
+    { name: "Arlo", age: "5 Months", gender: "Male", type: "image", src: "Adopt3.jpeg" },
+    { name: "Ursa", age: "2 Months", gender: "Female", type: "image", src: "Adopt18.jpg" },
+    { name: "Panda", age: "2 Months", gender: "Male", type: "image", src: "Adopt13.jpg" },
+    { name: "Pufi", age: "2 Months", gender: "Male", type: "image", src: "Adopt14.jpg" },
+    { name: "Latte", age: "2 Months", gender: "Male", type: "image", src: "Adopt19.jpg" },
+    { name: "Mochi", age: "2 Months", gender: "Male", type: "image", src: "Adopt16.jpg" },
+    { name: "Bambi", age: "2 Months", gender: "Female", type: "image", src: "Adopt15.jpg" },
+    { name: "Jewel", age: "2 Months", gender: "Male", type: "image", src: "Adopt20.jpg" },
+    { name: "Toby", age: "6 Months", gender: "Male", type: "image", src: "Adopt4.jpeg" },
+    { name: "", age: "", gender: "", type: "video", src: "Video.mp4"},
+    { name: "", age: "", gender: "", type: "video", src: "Video3.mp4"},
+    { name: "", age: "", gender: "", type: "video", src: "Video4.mp4"},
+    { name: "Luna", age: "4 Years", gender: "Female", type: "image", src: "Adopt5.jpeg" },
+    { name: "Bobby", age: "2 Years", gender: "Male", type: "image", src: "Adopt6.jpeg" },
+    { name: "Zara", age: "2 Years", gender: "Female", type: "image", src: "Adopt7.jpeg" },
+    { name: "Aky", age: "2 Years", gender: "Female", type: "image", src: "Adopt9.jpeg" },
+    { name: "Bamby", age: "2 Years", gender: "Female", type: "image", src: "Adopt10.jpeg" }
 ];
 
         function renderDogs() {
@@ -1122,21 +1125,42 @@ slider.innerHTML = dogs.map(dog => `
 
                 <!-- FRONT -->
                 <div class="flip-card-front">
-                    <img src="${dog.img}" 
-                         alt="${dog.name}" 
-                         class="w-full h-full object-cover">
+${dog.type === "video"
+    ? `
+        <video
+            class="w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline>
+
+            <source src="${dog.src}" type="video/mp4">
+
+        </video>
+      `
+    : `
+        <img
+            src="${dog.src}"
+            alt="${dog.name}"
+            class="w-full h-full object-cover">
+      `
+}
                 </div>
 
                 <!-- BACK -->
                 <div class="flip-card-back">
 
+${dog.name ? `
 <h3 class="card-title text-2xl font-bold mb-2">
     ${dog.name}
 </h3>
+` : ""}
 
+${dog.age && dog.gender ? `
 <p class="card-meta mb-2">
     ${translations[currentLanguage][dog.age]} • ${translations[currentLanguage][dog.gender]}
 </p>
+` : ""}
 
 <p class="card-subtitle mb-8">
     ${translations[currentLanguage]["dog-ready"]}
